@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://insertdate.com/sitemap.xml

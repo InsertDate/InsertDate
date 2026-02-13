@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>InsertDate – One Team. One Date. | Windows Date Input Tool</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="InsertDate unifies date formats across your team. One key, one fixed format. No settings required.">
+  <meta name="keywords" content="date input, Windows utility, date format, file naming, office tool, standardization">
+
+  <meta property="og:title" content="InsertDate – One Team. One Date.">
+  <meta property="og:site_name" content="InsertDate">
+  <meta property="og:description" content="Unify team date formats with one key. No settings. One fixed format.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://insertdate.com/">
+  <meta property="og:image" content="https://insertdate.com/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="InsertDate – One Team. One Date.">
+  <meta name="twitter:description" content="Unify team date formats with one key. No settings.">
+
+  <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <link rel="alternate" hreflang="en" href="https://insertdate.com/" />
+  <link rel="alternate" hreflang="ja" href="https://insertdate.com/?lang=ja" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://insertdate.com/?lang=zh-hans" />
+  <link rel="alternate" hreflang="zh-Hant" href="https://insertdate.com/?lang=zh-hant" />
+  <link rel="alternate" hreflang="x-default" href="https://insertdate.com/" />
+  <link rel="canonical" href="https://insertdate.com/">
+  <style>
+    /* フォントは変えず、余白とバランスを微調整 */
+    .logo { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 2.6rem; font-weight: 600; letter-spacing: -0.02em; }
+    .logo span { color: #1f5fbf; font-weight: 700; }
+    .tagline { font-size: 1.2rem; font-weight: 500; color: #555; margin-top: 0.5rem; }
+    header { margin-top: 4rem; margin-bottom: 4rem; } /* 上部余白を拡張 */
+    body { font-size: 0.95rem; }
+    .example { font-size: 0.75rem; color: #666; margin-left: 0.5rem; }
+    .lang-switch { display: flex; gap: .5rem; margin-bottom: 2.5rem; }
+    .lang-switch button { font-size: 0.8rem; padding: 0.25rem 0.6rem; }
+    section { display: none; margin-bottom: 5rem; } /* セクション間を広く */
+    section.active { display: block; }
+    .demo { margin: 3rem 0; text-align: center; }
+    .demo img { border-radius: .4rem; box-shadow: 0 0.25rem 1rem rgba(0,0,0,.1); }
+    .note { font-size: 0.7rem; color: #555; margin-top: 0.5rem; margin-bottom: 1rem; }
+    h2 { margin-bottom: 1.5rem; border-bottom: 1px solid #eee; padding-bottom: 0.5rem; }
+    footer { margin-top: 8rem; text-align: center; opacity: .7; padding-bottom: 3rem; border-top: 1px solid #eee; padding-top: 2rem; }
+    footer a { margin: 0 0.5rem; }
+  </style>
+</head>
+
+<body>
+<main class="container">
+
+<nav class="lang-switch">
+  <button class="secondary outline" onclick="setLang('en')">English</button>
+  <button class="secondary outline" onclick="setLang('ja')">日本語</button>
+  <button class="secondary outline" onclick="setLang('zh-hans')">简体中文</button>
+  <button class="secondary outline" onclick="setLang('zh-hant')">繁體中文</button>
+</nav>
+
+<header>
+  <h1 class="logo">Insert<span>Date</span></h1>
+  <p class="tagline">One Team. One Date.</p>
+</header>
+
+<template id="formats-ul-template">
+<ul>
+  <li>
+    <a href="./InsertDate_v1.0.zip" class="fmt" data-type="basic">InsertDate_v1.0.zip</a>
+    <span class="example" data-format="yyyyMMdd"></span>
+  </li>
+  <li>
+    <a href="./InsertDate-Slash_v1.0.zip" class="fmt" data-type="slash">InsertDate-Slash_v1.0.zip</a>
+    <span class="example" data-format="yyyy/MM/dd"></span>
+  </li>
+  <li>
+    <a href="./InsertDate-Dot_v1.0.zip" class="fmt" data-type="dot">InsertDate-Dot_v1.0.zip</a>
+    <span class="example" data-format="yyyy.MM.dd"></span>
+  </li>
+  <li>
+    <a href="./InsertDate-EA_v1.0.zip" class="fmt" data-type="ea">InsertDate-EA_v1.0.zip</a>
+    <span class="example" data-format="yyyy年MM月dd日"></span>
+  </li>
+</ul>
+</template>
+
+<div class="demo">
+  <img src="/animation.gif" width="249" height="211" alt="InsertDate demo">
+</div>
+
+<section id="en">
+<h2>What is InsertDate?</h2>
+<p>InsertDate is a tool to align date formats within an organization. While running, it outputs today's date whenever the <strong>Insert key</strong> is pressed.</p>
+<p>By using it for reports, invoices, and file names, you can maintain a uniform record format across your team.</p>
+
+<h2>Design Principle</h2>
+<p>It has no settings or customization. By providing only one fixed format, it ensures that every member gets the exact same result regardless of their environment or input method.</p>
+
+<h2>Download</h2>
+<p><strong>Supported OS:</strong> Windows 10 / 11</p>
+
+<div class="formats">
+  <div class="formats-ul"></div>
+  <p>Select the format that fits your team's rules.</p>
+  <p class="note">
+    InsertDate is digitally code-signed using an SSL.com Code Signing Certificate (Type IV).
+  </p>
+</div>
+
+<h2>License</h2>
+<ul>
+  <li>Free for personal use</li>
+  <li>Commercial use: <a href="https://buy.stripe.com/9B68wQ7Va0ZR3sScZPbwk00">$39 USD / PC</a> (1-week free trial available)</li>
+</ul>
+</section>
+
+<section id="ja">
+<h2>InsertDateとは</h2>
+<p>InsertDateは、組織内での日付表記を統一するためのツールです。常駐している間、キーボードの<strong>Insertキー</strong>ひとつで当日の日付を入力します。</p>
+<p>報告書、請求書、ファイル名などの日付形式をチーム全体で揃えるために機能します。</p>
+
+<h2>設計思想</h2>
+<p>設定やカスタマイズはありません。形式を一つに絞ることで、誰が入力しても、どの環境であっても、全く同じアウトプットが得られるように設計されています。</p>
+
+<h2>ダウンロード</h2>
+<p><strong>対応OS:</strong> Windows 10 / 11</p>
+
+<div class="formats">
+  <div class="formats-ul"></div>
+  <p>運用ルールに合った形式を選択してください。</p>
+  <p class="note">
+    InsertDateは SSL.com の Code Signing Certificate（Type IV）でコード署名されています。
+  </p>
+</div>
+
+<h2>ライセンス</h2>
+<ul>
+  <li>個人利用：無料</li>
+  <li>商用利用：<a href="https://buy.stripe.com/9B68wQ7Va0ZR3sScZPbwk00">$39 USD / PC</a>（1週間の無料トライアルあり）</li>
+</ul>
+</section>
+
+<section id="zh-hans">
+<h2>什么是 InsertDate？</h2>
+<p>InsertDate 是一个用于统一组织内日期格式的工具。运行时，只需按下 <strong>Insert 键</strong>即可输入当天日期。</p>
+<p>适用于报告、发票和文件名，使整个团队的记录保持一致。</p>
+
+<h2>设计理念</h2>
+<p>无设置，无自定义。通过固定单一格式，确保所有成员在任何环境下都能获得完全相同的输入结果。</p>
+
+<h2>下载</h2>
+<p><strong>支持系统:</strong> Windows 10 / 11</p>
+
+<div class="formats">
+  <div class="formats-ul"></div>
+  <p>请选择符合您团队规范的格式。</p>
+  <p class="note">
+    InsertDate 已使用 SSL.com 的代码签名证书（Type IV）完成签名。
+  </p>
+</div>
+
+<h2>许可</h2>
+<ul>
+  <li>个人使用：免费</li>
+  <li>商业使用：<a href="https://buy.stripe.com/9B68wQ7Va0ZR3sScZPbwk00">$39 USD / 台</a>（提供 1 周试用）</li>
+</ul>
+</section>
+
+<section id="zh-hant">
+<h2>什麼是 InsertDate？</h2>
+<p>InsertDate 是一個用於統一組織內日期格式的工具。執行時，只需按下 <strong>Insert 鍵</strong>即可輸入當天日期。</p>
+<p>適用於報告、發票和檔名，使整個團隊的記錄保持一致。</p>
+
+<h2>設計理念</h2>
+<p>無設定，無自訂。透過固定單一格式，確保所有成員在任何環境下都能獲得完全相同的輸入結果。</p>
+
+<h2>下載</h2>
+<p><strong>支援系統:</strong> Windows 10 / 11</p>
+
+<div class="formats">
+  <div class="formats-ul"></div>
+  <p>請選擇符合您團隊規範的格式。</p>
+  <p class="note">
+    InsertDate 已使用 SSL.com 的程式碼簽章憑證（Type IV）完成簽章。
+  </p>
+</div>
+
+<h2>授權</h2>
+<ul>
+  <li>個人使用：免費</li>
+  <li>商業使用：<a href="https://buy.stripe.com/9B68wQ7Va0ZR3sScZPbwk00">$39 USD / PC</a>（提供 1 週試用）</li>
+</ul>
+</section>
+
+<footer>
+  <small>Developed in Japan. Available worldwide.</small><br>
+  <small>Contact: info@insertdate.com</small><br>
+  <small>
+    <a href="/privacy.html">Privacy Policy</a> | 
+    <a href="/legal.html">Legal Notice</a>
+  </small><br>
+  <small>© InsertDate. All rights reserved.</small>
+</footer>
+
+</main>
+
+<script>
+const pageMeta = {
+  'en': { title: 'InsertDate – One Team. One Date. | Team Date Unification Tool', desc: 'InsertDate unifies date formats across your team. One key, one fixed format. No settings required.' },
+  'ja': { title: 'InsertDate – One Team. One Date. | 日付表記の統一ツール', desc: 'InsertDateは、組織の日付表記を一つに揃えるためのツールです。設定を排し、チーム全体で全く同じ出力を保証します。' },
+  'zh-hans': { title: 'InsertDate – One Team. One Date. | 团队日期统一工具', desc: 'InsertDate 是一个用于统一组织内日期格式的工具。固定格式，无需设置。' },
+  'zh-hant': { title: 'InsertDate – One Team. One Date. | 團隊日期統一工具', desc: 'InsertDate 是一個用於統一組織內日期格式的工具。固定格式，無需設定。' }
+};
+
+function formatDate(fmt) {
+  const d = new Date();
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  return fmt.replace('yyyy', y).replace('MM', m).replace('dd', day);
+}
+
+function injectFormatsUL() {
+  const tpl = document.getElementById('formats-ul-template');
+  document.querySelectorAll('.formats-ul').forEach(el => {
+    el.innerHTML = '';
+    el.appendChild(tpl.content.cloneNode(true));
+  });
+  document.querySelectorAll('.example[data-format]').forEach(el => {
+    el.textContent = 'Example: ' + formatDate(el.dataset.format);
+  });
+}
+
+injectFormatsUL();
+
+function setLang(lang) {
+  document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
+  const target = document.getElementById(lang);
+  if (target) target.classList.add('active');
+
+  const map = { en:'en', ja:'ja', 'zh-hans':'zh-Hans', 'zh-hant':'zh-Hant' };
+  document.documentElement.lang = map[lang] || 'en';
+
+  document.querySelectorAll('.lang-switch button').forEach(btn => {
+    btn.classList.remove('primary');
+    btn.classList.add('secondary','outline');
+  });
+
+  const activeBtn = document.querySelector(`.lang-switch button[onclick="setLang('${lang}')"]`);
+  if (activeBtn) {
+    activeBtn.classList.remove('secondary','outline');
+    activeBtn.classList.add('primary');
+  }
+
+  if (pageMeta[lang]) {
+    document.title = pageMeta[lang].title;
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) metaDesc.setAttribute('content', pageMeta[lang].desc);
+    const ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc) ogDesc.setAttribute('content', pageMeta[lang].desc);
+  }
+}
+
+function detectLang() {
+  const params = new URLSearchParams(window.location.search);
+  const urlLang = params.get('lang');
+  if (urlLang) {
+    const lower = urlLang.toLowerCase();
+    if (lower.startsWith('ja')) return 'ja';
+    if (lower.startsWith('zh-tw') || lower.startsWith('zh-hant')) return 'zh-hant';
+    if (lower.startsWith('zh')) return 'zh-hans';
+    if (lower.startsWith('en')) return 'en';
+  }
+  const langs = navigator.languages || [navigator.language];
+  for (const l of langs) {
+    if (l.startsWith('ja')) return 'ja';
+    if (l.startsWith('zh-TW') || l.startsWith('zh-HK')) return 'zh-hant';
+    if (l.startsWith('zh')) return 'zh-hans';
+    if (l.startsWith('en')) return 'en';
+  }
+  return 'en';
+}
+setLang(detectLang());
+</script>
+</body>
+</html>
