@@ -12,10 +12,10 @@ It eliminates the friction of fragmented date formatting. By removing customizat
 
 ### 💠 Available Formats
 Choose the one version that matches your organization’s rules (EXE included in ZIP):
-* Standard: `20260214` ([InsertDate_v1.0.zip](https://github.com/InsertDate/InsertDate/raw/main/InsertDate_v1.0.zip))
-* Slash: `2026/02/14` ([InsertDate-Slash_v1.0.zip](https://github.com/InsertDate/InsertDate/raw/main/InsertDate-Slash_v1.0.zip))
-* Dot: `2026.02.14` ([InsertDate-Dot_v1.0.zip](https://github.com/InsertDate/InsertDate/raw/main/InsertDate-Dot_v1.0.zip))
-* EA: `2026年02月14日` ([InsertDate-EA_v1.0.zip](https://github.com/InsertDate/InsertDate/raw/main/InsertDate-EA_v1.0.zip))
+* Standard: `20260214` ([InsertDate_v1.0.zip](https://github.com/InsertDate/InsertDate/releases/download/v1.0/InsertDate_v1.0.zip))
+* Slash: `2026/02/14` ([InsertDate-Slash_v1.0.zip](https://github.com/InsertDate/InsertDate/releases/download/v1.0/InsertDate-Slash_v1.0.zip))
+* Dot: `2026.02.14` ([InsertDate-Dot_v1.0.zip](https://github.com/InsertDate/InsertDate/releases/download/v1.0/InsertDate-Dot_v1.0.zip))
+* EA: `2026年02月14日` ([InsertDate-EA_v1.0.zip](https://github.com/InsertDate/InsertDate/releases/download/v1.0/InsertDate-EA_v1.0.zip))
 
 ### 💳 Licensing
 - **Personal Use**: Free
