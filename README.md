@@ -22,6 +22,12 @@ Choose the one version that matches your organization’s rules (EXE included in
 - **Commercial Use**: **$39 USD / PC** (Includes a 7-day free trial)
 
 ---
+### 🔍 Security
+Verified by VirusTotal (0/94 detection)
+[View Scan Report](https://www.virustotal.com/gui/url/ade8d5614f2c7d050a51854fad319abc4d0525656281d931017ba8d1217b1a64?nocache=1)
+[View Scan Report](https://www.virustotal.com/gui/url/247b59d3669a3aba69543c5f8070825856396e9b279066d54da52096662d4f66?nocache=1)
+[View Scan Report](https://www.virustotal.com/gui/url/f2ee69d9f81b6048a7f58aea10eec10357d52563e8741df367af2712d473ec60?nocache=1)
+[View Scan Report](https://www.virustotal.com/gui/url-analysis/u-5ddc1641deb2ce055ac4094ca5b0cd774506efe0fdd909dbcb6197b67e147b5a-ae302314)
 
 ### 🔍 Integrity Verification (SHA-256)
 - **InsertDate_v1.0.zip**: 0666E347461BC90078316EB6CDB9A3A22482B40AADCFAB40C09AD77879174304
