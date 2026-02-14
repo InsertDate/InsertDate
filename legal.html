@@ -5,254 +5,487 @@
   <title>Legal Notice | InsertDate</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex">
-  <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+  <meta name="theme-color" content="#1a2332">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
   <style>
-    .logo { font-family: system-ui, -apple-system, sans-serif; font-size: 2rem; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 0.5rem; }
-    .logo span { color: #1f5fbf; font-weight: 700; }
-    .logo a { text-decoration: none; color: inherit; }
-    body { font-size: 1rem; line-height: 1.6; }
-    header { margin-top: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1rem; }
-    h2 { font-size: 1.4rem; margin-top: 2rem; border-left: 4px solid #1f5fbf; padding-left: 0.5rem; }
-    h3 { font-size: 1.1rem; margin-top: 1.5rem; text-decoration: underline; }
-    .lang-switch { display: flex; gap: .5rem; margin: 1.5rem 0; }
-    .lang-switch button { font-size: 0.75rem; padding: 0.2rem 0.5rem; }
-    section { display: none; }
-    section.active { display: block; }
-    .law-box { background: #f9f9f9; padding: 1rem; border-radius: 0.4rem; border: 1px solid #eee; margin-top: 2rem; }
-    .important { font-weight: bold; color: #d81b60; border: 2px solid #d81b60; padding: 0.5rem; display: block; }
-    code { font-size: 0.8rem; background: #eee; padding: 0.1rem 0.3rem; border-radius: 3px; }
-    footer { margin-top: 4rem; text-align: center; opacity: .7; padding-bottom: 2rem; }
+    :root {
+      --navy: #0f1419;
+      --navy-light: #1a2332;
+      --blue: #1e40af;
+      --blue-light: #3b82f6;
+      --blue-dark: #1e3a8a;
+      --gray-50: #f8fafc;
+      --gray-100: #f1f5f9;
+      --gray-200: #e2e8f0;
+      --gray-300: #cbd5e1;
+      --gray-400: #94a3b8;
+      --gray-500: #64748b;
+      --gray-600: #475569;
+      --gray-700: #334155;
+      --gray-800: #1e293b;
+      --gray-900: #0f172a;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Noto Sans CJK JP", "Microsoft YaHei", sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--gray-700);
+      background: var(--gray-50);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+    /* Navigation */
+    nav.top-nav {
+      background: white;
+      border-bottom: 1px solid var(--gray-200);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+    }
+
+    nav.top-nav .nav-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+    }
+
+    .logo-link {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--navy);
+      text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+    .logo-link span { color: var(--blue); }
+
+    .lang-switcher { display: flex; gap: 8px; }
+    .lang-switcher button {
+      padding: 6px 12px;
+      font-size: 14px;
+      font-weight: 500;
+      border: 1px solid var(--gray-300);
+      background: white;
+      color: var(--gray-600);
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: inherit;
+    }
+    .lang-switcher button:hover { border-color: var(--blue); color: var(--blue); }
+    .lang-switcher button.active { background: var(--blue); color: white; border-color: var(--blue); }
+
+    /* Page Header */
+    .page-header {
+      background: linear-gradient(180deg, var(--navy) 0%, var(--navy-light) 100%);
+      color: white;
+      padding: 48px 0;
+      text-align: center;
+    }
+    .page-header h1 {
+      font-size: 36px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+    .page-header .updated {
+      font-size: 15px;
+      color: rgba(255,255,255,0.6);
+    }
+
+    /* Content */
+    main {
+      padding: 48px 0 80px;
+    }
+    .content-card {
+      background: white;
+      border: 1px solid var(--gray-200);
+      border-radius: 8px;
+      padding: 48px;
+      max-width: 860px;
+      margin: 0 auto;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+
+    .content-card h2 {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-top: 40px;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--blue);
+      display: inline-block;
+    }
+    .content-card h2:first-of-type { margin-top: 0; }
+
+    .content-card h3 {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--navy);
+      margin-top: 24px;
+      margin-bottom: 12px;
+    }
+
+    .content-card p { margin-bottom: 16px; }
+
+    .content-card ul, .content-card ol {
+      margin-bottom: 16px;
+      padding-left: 24px;
+    }
+    .content-card li { margin-bottom: 8px; }
+    .content-card li ul { margin-top: 8px; margin-bottom: 8px; }
+
+    .content-card code {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 13px;
+      background: var(--gray-100);
+      padding: 2px 6px;
+      border-radius: 4px;
+      color: var(--navy);
+    }
+
+    .important-box {
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      border-left: 4px solid #ef4444;
+      border-radius: 4px;
+      padding: 16px 20px;
+      margin: 16px 0;
+      font-weight: 600;
+      color: #991b1b;
+    }
+
+    .law-box {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: 8px;
+      padding: 24px;
+      margin-top: 40px;
+    }
+    .law-box h3 {
+      margin-top: 0;
+      color: var(--blue);
+    }
+
+    /* Language sections */
+    section[data-lang] { display: none; }
+    section[data-lang].active { display: block; animation: fadeIn 0.3s ease-out; }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Footer */
+    footer {
+      background: var(--navy);
+      color: rgba(255,255,255,0.7);
+      padding: 32px 0;
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+    }
+    .footer-inner a {
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-inner a:hover { color: white; }
+
+    @media (max-width: 768px) {
+      .container { padding: 0 16px; }
+      .page-header { padding: 32px 0; }
+      .page-header h1 { font-size: 26px; }
+      .content-card { padding: 24px; }
+      .content-card h2 { font-size: 19px; }
+      .lang-switcher { flex-wrap: wrap; gap: 4px; }
+      .lang-switcher button { font-size: 12px; padding: 6px 10px; }
+      .logo-link { font-size: 20px; }
+      .footer-inner { flex-direction: column; gap: 8px; text-align: center; }
+    }
   </style>
 </head>
-
 <body>
-<main class="container">
 
-<header>
-  <div class="logo"><a href="/">Insert<span>Date</span></a></div>
-  <nav class="lang-switch" aria-label="Language selection">
-    <button class="secondary outline" onclick="setLang('en')" aria-label="English">English</button>
-    <button class="secondary outline" onclick="setLang('ja')" aria-label="Japanese">日本語</button>
-    <button class="secondary outline" onclick="setLang('zh-hans')" aria-label="Simplified Chinese">简体中文</button>
-    <button class="secondary outline" onclick="setLang('zh-hant')" aria-label="Traditional Chinese">繁體中文</button>
-  </nav>
-</header>
-
-<section id="en" lang="en">
-  <h1>Legal Notice / Terms of Service</h1>
-  <p>Last Updated: 2026-02-13 (ver 1.0)</p>
-
-  <h2>1. Specifications & Usage</h2>
-  <p>InsertDate (the "Software") is a resident utility. <strong>While running, pressing the Insert key inserts the current date as text characters.</strong> Multiple executable files (exes) are provided for different date formats, but the basic operation is identical; only the output format differs. You can manage the application by right-clicking the icon in the system tray to open the menu:</p>
-  <ul>
-    <li><strong>Start on user login:</strong> Controls automatic execution at login. 
-      <ul>
-        <li>Clicking to enable this creates a shortcut in the <strong>user-specific</strong> startup folder: <code>%AppData%\Microsoft\Windows\Start Menu\Programs\Startup</code> and adds a checkmark to the menu.</li>
-        <li>Clicking again to disable it removes the shortcut from the folder and clears the checkmark.</li>
-      </ul>
-    </li>
-    <li><strong>Exit:</strong> Exits the Software and restores standard Insert key behavior.</li>
-    <li><strong>Registry-free:</strong> The Software does NOT use the system registry for saving settings or startup registration.</li>
-    <li><strong>No Network:</strong> The Software performs NO network communication and collects no personal information.</li>
-    <li><strong>No Service:</strong> It does NOT register as a "Windows Service." It runs as a standard user process.</li>
-    <li><strong>UAC:</strong> To type into Administrator-level apps, the Software must also be "Run as Administrator" (Windows Security Specification).</li>
-  </ul>
-
-  <h2>2. Licensing & "1 PC" Definition</h2>
-  <ul>
-    <li><strong>1 PC:</strong> One license per physical computer unit. Valid for multiple OS/user accounts on the same hardware.</li>
-    <li><strong>Updates:</strong> License remains valid for future updates of "InsertDate" on the same PC.</li>
-    <li><strong>Forbidden:</strong> Reverse engineering, decompiling, or modification is prohibited.</li>
-  </ul>
-
-  <h2>3. Limitation of Liability</h2>
-  <p class="important">TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE AUTHOR'S TOTAL LIABILITY SHALL NOT EXCEED THE AMOUNT PAID ($39 USD). NO LIABILITY FOR INDIRECT OR CONSEQUENTIAL DAMAGES.</p>
-
-  <h2>4. No Refunds & Refund Processing Fee</h2>
-  <p class="important">
-    ALL SALES ARE FINAL. Due to the nature of digital software and the provision of a free trial period, as a general rule, no refunds or cancellations will be accepted after purchase.
-  </p>
-  <p>
-    In the exceptional event that the Author agrees to a refund at their sole discretion, the refund will be issued <strong>minus the non-refundable payment processing fees (e.g., Stripe fees) and any administrative costs.</strong> The user shall bear all transaction-related costs.
-  </p>
-
-  <h2>5. Uninstallation</h2>
-  <p>To uninstall the Software, please follow these steps:</p>
-  <ol>
-    <li>Right-click the tray icon and disable "Start on user login" (to remove the startup shortcut).</li>
-    <li>Exit the Software.</li>
-    <li>Delete the <code>InsertDate.exe</code> file manually.</li>
-  </ol>
-
-  <div class="law-box">
-    <h3>Governing Law</h3>
-    <p>Governed by Japanese law. Jurisdiction: Courts in the author's place of residence, Japan.</p>
+<nav class="top-nav">
+  <div class="container">
+    <div class="nav-content">
+      <a href="/" class="logo-link">Insert<span>Date</span></a>
+      <div class="lang-switcher" aria-label="Language selection">
+        <button onclick="setLang('en')" data-lang="en" aria-label="English">English</button>
+        <button onclick="setLang('ja')" data-lang="ja" aria-label="Japanese">日本語</button>
+        <button onclick="setLang('zh-hans')" data-lang="zh-hans" aria-label="Simplified Chinese">简体中文</button>
+        <button onclick="setLang('zh-hant')" data-lang="zh-hant" aria-label="Traditional Chinese">繁體中文</button>
+      </div>
+    </div>
   </div>
-</section>
+</nav>
 
-<section id="ja" lang="ja">
-  <h1>利用規約・特定商取引法に基づく表記</h1>
-  <p>最終更新日：2026年2月13日 (ver 1.0)</p>
-
-  <h2>1. 動作仕様・操作方法</h2>
-  <p>InsertDate（以下「本ソフトウェア」）は常駐型ユーティリティです。<strong>常駐している間は、Insertキーを押すとテキスト文字として現在の日付が挿入されます。</strong> 日付形式ごとに実行ファイル（exe）が分かれていますが、基本動作はすべて共通であり、入力される日付の形式のみが異なります。タスクトレイのアイコンを右クリックするとメニューが開き、以下の操作が行えます。</p>
-  <ul>
-    <li><strong>Start on user login:</strong> ユーザーログイン時の自動実行を制御します。
-      <ul>
-        <li>クリックして有効にすると、<strong>ログインユーザー個別</strong>のスタートアップフォルダ（<code>%AppData%\Microsoft\Windows\Start Menu\Programs\Startup</code>）にショートカットが作成され、メニューにチェックが入ります。</li>
-        <li>再度クリックして無効にすると、フォルダからショートカットが削除され、チェックも外れます。</li>
-      </ul>
-    </li>
-    <li><strong>Exit:</strong> 本ソフトウェアを終了し、Insertキーの挙動を標準の状態に戻します。</li>
-    <li><strong>レジストリ不使用:</strong> 設定の保存や自動実行の登録に、システムレジストリを一切使用しません。</li>
-    <li><strong>通信の不実施:</strong> 外部とのネットワーク通信を一切行いません。個人情報も収集しません。</li>
-    <li><strong>非サービス登録:</strong> 「Windowsサービス」としての登録は行わず、標準のユーザープロセスとして動作します。</li>
-    <li><strong>管理者権限:</strong> 管理者権限アプリへ入力するには、本ソフトも「管理者として実行」が必要です（Windowsの仕様）。</li>
-  </ul>
-
-  <h2>2. ライセンスと「1PC」の定義</h2>
-  <ul>
-    <li><strong>1PCの定義:</strong> 物理的なコンピュータ1台を指します。同一ハード上のマルチブートや複数ユーザーでの利用に追加ライセンスは不要です。</li>
-    <li><strong>アップデート:</strong> 同一PCでのバージョンアップデート時も、ライセンスは継続して有効です。</li>
-    <li><strong>禁止事項:</strong> 逆コンパイル、解析、改変、および無許可の再配布を禁じます。</li>
-  </ul>
-
-  <h2>3. 損害賠償の上限</h2>
-  <p class="important">法律が許容する最大範囲において、作者の賠償責任はユーザーが実際に支払った対価（最大$39 USD）を絶対的な上限とします。逸失利益等の間接損害は一切免責されます。</p>
-
-  <h2>4. 返金・キャンセルおよび払戻手数料（重要）</h2>
-  <p class="important">
-    デジタルコンテンツの性質上、および無料試用期間を提供しているため、購入確定後はお客様都合による返金・キャンセルには一切応じられません。
-  </p>
-  <p>
-    万一、作者が例外的に返金に合意する場合であっても、<strong>決済代行会社（Stripe等）の返金不可な決済手数料、および返金処理に伴う事務手数料を差し引いた金額</strong>を払い戻すものとします。決済にかかる諸費用はユーザーの負担となります。
-  </p>
-
-  <h2>5. アンインストール方法</h2>
-  <p>本ソフトウェアをアンインストールする場合は、以下の手順で行ってください。</p>
-  <ol>
-    <li>メニューの「Start on user login」をクリックしてチェックを外し、スタートアップ登録を解除します。</li>
-    <li>本ソフトウェアを終了（Exit）します。</li>
-    <li>実行ファイル（exeファイル）を削除してください。</li>
-  </ol>
-
-  <div class="law-box">
-    <h3>特定商取引法に基づく表記</h3>
-    <p><strong>販売者:</strong> Masao Hara / <strong>連絡先:</strong> info@insertdate.com / <strong>価格:</strong> $39 USD / <strong>管轄:</strong> 日本法・作者居住地裁判所</p>
+<!-- English -->
+<section data-lang="en" lang="en">
+  <div class="page-header">
+    <div class="container">
+      <h1>Legal Notice / Terms of Service</h1>
+      <p class="updated">Last Updated: 2026-02-13 (ver 1.0)</p>
+    </div>
   </div>
+  <main>
+    <div class="container">
+      <div class="content-card">
+        <h2>1. Specifications & Usage</h2>
+        <p>InsertDate (the "Software") is a resident utility. <strong>While running, pressing the Insert key inserts the current date as text characters.</strong> Multiple executable files (exes) are provided for different date formats, but the basic operation is identical; only the output format differs. You can manage the application by right-clicking the icon in the system tray to open the menu:</p>
+        <ul>
+          <li><strong>Start on user login:</strong> Controls automatic execution at login.
+            <ul>
+              <li>Clicking to enable this creates a shortcut in the <strong>user-specific</strong> startup folder: <code>%AppData%\Microsoft\Windows\Start Menu\Programs\Startup</code> and adds a checkmark to the menu.</li>
+              <li>Clicking again to disable it removes the shortcut from the folder and clears the checkmark.</li>
+            </ul>
+          </li>
+          <li><strong>Exit:</strong> Exits the Software and restores standard Insert key behavior.</li>
+          <li><strong>Registry-free:</strong> The Software does NOT use the system registry for saving settings or startup registration.</li>
+          <li><strong>No Network:</strong> The Software performs NO network communication and collects no personal information.</li>
+          <li><strong>No Service:</strong> It does NOT register as a "Windows Service." It runs as a standard user process.</li>
+          <li><strong>UAC:</strong> To type into Administrator-level apps, the Software must also be "Run as Administrator" (Windows Security Specification).</li>
+        </ul>
+
+        <h2>2. Licensing & "1 PC" Definition</h2>
+        <ul>
+          <li><strong>1 PC:</strong> One license per physical computer unit. Valid for multiple OS/user accounts on the same hardware.</li>
+          <li><strong>Updates:</strong> License remains valid for future updates of "InsertDate" on the same PC.</li>
+          <li><strong>Forbidden:</strong> Reverse engineering, decompiling, or modification is prohibited.</li>
+        </ul>
+
+        <h2>3. Limitation of Liability</h2>
+        <div class="important-box">TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE AUTHOR'S TOTAL LIABILITY SHALL NOT EXCEED THE AMOUNT PAID ($39 USD). NO LIABILITY FOR INDIRECT OR CONSEQUENTIAL DAMAGES.</div>
+
+        <h2>4. No Refunds & Refund Processing Fee</h2>
+        <div class="important-box">ALL SALES ARE FINAL. Due to the nature of digital software and the provision of a free trial period, as a general rule, no refunds or cancellations will be accepted after purchase.</div>
+        <p>In the exceptional event that the Author agrees to a refund at their sole discretion, the refund will be issued <strong>minus the non-refundable payment processing fees (e.g., Stripe fees) and any administrative costs.</strong> The user shall bear all transaction-related costs.</p>
+
+        <h2>5. Uninstallation</h2>
+        <p>To uninstall the Software, please follow these steps:</p>
+        <ol>
+          <li>Right-click the tray icon and disable "Start on user login" (to remove the startup shortcut).</li>
+          <li>Exit the Software.</li>
+          <li>Delete the <code>InsertDate.exe</code> file manually.</li>
+        </ol>
+
+        <div class="law-box">
+          <h3>Governing Law</h3>
+          <p>Governed by Japanese law. Jurisdiction: Courts in the author's place of residence, Japan.</p>
+        </div>
+      </div>
+    </div>
+  </main>
 </section>
 
-<section id="zh-hans" lang="zh-Hans">
-  <h1>法律声明 / 服务协议</h1>
-  <p>最后更新：2026-02-13 (ver 1.0)</p>
+<!-- Japanese -->
+<section data-lang="ja" lang="ja">
+  <div class="page-header">
+    <div class="container">
+      <h1>利用規約・特定商取引法に基づく表記</h1>
+      <p class="updated">最終更新日：2026年2月13日 (ver 1.0)</p>
+    </div>
+  </div>
+  <main>
+    <div class="container">
+      <div class="content-card">
+        <h2>1. 動作仕様・操作方法</h2>
+        <p>InsertDate（以下「本ソフトウェア」）は常駐型ユーティリティです。<strong>常駐している間は、Insertキーを押すとテキスト文字として現在の日付が挿入されます。</strong> 日付形式ごとに実行ファイル（exe）が分かれていますが、基本動作はすべて共通であり、入力される日付の形式のみが異なります。タスクトレイのアイコンを右クリックするとメニューが開き、以下の操作が行えます。</p>
+        <ul>
+          <li><strong>Start on user login:</strong> ユーザーログイン時の自動実行を制御します。
+            <ul>
+              <li>クリックして有効にすると、<strong>ログインユーザー個別</strong>のスタートアップフォルダ（<code>%AppData%\Microsoft\Windows\Start Menu\Programs\Startup</code>）にショートカットが作成され、メニューにチェックが入ります。</li>
+              <li>再度クリックして無効にすると、フォルダからショートカットが削除され、チェックも外れます。</li>
+            </ul>
+          </li>
+          <li><strong>Exit:</strong> 本ソフトウェアを終了し、Insertキーの挙動を標準の状態に戻します。</li>
+          <li><strong>レジストリ不使用:</strong> 設定の保存や自動実行の登録に、システムレジストリを一切使用しません。</li>
+          <li><strong>通信の不実施:</strong> 外部とのネットワーク通信を一切行いません。個人情報も収集しません。</li>
+          <li><strong>非サービス登録:</strong> 「Windowsサービス」としての登録は行わず、標準のユーザープロセスとして動作します。</li>
+          <li><strong>管理者権限:</strong> 管理者権限アプリへ入力するには、本ソフトも「管理者として実行」が必要です（Windowsの仕様）。</li>
+        </ul>
 
-  <h2>1. 运行规格与操作方法</h2>
-  <p>InsertDate 是一款常驻实用工具。<strong>在运行时，按下 Insert 键即可将当前日期作为文本字符插入。</strong> 我们为不同的日期格式提供了多个可执行文件 (exe)，但基本操作完全相同，仅输入的日期格式有所不同。右键单击系统托盘中的图标即可打开菜单，并进行以下操作：</p>
-  <ul>
-    <li><strong>登录时自启 (Start on user login):</strong> 控制登录时自动运行。
-      <ul>
-        <li>点击启用后，将在<strong>当前登录用户</strong>的启动文件夹（<code>%AppData%\Microsoft\Windows\Start Menu\Programs\Startup</code>）中创建快捷方式，菜单将显示打勾状态。</li>
-        <li>再次点击可从文件夹中删除该快捷方式并取消打勾。</li>
-      </ul>
-    </li>
-    <li><strong>退出 (Exit):</strong> 退出本软件并恢复标准 Insert 键功能。</li>
-    <li><strong>不使用注册表:</strong> 无论是保存设置还是注册启动项，均不使用系统注册表。</li>
-    <li><strong>无网络通信:</strong> 本软件不会进行任何外部网络通信，也不收集个人信息。</li>
-    <li><strong>非系统服务:</strong> 本软件不会注册为“Windows 服务”，仅作为标准用户程序运行。</li>
-    <li><strong>管理员权限:</strong> 若要在管理员权限应用中输入，本软件也需“以管理员身份运行”（根据 Windows 系统规范）。</li>
-  </ul>
+        <h2>2. ライセンスと「1PC」の定義</h2>
+        <ul>
+          <li><strong>1PCの定義:</strong> 物理的なコンピュータ1台を指します。同一ハード上のマルチブートや複数ユーザーでの利用に追加ライセンスは不要です。</li>
+          <li><strong>アップデート:</strong> 同一PCでのバージョンアップデート時も、ライセンスは継続して有効です。</li>
+          <li><strong>禁止事項:</strong> 逆コンパイル、解析、改変、および無許可の再配布を禁じます。</li>
+        </ul>
 
-  <h2>2. 授权定义与更新</h2>
-  <ul>
-    <li><strong>1 PC 定义:</strong> 指一台物理计算机。同一硬件上的多系统环境无需额外授权。</li>
-    <li><strong>版本更新:</strong> 在同一台 PC 上更新版本后，授权继续有效。</li>
-    <li><strong>禁止事项:</strong> 禁止进行反向工程、反编译、修改或未经授权的再发布。</li>
-  </ul>
+        <h2>3. 損害賠償の上限</h2>
+        <div class="important-box">法律が許容する最大範囲において、作者の賠償責任はユーザーが実際に支払った対価（最大$39 USD）を絶対的な上限とします。逸失利益等の間接損害は一切免責されます。</div>
 
-  <h2>3. 责任限制</h2>
-  <p class="important">在法律允许的最大范围内，作者的全部赔偿责任最高不超过用户支付的金额（上限 $39 USD）。</p>
+        <h2>4. 返金・キャンセルおよび払戻手数料（重要）</h2>
+        <div class="important-box">デジタルコンテンツの性質上、および無料試用期間を提供しているため、購入確定後はお客様都合による返金・キャンセルには一切応じられません。</div>
+        <p>万一、作者が例外的に返金に合意する場合であっても、<strong>決済代行会社（Stripe等）の返金不可な決済手数料、および返金処理に伴う事務手数料を差し引いた金額</strong>を払い戻すものとします。決済にかかる諸費用はユーザーの負担となります。</p>
 
-  <h2>4. 退款政策与手续费</h2>
-  <p class="important">鉴于数字软件的特殊性并已提供免费试用期，产品一经售出，概不接受任何退款。</p>
-  <p>如果作者破例同意退款，<strong>退款金额将扣除支付平台（如 Stripe）收取的不可退还的手续费及相关行政费用。</strong>所有交易费用由用户承担。</p>
+        <h2>5. アンインストール方法</h2>
+        <p>本ソフトウェアをアンインストールする場合は、以下の手順で行ってください。</p>
+        <ol>
+          <li>メニューの「Start on user login」をクリックしてチェックを外し、スタートアップ登録を解除します。</li>
+          <li>本ソフトウェアを終了（Exit）します。</li>
+          <li>実行ファイル（exeファイル）を削除してください。</li>
+        </ol>
 
-  <h2>5. 卸载方法</h2>
-  <p>如需卸载本软件，请按照以下步骤操作：</p>
-  <ol>
-    <li>在菜单中关闭“Start on user login”（以删除启动项快捷方式）。</li>
-    <li>退出软件（Exit）。</li>
-    <li>手动删除 <code>InsertDate.exe</code> 执行文件。</li>
-  </ol>
+        <div class="law-box">
+          <h3>特定商取引法に基づく表記</h3>
+          <p><strong>販売者:</strong> Masao Hara / <strong>連絡先:</strong> <span class="email-protect" data-user="info" data-domain="insertdate.com"></span> / <strong>価格:</strong> $39 USD / <strong>管轄:</strong> 日本法・作者居住地裁判所</p>
+        </div>
+      </div>
+    </div>
+  </main>
 </section>
 
-<section id="zh-hant" lang="zh-Hant">
-  <h1>法律聲明 / 服務條款</h1>
-  <p>最後更新：2026-02-13 (ver 1.0)</p>
+<!-- Simplified Chinese -->
+<section data-lang="zh-hans" lang="zh-Hans">
+  <div class="page-header">
+    <div class="container">
+      <h1>法律声明 / 服务协议</h1>
+      <p class="updated">最后更新：2026-02-13 (ver 1.0)</p>
+    </div>
+  </div>
+  <main>
+    <div class="container">
+      <div class="content-card">
+        <h2>1. 运行规格与操作方法</h2>
+        <p>InsertDate 是一款常驻实用工具。<strong>在运行时，按下 Insert 键即可将当前日期作为文本字符插入。</strong> 我们为不同的日期格式提供了多个可执行文件 (exe)，但基本操作完全相同，仅输入的日期格式有所不同。右键单击系统托盘中的图标即可打开菜单，并进行以下操作：</p>
+        <ul>
+          <li><strong>登录时自启 (Start on user login):</strong> 控制登录时自动运行。
+            <ul>
+              <li>点击启用后，将在<strong>当前登录用户</strong>的启动文件夹（<code>%AppData%\Microsoft\Windows\Start Menu\Programs\Startup</code>）中创建快捷方式，菜单将显示打勾状态。</li>
+              <li>再次点击可从文件夹中删除该快捷方式并取消打勾。</li>
+            </ul>
+          </li>
+          <li><strong>退出 (Exit):</strong> 退出本软件并恢复标准 Insert 键功能。</li>
+          <li><strong>不使用注册表:</strong> 无论是保存设置还是注册启动项，均不使用系统注册表。</li>
+          <li><strong>无网络通信:</strong> 本软件不会进行任何外部网络通信，也不收集个人信息。</li>
+          <li><strong>非系统服务:</strong> 本软件不会注册为"Windows 服务"，仅作为标准用户程序运行。</li>
+          <li><strong>管理员权限:</strong> 若要在管理员权限应用中输入，本软件也需"以管理员身份运行"（根据 Windows 系统规范）。</li>
+        </ul>
 
-  <h2>1. 運作規格與操作方式</h2>
-  <p>InsertDate 是一款常駐實用工具。**在執行期間，按下 Insert 鍵即可將目前日期作為文字字元插入。** 針對不同的日期格式提供多個執行檔 (exe)，但基本運作完全相同，僅輸入的日期格式有所不同。右鍵按一下系統匣中的圖示即可開啟選單，進行以下操作：</p>
-  <ul>
-    <li><strong>登入時自啟 (Start on user login):</strong> 設定登入時自動執行。
-      <ul>
-        <li>點擊啟用後，會在<strong>當前登入使用者</strong>的啟動資料夾（<code>%AppData%\Microsoft\Windows\Start Menu\Programs\Startup</code>）中建立快捷方式，選單將顯示勾選狀態。</li>
-        <li>再次點擊即可從資料夾中刪除該快捷方式並取消勾選。</li>
-      </ul>
-    </li>
-    <li><strong>結束 (Exit):</strong> 結束本軟體並恢復標準 Insert 鍵功能。</li>
-    <li><strong>不使用登錄檔:</strong> 無論是儲存設定或註冊啟動項目，均完全不使用系統登錄檔。</li>
-    <li><strong>無網路通訊:</strong> 本軟體不會進行任何外部網路通訊，亦不收集個人資訊。</li>
-    <li><strong>非系統服務:</strong> 本軟體不會註冊為「Windows 服務」，僅作為標準使用者程式執行。</li>
-    <li><strong>管理員權限:</strong> 若要在管理員權限應用中輸入，本軟體也需「以管理員身分執行」（根據 Windows 系統規範）。</li>
-  </ul>
+        <h2>2. 授权定义与更新</h2>
+        <ul>
+          <li><strong>1 PC 定义:</strong> 指一台物理计算机。同一硬件上的多系统环境无需额外授权。</li>
+          <li><strong>版本更新:</strong> 在同一台 PC 上更新版本后，授权继续有效。</li>
+          <li><strong>禁止事项:</strong> 禁止进行反向工程、反编译、修改或未经授权的再发布。</li>
+        </ul>
 
-  <h2>2. 授權定義與更新</h2>
-  <ul>
-    <li><strong>1 PC 定義:</strong> 指一台實體電腦。同一硬體上的多系統環境無需額外授權。</li>
-    <li><strong>版本更新:</strong> 在同一台 PC 上更新版本後，授權繼續有效。</li>
-    <li><strong>禁止事項:</strong> 禁止進行反向工程、反編譯、修改或未經授權的再發布。</li>
-  </ul>
+        <h2>3. 责任限制</h2>
+        <div class="important-box">在法律允许的最大范围内，作者的全部赔偿责任最高不超过用户支付的金额（上限 $39 USD）。</div>
 
-  <h2>3. 責任限制</h2>
-  <p class="important">在法律允許的最大範圍內，作者的全部賠償責任最高不超過使用者支付的金額（上限 $39 USD）。</p>
+        <h2>4. 退款政策与手续费</h2>
+        <div class="important-box">鉴于数字软件的特殊性并已提供免费试用期，产品一经售出，概不接受任何退款。</div>
+        <p>如果作者破例同意退款，<strong>退款金额将扣除支付平台（如 Stripe）收取的不可退还的手续费及相关行政费用。</strong>所有交易费用由用户承担。</p>
 
-  <h2>4. 退款政策與手續費</h2>
-  <p class="important">由於數位產品的特性且已提供免費試用期，本產品售出後概不接受任何形式的退款。</p>
-  <p>若作者例外同意退款，<strong>退款金額將扣除支付平台（如 Stripe）收取的不可退還之手續費及相關行政費用。</strong>所有交易衍生費用均由使用者負擔。</p>
+        <h2>5. 卸载方法</h2>
+        <p>如需卸载本软件，请按照以下步骤操作：</p>
+        <ol>
+          <li>在菜单中关闭"Start on user login"（以删除启动项快捷方式）。</li>
+          <li>退出软件（Exit）。</li>
+          <li>手动删除 <code>InsertDate.exe</code> 执行文件。</li>
+        </ol>
 
-  <h2>5. 解除安裝方法</h2>
-  <p>如需解除安裝本軟體，請按照以下步驟操作：</p>
-  <ol>
-    <li>在選單中取消勾選「Start on user login」（以移除啟動項快捷方式）。</li>
-    <li>結束程式（Exit）。</li>
-    <li>手動刪除 <code>InsertDate.exe</code> 執行檔。</li>
-  </ol>
+        <div class="law-box">
+          <h3>适用法律</h3>
+          <p>适用日本法律。管辖法院：日本作者住所地法院。</p>
+        </div>
+      </div>
+    </div>
+  </main>
+</section>
+
+<!-- Traditional Chinese -->
+<section data-lang="zh-hant" lang="zh-Hant">
+  <div class="page-header">
+    <div class="container">
+      <h1>法律聲明 / 服務條款</h1>
+      <p class="updated">最後更新：2026-02-13 (ver 1.0)</p>
+    </div>
+  </div>
+  <main>
+    <div class="container">
+      <div class="content-card">
+        <h2>1. 運作規格與操作方式</h2>
+        <p>InsertDate 是一款常駐實用工具。<strong>在執行期間，按下 Insert 鍵即可將目前日期作為文字字元插入。</strong> 針對不同的日期格式提供多個執行檔 (exe)，但基本運作完全相同，僅輸入的日期格式有所不同。右鍵按一下系統匣中的圖示即可開啟選單，進行以下操作：</p>
+        <ul>
+          <li><strong>登入時自啟 (Start on user login):</strong> 設定登入時自動執行。
+            <ul>
+              <li>點擊啟用後，會在<strong>當前登入使用者</strong>的啟動資料夾（<code>%AppData%\Microsoft\Windows\Start Menu\Programs\Startup</code>）中建立快捷方式，選單將顯示勾選狀態。</li>
+              <li>再次點擊即可從資料夾中刪除該快捷方式並取消勾選。</li>
+            </ul>
+          </li>
+          <li><strong>結束 (Exit):</strong> 結束本軟體並恢復標準 Insert 鍵功能。</li>
+          <li><strong>不使用登錄檔:</strong> 無論是儲存設定或註冊啟動項目，均完全不使用系統登錄檔。</li>
+          <li><strong>無網路通訊:</strong> 本軟體不會進行任何外部網路通訊，亦不收集個人資訊。</li>
+          <li><strong>非系統服務:</strong> 本軟體不會註冊為「Windows 服務」，僅作為標準使用者程式執行。</li>
+          <li><strong>管理員權限:</strong> 若要在管理員權限應用中輸入，本軟體也需「以管理員身分執行」（根據 Windows 系統規範）。</li>
+        </ul>
+
+        <h2>2. 授權定義與更新</h2>
+        <ul>
+          <li><strong>1 PC 定義:</strong> 指一台實體電腦。同一硬體上的多系統環境無需額外授權。</li>
+          <li><strong>版本更新:</strong> 在同一台 PC 上更新版本後，授權繼續有效。</li>
+          <li><strong>禁止事項:</strong> 禁止進行反向工程、反編譯、修改或未經授權的再發布。</li>
+        </ul>
+
+        <h2>3. 責任限制</h2>
+        <div class="important-box">在法律允許的最大範圍內，作者的全部賠償責任最高不超過使用者支付的金額（上限 $39 USD）。</div>
+
+        <h2>4. 退款政策與手續費</h2>
+        <div class="important-box">由於數位產品的特性且已提供免費試用期，本產品售出後概不接受任何形式的退款。</div>
+        <p>若作者例外同意退款，<strong>退款金額將扣除支付平台（如 Stripe）收取的不可退還之手續費及相關行政費用。</strong>所有交易衍生費用均由使用者負擔。</p>
+
+        <h2>5. 解除安裝方法</h2>
+        <p>如需解除安裝本軟體，請按照以下步驟操作：</p>
+        <ol>
+          <li>在選單中取消勾選「Start on user login」（以移除啟動項快捷方式）。</li>
+          <li>結束程式（Exit）。</li>
+          <li>手動刪除 <code>InsertDate.exe</code> 執行檔。</li>
+        </ol>
+
+        <div class="law-box">
+          <h3>適用法律</h3>
+          <p>適用日本法律。管轄法院：日本作者住所地法院。</p>
+        </div>
+      </div>
+    </div>
+  </main>
 </section>
 
 <footer>
-  <small><a href="/">← Back to Home</a></small><br>
-  <small>© InsertDate. All rights reserved.</small>
+  <div class="container">
+    <div class="footer-inner">
+      <a href="/">← Back to Home</a>
+      <span>© 2026 InsertDate. All rights reserved.</span>
+    </div>
+  </div>
 </footer>
-
-</main>
 
 <script>
 function setLang(lang) {
-  document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
-  const target = document.getElementById(lang);
-  if (target) target.classList.add('active');
-  
-  const activeBtn = document.querySelector(`.lang-switch button[onclick="setLang('${lang}')"]`);
-  document.querySelectorAll('.lang-switch button').forEach(btn => { 
-    btn.classList.remove('primary'); 
-    btn.classList.add('secondary','outline'); 
-  });
-  if (activeBtn) { 
-    activeBtn.classList.remove('secondary','outline'); 
-    activeBtn.classList.add('primary'); 
-  }
-  
+  document.querySelectorAll('section[data-lang]').forEach(s => s.classList.remove('active'));
+  const section = document.querySelector(`section[data-lang="${lang}"]`);
+  if (section) section.classList.add('active');
+
+  document.querySelectorAll('.lang-switcher button').forEach(btn => btn.classList.remove('active'));
+  const activeBtn = document.querySelector(`button[data-lang="${lang}"]`);
+  if (activeBtn) activeBtn.classList.add('active');
+
   const map = { en:'en', ja:'ja', 'zh-hans':'zh-Hans', 'zh-hant':'zh-Hant' };
   document.documentElement.lang = map[lang] || 'en';
 }
@@ -269,14 +502,26 @@ function detectLang() {
   }
   const langs = navigator.languages || [navigator.language];
   for (const l of langs) {
-    if (l.startsWith('ja')) return 'ja';
-    if (l.startsWith('zh-TW') || l.startsWith('zh-HK')) return 'zh-hant';
-    if (l.startsWith('zh')) return 'zh-hans';
-    if (l.startsWith('en')) return 'en';
+    const low = l.toLowerCase();
+    if (low.startsWith('ja')) return 'ja';
+    if (low.includes('tw') || low.includes('hk') || low.includes('hant')) return 'zh-hant';
+    if (low.startsWith('zh')) return 'zh-hans';
+    if (low.startsWith('en')) return 'en';
   }
   return 'en';
 }
+
 setLang(detectLang());
+
+document.querySelectorAll('.email-protect').forEach(el => {
+  const u = el.getAttribute('data-user');
+  const d = el.getAttribute('data-domain');
+  const addr = u + '@' + d;
+  const a = document.createElement('a');
+  a.href = 'mailto:' + addr;
+  a.textContent = addr;
+  el.appendChild(a);
+});
 </script>
 </body>
 </html>
