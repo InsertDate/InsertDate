@@ -92,8 +92,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="dns-prefetch" href="https://fonts.googleapis.com">
   
+<<<<<<< HEAD
   <!-- Fonts - Optimized weights only -->
   <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap" rel="stylesheet">
+=======
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+>>>>>>> 92aa6bb67222dd6a808792d4798df0fb33f65753
   
   <!-- Favicon -->
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -101,6 +106,7 @@
 
   <style>
     :root {
+<<<<<<< HEAD
       /* Microsoft-inspired color palette */
       --primary-blue: #0078D4;
       --primary-blue-dark: #005A9E;
@@ -119,6 +125,21 @@
       --text-primary: #323130;
       --text-secondary: #605E5C;
       --border-color: #EDEBE9;
+=======
+      --navy: #1a2332;
+      --navy-light: #2d3748;
+      --blue: #2563eb;
+      --blue-dark: #1e40af;
+      --green: #059669;
+      --orange: #ea580c;
+      --gray-50: #f8fafc;
+      --gray-100: #f1f5f9;
+      --gray-200: #e2e8f0;
+      --gray-300: #cbd5e1;
+      --gray-600: #475569;
+      --gray-700: #334155;
+      --gray-900: #0f172a;
+>>>>>>> 92aa6bb67222dd6a808792d4798df0fb33f65753
     }
     
     * {
@@ -166,8 +187,12 @@
       position: sticky;
       top: 0;
       z-index: 100;
+<<<<<<< HEAD
       box-shadow: 0 0.3px 0.9px rgba(0, 0, 0, 0.03),
                   0 1.6px 3.6px rgba(0, 0, 0, 0.04);
+=======
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+>>>>>>> 92aa6bb67222dd6a808792d4798df0fb33f65753
     }
 
     nav.top-nav .nav-content {
@@ -227,10 +252,31 @@
 
     /* Hero Section */
     .hero {
+<<<<<<< HEAD
       background: var(--neutral-gray-10);
       color: var(--text-primary);
       padding: 80px 0;
       border-bottom: 1px solid var(--border-color);
+=======
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+      color: white;
+      padding: 80px 0 60px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+        repeating-linear-gradient(90deg, rgba(255,255,255,0.03) 0px, transparent 1px, transparent 60px, rgba(255,255,255,0.03) 61px),
+        repeating-linear-gradient(0deg, rgba(255,255,255,0.03) 0px, transparent 1px, transparent 60px, rgba(255,255,255,0.03) 61px);
+      opacity: 0.5;
+>>>>>>> 92aa6bb67222dd6a808792d4798df0fb33f65753
     }
 
     .hero-content {
@@ -249,8 +295,13 @@
     }
 
     .hero .subtitle {
+<<<<<<< HEAD
       font-size: 20px;
       color: var(--text-secondary);
+=======
+      font-size: 22px;
+      color: rgba(255,255,255,0.9);
+>>>>>>> 92aa6bb67222dd6a808792d4798df0fb33f65753
       margin-bottom: 40px;
       font-weight: 400;
       line-height: 1.5;
@@ -268,7 +319,11 @@
       padding: 12px 32px;
       font-size: 15px;
       font-weight: 600;
+<<<<<<< HEAD
       border-radius: 2px;
+=======
+      border-radius: 8px;
+>>>>>>> 92aa6bb67222dd6a808792d4798df0fb33f65753
       text-decoration: none;
       transition: all 0.1s ease;
       border: 1px solid transparent;
@@ -282,6 +337,7 @@
     }
 
     .btn-primary {
+<<<<<<< HEAD
       background: var(--primary-blue);
       color: var(--neutral-white);
       border-color: var(--primary-blue);
@@ -300,6 +356,28 @@
 
     .btn-secondary:hover {
       background: var(--neutral-gray-20);
+=======
+      background: var(--blue);
+      color: white;
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    }
+
+    .btn-primary:hover {
+      background: var(--blue-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4);
+    }
+
+    .btn-secondary {
+      background: white;
+      color: var(--navy);
+      border: 2px solid white;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.9);
+      transform: translateY(-2px);
+>>>>>>> 92aa6bb67222dd6a808792d4798df0fb33f65753
     }
 
     /* Problem Section */
@@ -315,12 +393,21 @@
 
     .section-tag {
       display: inline-block;
+<<<<<<< HEAD
       font-size: 12px;
       font-weight: 600;
       color: var(--primary-blue);
       background: var(--neutral-gray-20);
       padding: 6px 16px;
       border-radius: 2px;
+=======
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--blue);
+      background: rgba(37, 99, 235, 0.1);
+      padding: 6px 16px;
+      border-radius: 20px;
+>>>>>>> 92aa6bb67222dd6a808792d4798df0fb33f65753
       margin-bottom: 16px;
       letter-spacing: 0.05em;
       text-transform: uppercase;
@@ -349,16 +436,26 @@
     }
 
     .problem-card {
+<<<<<<< HEAD
       background: var(--neutral-white);
       border: 1px solid var(--border-color);
       border-radius: 2px;
+=======
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: 12px;
+>>>>>>> 92aa6bb67222dd6a808792d4798df0fb33f65753
       padding: 32px;
       box-shadow: 0 0.3px 0.9px rgba(0, 0, 0, 0.03),
                   0 1.6px 3.6px rgba(0, 0, 0, 0.04);
     }
 
     .problem-icon {
+<<<<<<< HEAD
       font-size: 32px;
+=======
+      font-size: 40px;
+>>>>>>> 92aa6bb67222dd6a808792d4798df0fb33f65753
       margin-bottom: 16px;
     }
 
@@ -384,6 +481,7 @@
     }
 
     .demo-container {
+<<<<<<< HEAD
       background: var(--neutral-white);
       border: 1px solid var(--border-color);
       border-radius: 2px;
@@ -391,12 +489,25 @@
       margin: 48px 0;
       box-shadow: 0 0.3px 0.9px rgba(0, 0, 0, 0.03),
                   0 1.6px 3.6px rgba(0, 0, 0, 0.04);
+=======
+      background: white;
+      border: 1px solid var(--gray-200);
+      border-radius: 16px;
+      padding: 48px;
+      margin: 48px 0;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+>>>>>>> 92aa6bb67222dd6a808792d4798df0fb33f65753
       text-align: center;
     }
 
     .demo-container img {
+<<<<<<< HEAD
       border-radius: 2px;
       border: 1px solid var(--border-color);
+=======
+      border-radius: 8px;
+      border: 1px solid var(--gray-200);
+>>>>>>> 92aa6bb67222dd6a808792d4798df0fb33f65753
       max-width: 100%;
       height: auto;
     }
@@ -420,6 +531,7 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
+<<<<<<< HEAD
       width: 48px;
       height: 48px;
       background: var(--primary-blue);
@@ -427,6 +539,15 @@
       border-radius: 50%;
       font-size: 20px;
       font-weight: 600;
+=======
+      width: 56px;
+      height: 56px;
+      background: var(--blue);
+      color: white;
+      border-radius: 50%;
+      font-size: 24px;
+      font-weight: 700;
+>>>>>>> 92aa6bb67222dd6a808792d4798df0fb33f65753
       margin-bottom: 20px;
     }
 
@@ -457,6 +578,7 @@
     }
 
     .benefit-card {
+<<<<<<< HEAD
       border: 1px solid var(--border-color);
       border-radius: 2px;
       padding: 32px;
@@ -480,6 +602,30 @@
       justify-content: center;
       font-size: 20px;
       margin-bottom: 16px;
+=======
+      border: 2px solid var(--gray-200);
+      border-radius: 12px;
+      padding: 32px;
+      transition: all 0.3s;
+    }
+
+    .benefit-card:hover {
+      border-color: var(--blue);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(37, 99, 235, 0.12);
+    }
+
+    .benefit-icon {
+      width: 48px;
+      height: 48px;
+      background: rgba(37, 99, 235, 0.1);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      margin-bottom: 20px;
+>>>>>>> 92aa6bb67222dd6a808792d4798df0fb33f65753
     }
 
     .benefit-card h3 {
@@ -503,9 +649,15 @@
     }
 
     .specs-table {
+<<<<<<< HEAD
       background: var(--neutral-white);
       border: 1px solid var(--border-color);
       border-radius: 2px;
+=======
+      background: white;
+      border: 1px solid var(--gray-200);
+      border-radius: 12px;
+>>>>>>> 92aa6bb67222dd6a808792d4798df0fb33f65753
       overflow: hidden;
       margin-top: 48px;
       box-shadow: 0 0.3px 0.9px rgba(0, 0, 0, 0.03),
@@ -572,8 +724,13 @@
 
     .format-example {
       display: block;
+<<<<<<< HEAD
       font-size: 12px;
       color: var(--semantic-success);
+=======
+      font-size: 13px;
+      color: var(--green);
+>>>>>>> 92aa6bb67222dd6a808792d4798df0fb33f65753
       margin-top: 4px;
       font-family: 'Consolas', 'Courier New', monospace;
     }
@@ -593,11 +750,19 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
+<<<<<<< HEAD
       padding: 6px 12px;
       background: var(--neutral-white);
       color: var(--semantic-success);
       border: 1px solid var(--semantic-success);
       border-radius: 2px;
+=======
+      padding: 8px 16px;
+      background: #ecfdf5;
+      color: var(--green);
+      border: 2px solid var(--green);
+      border-radius: 6px;
+>>>>>>> 92aa6bb67222dd6a808792d4798df0fb33f65753
       text-decoration: none;
       font-size: 12px;
       font-weight: 600;
@@ -605,6 +770,7 @@
     }
 
     .verify-btn:hover {
+<<<<<<< HEAD
       background: var(--semantic-success);
       color: var(--neutral-white);
     }
@@ -626,6 +792,24 @@
 
     .security-note strong {
       color: var(--semantic-warning);
+=======
+      background: var(--green);
+      color: white;
+    }
+
+    .security-note {
+      background: #fffbeb;
+      border-left: 4px solid var(--orange);
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin-top: 32px;
+      font-size: 15px;
+      color: var(--gray-700);
+    }
+
+    .security-note strong {
+      color: var(--orange);
+>>>>>>> 92aa6bb67222dd6a808792d4798df0fb33f65753
       font-weight: 600;
     }
 
@@ -644,6 +828,7 @@
     }
 
     .pricing-card {
+<<<<<<< HEAD
       background: var(--neutral-white);
       border: 1px solid var(--border-color);
       border-radius: 2px;
@@ -657,15 +842,41 @@
       border: 2px solid var(--primary-blue);
       box-shadow: 0 3.2px 7.2px rgba(0, 120, 212, 0.12),
                   0 0.6px 1.8px rgba(0, 120, 212, 0.08);
+=======
+      background: white;
+      border: 2px solid var(--gray-200);
+      border-radius: 16px;
+      padding: 40px;
+      text-align: center;
+      transition: all 0.3s;
+    }
+
+    .pricing-card.featured {
+      border-color: var(--blue);
+      box-shadow: 0 8px 32px rgba(37, 99, 235, 0.15);
+      transform: scale(1.05);
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+>>>>>>> 92aa6bb67222dd6a808792d4798df0fb33f65753
     }
 
     .pricing-badge {
       display: inline-block;
       padding: 6px 16px;
+<<<<<<< HEAD
       background: var(--neutral-gray-20);
       color: var(--primary-blue);
       border-radius: 2px;
       font-size: 12px;
+=======
+      background: rgba(37, 99, 235, 0.1);
+      color: var(--blue);
+      border-radius: 20px;
+      font-size: 13px;
+>>>>>>> 92aa6bb67222dd6a808792d4798df0fb33f65753
       font-weight: 600;
       margin-bottom: 16px;
       text-transform: uppercase;
@@ -717,16 +928,27 @@
 
     .pricing-features li::before {
       content: "✓";
+<<<<<<< HEAD
       color: var(--semantic-success);
       font-weight: 600;
       font-size: 16px;
+=======
+      color: var(--green);
+      font-weight: 700;
+      font-size: 18px;
+>>>>>>> 92aa6bb67222dd6a808792d4798df0fb33f65753
       flex-shrink: 0;
     }
 
     /* Footer */
     footer {
+<<<<<<< HEAD
       background: var(--neutral-gray-20);
       color: var(--text-secondary);
+=======
+      background: var(--navy);
+      color: rgba(255,255,255,0.8);
+>>>>>>> 92aa6bb67222dd6a808792d4798df0fb33f65753
       padding: 60px 0 32px;
       border-top: 1px solid var(--border-color);
     }
@@ -754,7 +976,11 @@
     }
 
     .footer-links a {
+<<<<<<< HEAD
       color: var(--text-secondary);
+=======
+      color: rgba(255,255,255,0.8);
+>>>>>>> 92aa6bb67222dd6a808792d4798df0fb33f65753
       text-decoration: none;
       transition: color 0.1s ease;
       font-size: 14px;
@@ -774,8 +1000,13 @@
       padding-top: 32px;
       border-top: 1px solid var(--border-color);
       text-align: center;
+<<<<<<< HEAD
       font-size: 13px;
       color: var(--text-secondary);
+=======
+      font-size: 14px;
+      color: rgba(255,255,255,0.6);
+>>>>>>> 92aa6bb67222dd6a808792d4798df0fb33f65753
     }
 
     /* Language-specific sections */
@@ -972,6 +1203,7 @@
       <div class="problem-grid">
         <div class="problem-card">
           <div class="problem-icon">📁</div>
+<<<<<<< HEAD
           <h3>File Management Complexity</h3>
           <p>Files named "2026-02-14", "02.14.2026", "14/02/2026" cannot be sorted systematically, reducing operational efficiency.</p>
         </div>
@@ -984,6 +1216,20 @@
           <div class="problem-icon">⏱️</div>
           <h3>Productivity Loss</h3>
           <p>Staff repeatedly verify formatting standards, consuming valuable time that should be allocated to core business functions.</p>
+=======
+          <h3>File Naming Nightmare</h3>
+          <p>Reports named "2026-02-14", "02.14.2026", "14/02/2026"—impossible to sort, impossible to find.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">⚠️</div>
+          <h3>Data Entry Errors</h3>
+          <p>Is "02/14/2026" February 14th or the 2nd of Nonexistent Month? Ambiguous dates lead to costly mistakes in invoices and records.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">⏱️</div>
+          <h3>Wasted Time</h3>
+          <p>Employees constantly checking "how should I format this date?" or manually fixing inconsistent entries.</p>
+>>>>>>> 92aa6bb67222dd6a808792d4798df0fb33f65753
         </div>
       </div>
     </div>
@@ -1001,10 +1247,16 @@
         <img src="/animation.gif" width="249" height="211" alt="InsertDate demonstration showing instant date formatting with Insert key" loading="eager" fetchpriority="high">
         <p style="margin-top: 24px; color: var(--text-secondary);">Press Insert key → Standardized date format applied instantly</p>
       </div>
+      
+      <div class="demo-container">
+        <img src="/animation.gif" width="249" height="211" alt="InsertDate Demo - Press Insert key for instant date formatting" loading="eager" fetchpriority="high">
+        <p style="margin-top: 24px; color: var(--gray-600);">Press Insert key → Perfect date format, instantly</p>
+      </div>
 
       <div class="how-it-works">
         <div class="step">
           <div class="step-number">1</div>
+<<<<<<< HEAD
           <h3>Select Standard</h3>
           <p>Choose organizational format: yyyyMMdd, yyyy/MM/dd, yyyy.MM.dd, or yyyy年MM月dd日</p>
         </div>
@@ -1017,6 +1269,20 @@
           <div class="step-number">3</div>
           <h3>Execute Function</h3>
           <p>Press Insert key in any application—documents, email, file naming—for consistent formatting.</p>
+=======
+          <h3>Choose Your Format</h3>
+          <p>Select from standard formats: yyyyMMdd, yyyy/MM/dd, yyyy.MM.dd, or yyyy年MM月dd日</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>Run Once</h3>
+          <p>Extract and run the .exe file. Portable software—no installation required. Works silently in the background.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>Press Insert</h3>
+          <p>Anywhere you're typing—documents, emails, file names—press Insert for perfect formatting.</p>
+>>>>>>> 92aa6bb67222dd6a808792d4798df0fb33f65753
         </div>
       </div>
     </div>
@@ -1031,6 +1297,7 @@
       <div class="benefits-grid">
         <div class="benefit-card">
           <div class="benefit-icon">✅</div>
+<<<<<<< HEAD
           <h3>Immediate Compliance</h3>
           <p>Organization-wide adherence to date standards from deployment. No training infrastructure required.</p>
         </div>
@@ -1043,6 +1310,20 @@
           <div class="benefit-icon">💰</div>
           <h3>Risk Mitigation</h3>
           <p>Eliminates ambiguous date entries in financial documents, contracts, and regulatory filings.</p>
+=======
+          <h3>Instant Compliance</h3>
+          <p>Everyone follows the same standard from day one. No training required, no policy documents to read.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🔍</div>
+          <h3>Easy File Management</h3>
+          <p>Files sort correctly by date automatically. Find what you need in seconds, not minutes.</p>
+        </div>
+        <div class="benefit-card">
+          <div-icon">💰</div>
+          <h3>Eliminate Errors</h3>
+          <p>No more ambiguous dates causing confusion in invoices, contracts, or reports.</p>
+>>>>>>> 92aa6bb67222dd6a808792d4798df0fb33f65753
         </div>
         <div class="benefit-card">
           <div class="benefit-icon">⚡</div>
@@ -1051,6 +1332,7 @@
         </div>
         <div class="benefit-card">
           <div class="benefit-icon">🌐</div>
+<<<<<<< HEAD
           <h3>Universal Compatibility</h3>
           <p>Functions across all Windows applications—Microsoft Office, web browsers, file explorers, enterprise software.</p>
         </div>
@@ -1058,10 +1340,21 @@
           <div class="benefit-icon">🔒</div>
           <h3>Security Verified</h3>
           <p>SSL.com code signing certificate. VirusTotal verification. All data remains on local systems.</p>
+=======
+          <h3>Works Everywhere</h3>
+          <p>Functions in any Windows application—Word, Excel, Outlook, file explorer, web browsers.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🔒</div>
+          <h3>Secure & Verified</h3>
+          <p>Code-signed by SSL.com, verified by VirusTotal. Your data stays on your computer.</p>
+>>>>>>> 92aa6bb67222dd6a808792d4798df0fb33f65753
         </div>
       </div>
     </div>
   </div>
+
+
 
   <div class="specs-section" id="download">
     <div class="container">
@@ -1152,6 +1445,7 @@
       <div class="problem-grid">
         <div class="problem-card">
           <div class="problem-icon">📁</div>
+<<<<<<< HEAD
           <h3>ファイル管理の複雑化</h3>
           <p>「2026-02-14」「2026.02.14」「2026/02/14」—形式が統一されていないため、体系的なソートができず、業務効率が低下します。</p>
         </div>
@@ -1164,6 +1458,20 @@
           <div class="problem-icon">⏱️</div>
           <h3>生産性の損失</h3>
           <p>スタッフが繰り返し書式基準を確認し、本来の業務に割くべき貴重な時間を消費しています。</p>
+=======
+          <h3>ファイル管理の混乱</h3>
+          <p>「2026-02-14」「2026.02.14」「2026/02/14」—形式がバラバラで、ソートも検索も困難に。</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">⚠️</div>
+          <h3>データ入力ミス</h3>
+          <p>「02/14/2026」は2月14日？それとも存在しない月？曖昧な表記が請求書や記録に重大なミスを引き起こします。</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">⏱️</div>
+          <h3>時間の浪費</h3>
+          <p>「どの形式で入力すればいいの？」社員が迷い、修正に時間を取られる日々。</p>
+>>>>>>> 92aa6bb67222dd6a808792d4798df0fb33f65753
         </div>
       </div>
     </div>
@@ -1181,10 +1489,16 @@
         <img src="/animation.gif" width="249" height="211" alt="Insertキーによる即座の日付フォーマット適用を示すInsertDateデモンストレーション" loading="eager" fetchpriority="high">
         <p style="margin-top: 24px; color: var(--text-secondary);">Insertキーを押す → 標準化された日付形式が即座に適用</p>
       </div>
+      
+      <div class="demo-container">
+        <img src="/animation.gif" width="249" height="211" alt="InsertDate デモ - Insertキーを押すだけで瞬時に日付フォーマット" loading="eager" fetchpriority="high">
+        <p style="margin-top: 24px; color: var(--gray-600);">Insertキーを押す → 完璧な日付形式が即座に入力</p>
+      </div>
 
       <div class="how-it-works">
         <div class="step">
           <div class="step-number">1</div>
+<<<<<<< HEAD
           <h3>標準を選択</h3>
           <p>組織の形式を選択：yyyyMMdd、yyyy/MM/dd、yyyy.MM.dd、yyyy年MM月dd日</p>
         </div>
@@ -1197,6 +1511,20 @@
           <div class="step-number">3</div>
           <h3>機能を実行</h3>
           <p>任意のアプリケーション—ドキュメント、メール、ファイル名—でInsertキーを押すだけで一貫した形式に。</p>
+=======
+          <h3>形式を選択</h3>
+          <p>yyyyMMdd、yyyy/MM/dd、yyyy.MM.dd、yyyy年MM月dd日から選択</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>一度起動</h3>
+          <p>解凍して.exeファイルを実行。ポータブル型ソフトウェア—インストール不要。バックグラウンドで静かに動作。</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>Insertキーを押す</h3>
+          <p>文書、メール、ファイル名—どこでもInsertキーで完璧な形式に。</p>
+>>>>>>> 92aa6bb67222dd6a808792d4798df0fb33f65753
         </div>
       </div>
     </div>
@@ -1211,6 +1539,7 @@
       <div class="benefits-grid">
         <div class="benefit-card">
           <div class="benefit-icon">✅</div>
+<<<<<<< HEAD
           <h3>即座のコンプライアンス</h3>
           <p>展開から組織全体で日付標準への準拠。トレーニングインフラは不要です。</p>
         </div>
@@ -1223,6 +1552,20 @@
           <div class="benefit-icon">💰</div>
           <h3>リスクの軽減</h3>
           <p>財務書類、契約書、規制文書での曖昧な日付入力を排除します。</p>
+=======
+          <h3>即時コンプライアンス</h3>
+          <p>初日から全員が同じ標準に従います。教育不要、マニュアル不要。</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🔍</div>
+          <h3>簡単なファイル管理</h3>
+          <p>ファイルが日付順に自動でソート。数分から数秒で必要なものを発見。</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">💰</div>
+          <h3>エラーの撲滅</h3>
+          <p>請求書、契約書、報告書で曖昧な日付による混乱が消滅。</p>
+>>>>>>> 92aa6bb67222dd6a808792d4798df0fb33f65753
         </div>
         <div class="benefit-card">
           <div class="benefit-icon">⚡</div>
@@ -1231,6 +1574,7 @@
         </div>
         <div class="benefit-card">
           <div class="benefit-icon">🌐</div>
+<<<<<<< HEAD
           <h3>汎用的な互換性</h3>
           <p>すべてのWindowsアプリケーションで機能—Microsoft Office、Webブラウザ、ファイルエクスプローラー、エンタープライズソフトウェア。</p>
         </div>
@@ -1238,10 +1582,21 @@
           <div class="benefit-icon">🔒</div>
           <h3>セキュリティ検証済</h3>
           <p>SSL.comコード署名証明書。VirusTotal検証。すべてのデータはローカルシステムに保持されます。</p>
+=======
+          <h3>どこでも動作</h3>
+          <p>Word、Excel、Outlook、エクスプローラー、Webブラウザ—あらゆるアプリで機能。</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🔒</div>
+          <h3>セキュア・検証済</h3>
+          <p>SSL.comによるコード署名、VirusTotalで検証済。データはPC内に留まります。</p>
+>>>>>>> 92aa6bb67222dd6a808792d4798df0fb33f65753
         </div>
       </div>
     </div>
   </div>
+
+
 
   <div class="specs-section" id="download">
     <div class="container">
@@ -1332,6 +1687,7 @@
       <div class="problem-grid">
         <div class="problem-card">
           <div class="problem-icon">📁</div>
+<<<<<<< HEAD
           <h3>文件管理复杂性</h3>
           <p>文件名为"2026-02-14"、"02.14.2026"、"14/02/2026"无法系统排序，降低运营效率。</p>
         </div>
@@ -1344,6 +1700,20 @@
           <div class="problem-icon">⏱️</div>
           <h3>生产力损失</h3>
           <p>员工反复验证格式标准，消耗本应分配给核心业务功能的宝贵时间。</p>
+=======
+          <h3>文件命名混乱</h3>
+          <p>报告名为"2026-02-14"、"02.14.2026"、"14/02/2026"——无法排序，无法查找。</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">⚠️</div>
+          <h3>数据录入错误</h3>
+          <p>"02/14/2026"是2月14日还是不存在的月份？模糊的日期导致发票和记录中的昂贵错误。</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">⏱️</div>
+          <h3>浪费时间</h3>
+          <p>员工不断询问"我应该如何格式化这个日期？"或手动修复不一致的条目。</p>
+>>>>>>> 92aa6bb67222dd6a808792d4798df0fb33f65753
         </div>
       </div>
     </div>
@@ -1361,10 +1731,16 @@
         <img src="/animation.gif" width="249" height="211" alt="InsertDate演示显示使用Insert键即时格式化日期" loading="eager" fetchpriority="high">
         <p style="margin-top: 24px; color: var(--text-secondary);">按Insert键 → 标准化日期格式立即应用</p>
       </div>
+      
+      <div class="demo-container">
+        <img src="/animation.gif" width="249" height="211" alt="InsertDate 演示 - 按Insert键即可即时格式化日期" loading="eager" fetchpriority="high">
+        <p style="margin-top: 24px; color: var(--gray-600);">按Insert键 → 完美的日期格式，即刻呈现</p>
+      </div>
 
       <div class="how-it-works">
         <div class="step">
           <div class="step-number">1</div>
+<<<<<<< HEAD
           <h3>选择标准</h3>
           <p>选择组织格式：yyyyMMdd、yyyy/MM/dd、yyyy.MM.dd或yyyy年MM月dd日</p>
         </div>
@@ -1377,6 +1753,20 @@
           <div class="step-number">3</div>
           <h3>执行功能</h3>
           <p>在任何应用程序中—文档、电子邮件、文件命名—按Insert键即可获得一致的格式。</p>
+=======
+          <h3>选择格式</h3>
+          <p>从标准格式中选择：yyyyMMdd、yyyy/MM/dd、yyyy.MM.dd或yyyy年MM月dd日</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>运行一次</h3>
+          <p>解压并运行.exe文件。便携式软件—无需安装。在后台静默工作。</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>按Insert键</h3>
+          <p>在任何地方输入时——文档、电子邮件、文件名——按Insert键即可完美格式化。</p>
+>>>>>>> 92aa6bb67222dd6a808792d4798df0fb33f65753
         </div>
       </div>
     </div>
@@ -1396,6 +1786,7 @@
         </div>
         <div class="benefit-card">
           <div class="benefit-icon">🔍</div>
+<<<<<<< HEAD
           <h3>增强文件系统</h3>
           <p>时间顺序排序功能默认正确运行。减少查找文档所需的时间。</p>
         </div>
@@ -1403,6 +1794,15 @@
           <div class="benefit-icon">💰</div>
           <h3>风险缓解</h3>
           <p>消除财务文档、合同和监管文件中的模糊日期条目。</p>
+=======
+          <h3>轻松文件管理</h3>
+          <p>文件按日期自动正确排序。在几秒钟内找到所需内容。</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">💰</div>
+          <h3>消除错误</h3>
+          <p>发票、合同或报告中不再有导致混乱的模糊日期。</p>
+>>>>>>> 92aa6bb67222dd6a808792d4798df0fb33f65753
         </div>
         <div class="benefit-card">
           <div class="benefit-icon">⚡</div>
@@ -1411,6 +1811,7 @@
         </div>
         <div class="benefit-card">
           <div class="benefit-icon">🌐</div>
+<<<<<<< HEAD
           <h3>通用兼容性</h3>
           <p>在所有Windows应用程序中运行—Microsoft Office、网络浏览器、文件资源管理器、企业软件。</p>
         </div>
@@ -1418,10 +1819,21 @@
           <div class="benefit-icon">🔒</div>
           <h3>安全验证</h3>
           <p>SSL.com代码签名证书。VirusTotal验证。所有数据保留在本地系统上。</p>
+=======
+          <h3>随处可用</h3>
+          <p>在任何Windows应用程序中运行——Word、Excel、Outlook、文件资源管理器、Web浏览器。</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🔒</div>
+          <h3>安全可靠</h3>
+          <p>SSL.com代码签名，VirusTotal验证。您的数据保留在计算机上。</p>
+>>>>>>> 92aa6bb67222dd6a808792d4798df0fb33f65753
         </div>
       </div>
     </div>
   </div>
+
+
 
   <div class="specs-section" id="download">
     <div class="container">
@@ -1512,6 +1924,7 @@
       <div class="problem-grid">
         <div class="problem-card">
           <div class="problem-icon">📁</div>
+<<<<<<< HEAD
           <h3>檔案管理複雜性</h3>
           <p>檔案名為「2026-02-14」、「02.14.2026」、「14/02/2026」無法系統排序，降低運營效率。</p>
         </div>
@@ -1524,6 +1937,20 @@
           <div class="problem-icon">⏱️</div>
           <h3>生產力損失</h3>
           <p>員工反覆驗證格式標準，消耗本應分配給核心業務功能的寶貴時間。</p>
+=======
+          <h3>檔案命名混亂</h3>
+          <p>報告名為「2026-02-14」、「02.14.2026」、「14/02/2026」——無法排序，無法查找。</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">⚠️</div>
+          <h3>數據錄入錯誤</h3>
+          <p>「02/14/2026」是2月14日還是不存在的月份？模糊的日期導致發票和記錄中的昂貴錯誤。</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">⏱️</div>
+          <h3>浪費時間</h3>
+          <p>員工不斷詢問「我應該如何格式化這個日期？」或手動修復不一致的條目。</p>
+>>>>>>> 92aa6bb67222dd6a808792d4798df0fb33f65753
         </div>
       </div>
     </div>
@@ -1541,10 +1968,16 @@
         <img src="/animation.gif" width="249" height="211" alt="InsertDate演示顯示使用Insert鍵即時格式化日期" loading="eager" fetchpriority="high">
         <p style="margin-top: 24px; color: var(--text-secondary);">按Insert鍵 → 標準化日期格式立即應用</p>
       </div>
+      
+      <div class="demo-container">
+        <img src="/animation.gif" width="249" height="211" alt="InsertDate 演示 - 按Insert鍵即可即時格式化日期" loading="eager" fetchpriority="high">
+        <p style="margin-top: 24px; color: var(--gray-600);">按Insert鍵 → 完美的日期格式，即刻呈現</p>
+      </div>
 
       <div class="how-it-works">
         <div class="step">
           <div class="step-number">1</div>
+<<<<<<< HEAD
           <h3>選擇標準</h3>
           <p>選擇組織格式：yyyyMMdd、yyyy/MM/dd、yyyy.MM.dd或yyyy年MM月dd日</p>
         </div>
@@ -1557,6 +1990,20 @@
           <div class="step-number">3</div>
           <h3>執行功能</h3>
           <p>在任何應用程式中—文件、電子郵件、檔案命名—按Insert鍵即可獲得一致的格式。</p>
+=======
+          <h3>選擇格式</h3>
+          <p>從標準格式中選擇：yyyyMMdd、yyyy/MM/dd、yyyy.MM.dd或yyyy年MM月dd日</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>執行一次</h3>
+          <p>解壓並執行.exe檔案。可攜式軟體—無需安裝。在背景靜默工作。</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>按Insert鍵</h3>
+          <p>在任何地方輸入時——文件、電子郵件、檔案名稱——按Insert鍵即可完美格式化。</p>
+>>>>>>> 92aa6bb67222dd6a808792d4798df0fb33f65753
         </div>
       </div>
     </div>
@@ -1576,6 +2023,7 @@
         </div>
         <div class="benefit-card">
           <div class="benefit-icon">🔍</div>
+<<<<<<< HEAD
           <h3>增強檔案系統</h3>
           <p>時間順序排序功能預設正確運行。減少尋找文件所需的時間。</p>
         </div>
@@ -1583,6 +2031,15 @@
           <div class="benefit-icon">💰</div>
           <h3>風險緩解</h3>
           <p>消除財務文件、合約和監管文件中的模糊日期條目。</p>
+=======
+          <h3>輕鬆檔案管理</h3>
+          <p>檔案按日期自動正確排序。在幾秒鐘內找到所需內容。</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">💰</div>
+          <h3>消除錯誤</h3>
+          <p>發票、合約或報告中不再有導致混亂的模糊日期。</p>
+>>>>>>> 92aa6bb67222dd6a808792d4798df0fb33f65753
         </div>
         <div class="benefit-card">
           <div class="benefit-icon">⚡</div>
@@ -1591,6 +2048,7 @@
         </div>
         <div class="benefit-card">
           <div class="benefit-icon">🌐</div>
+<<<<<<< HEAD
           <h3>通用相容性</h3>
           <p>在所有Windows應用程式中運行—Microsoft Office、網路瀏覽器、檔案總管、企業軟體。</p>
         </div>
@@ -1598,10 +2056,21 @@
           <div class="benefit-icon">🔒</div>
           <h3>安全驗證</h3>
           <p>SSL.com代碼簽名證書。VirusTotal驗證。所有資料保留在本地系統上。</p>
+=======
+          <h3>隨處可用</h3>
+          <p>在任何Windows應用程式中運行——Word、Excel、Outlook、檔案總管、網頁瀏覽器。</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🔒</div>
+          <h3>安全可靠</h3>
+          <p>SSL.com代碼簽名，VirusTotal驗證。您的數據保留在電腦上。</p>
+>>>>>>> 92aa6bb67222dd6a808792d4798df0fb33f65753
         </div>
       </div>
     </div>
   </div>
+
+
 
   <div class="specs-section" id="download">
     <div class="container">
@@ -1703,6 +2172,7 @@
 </footer>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<<<<<<< HEAD
 (function() {
   'use strict';
 
@@ -1799,6 +2269,107 @@
       });
     });
   }
+=======
+const binaries = [
+  { 
+    name: 'InsertDate_v1.0.zip', 
+    format: 'yyyyMMdd', 
+    hash: '0666E347461BC90078316EB6CDB9A3A22482B40AADCFAB40C09AD77879174304', 
+    vt: 'ade8d5614f2c7d050a51854fad319abc4d0525656281d931017ba8d1217b1a64?nocache=1' 
+  },
+  { 
+    name: 'InsertDate-Slash_v1.0.zip', 
+    format: 'yyyy/MM/dd', 
+    hash: '46E1E592079059D9272717C1347F092069B1AB587B16D91703D60367F9EA489A', 
+    vt: '247b59d3669a3aba69543c5f8070825856396e9b279066d54da52096662d4f66?nocache=1' 
+  },
+  { 
+    name: 'InsertDate-Dot_v1.0.zip', 
+    format: 'yyyy.MM.dd', 
+    hash: 'BB5B7C33287A923F41FBEF0B3F13498BB8A2E8274611D8997FEEBDBE4658437A', 
+    vt: 'f2ee69d9f81b6048a7f58aea10eec10357d52563e8741df367af2712d473ec60?nocache=1' 
+  },
+  { 
+    name: 'InsertDate-EA_v1.0.zip', 
+    format: 'yyyy年MM月dd日', 
+    hash: 'B6740762B69B2391C648FBE8341E7A62B60102FF372F2E3F9458F6466D588B9F', 
+    vt: 'u-5ddc1641deb2ce055ac4094ca5b0cd774506efe0fdd909dbcb6197b67e147b5a-ae302314' 
+  }
+];
+
+function formatDate(fmt) {
+  const d = new Date();
+  const year = d.getFullYear();
+  const month = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  return fmt.replace('yyyy', year).replace('MM', month).replace('dd', day);
+}
+
+function populateTables() {
+  ['en', 'ja', 'zh-hans', 'zh-hant'].forEach(lang => {
+    const tbody = document.getElementById(`${lang}-table-body`);
+    if (!tbody) return;
+    
+    binaries.forEach(b => {
+      const tr = document.createElement('tr');
+      const vtUrl = b.vt.startsWith('u-') 
+        ? `https://www.virustotal.com/gui/url-analysis/${b.vt}` 
+        : `https://www.virustotal.com/gui/url/${b.vt}`;
+      
+      tr.innerHTML = `
+        <td><a href="https://github.com/InsertDate/InsertDate/releases/download/v1.0/${b.name}" class="package-name">${b.name}</a></td>
+        <td>
+          <span class="format-display">${b.format}</span>
+          <span class="format-example">Ex: ${formatDate(b.format)}</span>
+        </td>
+        <td><div class="hash-code">${b.hash}</div></td>
+        <td style="text-align:center"><a href="${vtUrl}" target="_blank" rel="noopener noreferrer" class="verify-btn">🛡️ VERIFY</a></td>
+      `;
+      tbody.appendChild(tr);
+    });
+  });
+}
+
+function setLang(lang) {
+  // Hide all sections
+  document.querySelectorAll('section[data-lang]').forEach(s => s.classList.remove('active'));
+  
+  // Show selected section
+  const section = document.querySelector(`section[data-lang="${lang}"]`);
+  if (section) section.classList.add('active');
+  
+  // Update button states
+  document.querySelectorAll('.lang-switcher button').forEach(btn => {
+    btn.classList.remove('active');
+  });
+  
+  const activeBtn = document.querySelector(`button[data-lang="${lang}"]`);
+  if (activeBtn) activeBtn.classList.add('active');
+  
+  // Update HTML lang attribute
+  const langCode = lang === 'zh-hans' ? 'zh-Hans' : (lang === 'zh-hant' ? 'zh-Hant' : lang);
+  document.documentElement.lang = langCode;
+  
+  // Update URL without reload but preserve hash
+  const url = new URL(window.location);
+  if (lang === 'en') {
+    url.searchParams.delete('lang');
+  } else {
+    url.searchParams.set('lang', lang);
+  }
+  window.history.replaceState({}, '', url);
+  
+  // If there's a hash in URL, scroll to it after language switch
+  if (window.location.hash) {
+    setTimeout(() => {
+      const element = document.querySelector(window.location.hash);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 100);
+  }
+}
+>>>>>>> 92aa6bb67222dd6a808792d4798df0fb33f65753
 
   function setLang(lang) {
     // 現在アクティブなセクションを取得
@@ -1851,11 +2422,30 @@
     }
   }
 
+<<<<<<< HEAD
   // グローバルに公開
   window.setLang = setLang;
 
   // 初期化
   populateTables();
+=======
+// Detect language from URL or browser
+const params = new URLSearchParams(window.location.search);
+const urlLang = params.get('lang');
+const browserLang = navigator.language.split('-')[0];
+
+let initialLang = 'en';
+if (urlLang && ['ja', 'en', 'zh-hans', 'zh-hant'].includes(urlLang)) {
+  initialLang = urlLang;
+} else if (browserLang === 'ja') {
+  initialLang = 'ja';
+} else if (browserLang === 'zh') {
+  const fullLang = navigator.language.toLowerCase();
+  initialLang = fullLang.includes('tw') || fullLang.includes('hk') || fullLang.includes('hant') 
+    ? 'zh-hant' 
+    : 'zh-hans';
+}
+>>>>>>> 92aa6bb67222dd6a808792d4798df0fb33f65753
 
   // URLまたはブラウザから言語を検出
   const params = new URLSearchParams(window.location.search);
