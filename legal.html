@@ -5,49 +5,353 @@
   <title>Legal Notice | InsertDate</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex">
-  <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
   <style>
-    .logo { font-family: system-ui, -apple-system, sans-serif; font-size: 2rem; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 0.5rem; }
-    .logo span { color: #1f5fbf; font-weight: 700; }
-    .logo a { text-decoration: none; color: inherit; }
-    body { font-size: 0.85rem; line-height: 1.6; }
-    header { margin-top: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1rem; }
-    h2 { font-size: 1.4rem; margin-top: 2rem; border-left: 4px solid #1f5fbf; padding-left: 0.5rem; }
-    h3 { font-size: 1.1rem; margin-top: 1.5rem; text-decoration: underline; }
-    .lang-switch { display: flex; gap: .5rem; margin: 1.5rem 0; }
-    .lang-switch button { font-size: 0.75rem; padding: 0.2rem 0.5rem; }
-    section { display: none; }
-    section.active { display: block; }
-    .law-box { background: #f9f9f9; padding: 1rem; border-radius: 0.4rem; border: 1px solid #eee; margin-top: 2rem; }
-    .important { font-weight: bold; color: #d81b60; border: 2px solid #d81b60; padding: 0.5rem; display: block; }
-    code { font-size: 0.8rem; background: #eee; padding: 0.1rem 0.3rem; border-radius: 3px; }
-    footer { margin-top: 4rem; text-align: center; opacity: .7; padding-bottom: 2rem; }
+    :root {
+      /* Microsoft-inspired color palette */
+      --primary-blue: #0078D4;
+      --primary-blue-dark: #005A9E;
+      --primary-blue-light: #50A0D8;
+      --primary-blue-vivid: #00A4EF;
+      --accent-blue: #106EBE;
+      --neutral-white: #FFFFFF;
+      --neutral-gray-10: #FAF9F8;
+      --neutral-gray-20: #F3F2F1;
+      --neutral-gray-30: #EDEBE9;
+      --neutral-gray-40: #E1DFDD;
+      --neutral-gray-90: #323130;
+      --neutral-gray-130: #605E5C;
+      --neutral-gray-160: #323130;
+      --semantic-success: #107C10;
+      --semantic-warning: #D83B01;
+      --text-primary: #323130;
+      --text-secondary: #605E5C;
+      --text-muted: #8A8886;
+      --border-color: #EDEBE9;
+      --background-secondary: #FAF9F8;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Noto Sans CJK JP", "Microsoft YaHei", "PingFang SC", "Hiragino Kaku Gothic Pro", sans-serif;
+      font-size: 15px;
+      line-height: 1.6;
+      color: var(--text-primary);
+      background: var(--neutral-white);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Navigation */
+    nav.top-nav {
+      background: var(--neutral-white);
+      border-bottom: 1px solid var(--border-color);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 0.3px 0.9px rgba(0, 0, 0, 0.03),
+                  0 1.6px 3.6px rgba(0, 0, 0, 0.04);
+    }
+
+    nav.top-nav .nav-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+    }
+
+    .logo-link {
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--text-primary);
+      text-decoration: none;
+      letter-spacing: -0.01em;
+    }
+
+    .logo-link span {
+      color: var(--primary-blue);
+      font-weight: 700;
+    }
+
+    .lang-switcher {
+      display: flex;
+      gap: 8px;
+    }
+
+    .lang-switcher button {
+      padding: 8px 16px;
+      font-size: 14px;
+      font-weight: 600;
+      border: 1px solid var(--border-color);
+      background: var(--neutral-white);
+      color: var(--text-secondary);
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.1s ease;
+    }
+
+    .lang-switcher button:hover {
+      background: var(--neutral-gray-20);
+      border-color: var(--neutral-gray-40);
+      color: var(--text-primary);
+    }
+
+    .lang-switcher button:focus {
+      outline: 2px solid var(--primary-blue);
+      outline-offset: 2px;
+    }
+
+    .lang-switcher button.active {
+      background: var(--primary-blue);
+      color: var(--neutral-white);
+      border-color: var(--primary-blue);
+    }
+
+    /* Content Area */
+    .content-wrapper {
+      background: var(--neutral-white);
+      min-height: 60vh;
+    }
+
+    .legal-content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 60px 24px;
+    }
+
+    section[data-lang] {
+      display: none;
+    }
+
+    section[data-lang].active {
+      display: block;
+    }
+
+    h1 {
+      font-size: 36px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+
+    .last-updated {
+      color: var(--text-muted);
+      font-size: 14px;
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      font-size: 24px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-top: 48px;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--primary-blue);
+    }
+
+    h3 {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-top: 32px;
+      margin-bottom: 16px;
+    }
+
+    p {
+      margin-bottom: 16px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    ul, ol {
+      margin-left: 24px;
+      margin-bottom: 20px;
+    }
+
+    li {
+      margin-bottom: 12px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    code {
+      font-family: "Consolas", "Monaco", "Courier New", monospace;
+      font-size: 13px;
+      background: var(--neutral-gray-20);
+      padding: 2px 6px;
+      border-radius: 3px;
+      color: var(--semantic-warning);
+    }
+
+    .law-box {
+      background: var(--background-secondary);
+      padding: 24px;
+      border-radius: 8px;
+      border-left: 4px solid var(--primary-blue);
+      margin-top: 32px;
+      margin-bottom: 32px;
+    }
+
+    .law-box h3 {
+      margin-top: 0;
+      color: var(--primary-blue);
+    }
+
+    .important {
+      display: block;
+      font-weight: 600;
+      color: var(--semantic-warning);
+      background: #FFF4F0;
+      border: 2px solid var(--semantic-warning);
+      padding: 16px 20px;
+      border-radius: 6px;
+      margin: 24px 0;
+      line-height: 1.6;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--neutral-gray-20);
+      color: var(--text-secondary);
+      padding: 60px 0 32px;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+
+    .footer-section h4 {
+      color: var(--text-primary);
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .footer-section p {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .footer-links {
+      list-style: none;
+      margin: 0;
+    }
+
+    .footer-links li {
+      margin-bottom: 12px;
+    }
+
+    .footer-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.1s ease;
+      font-size: 14px;
+    }
+
+    .footer-links a:hover {
+      color: var(--primary-blue);
+      text-decoration: underline;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 32px;
+      border-top: 1px solid var(--neutral-gray-30);
+    }
+
+    .footer-bottom p {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .lang-switcher {
+        flex-wrap: wrap;
+        gap: 4px;
+      }
+
+      .lang-switcher button {
+        font-size: 12px;
+        padding: 6px 10px;
+      }
+
+      .logo-link {
+        font-size: 18px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+
+      .legal-content {
+        padding: 40px 20px;
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+    }
   </style>
 </head>
 
 <body>
-<main class="container">
+<!-- Navigation -->
+<nav class="top-nav" role="navigation" aria-label="Main navigation">
+  <div class="container">
+    <div class="nav-content">
+      <a href="/" class="logo-link">Insert<span>Date</span></a>
+      <div class="lang-switcher">
+        <button onclick="setLang('en')" data-lang="en" aria-label="Switch to English">English</button>
+        <button onclick="setLang('ja')" data-lang="ja" aria-label="日本語に切り替え">日本語</button>
+        <button onclick="setLang('zh-hans')" data-lang="zh-hans" aria-label="切换到简体中文">简体中文</button>
+        <button onclick="setLang('zh-hant')" data-lang="zh-hant" aria-label="切換到繁體中文">繁體中文</button>
+      </div>
+    </div>
+  </div>
+</nav>
 
-<header>
-  <div class="logo"><a href="/">Insert<span>Date</span></a></div>
-  <nav class="lang-switch">
-    <button class="secondary outline" onclick="setLang('en')">English</button>
-    <button class="secondary outline" onclick="setLang('ja')">日本語</button>
-    <button class="secondary outline" onclick="setLang('zh-hans')">简体中文</button>
-    <button class="secondary outline" onclick="setLang('zh-hant')">繁體中文</button>
-  </nav>
-</header>
+<!-- Content -->
+<div class="content-wrapper">
+  <div class="legal-content">
 
-<section id="en">
+<section id="en" data-lang="en">
   <h1>Legal Notice / Terms of Service</h1>
-  <p>Last Updated: 2026-02-13 (ver 1.0)</p>
+  <p class="last-updated">Last Updated: 2026-02-13 (ver 1.0)</p>
 
   <h2>1. Specifications & Usage</h2>
   <p>InsertDate (the "Software") is a resident utility. <strong>While running, pressing the Insert key inserts the current date as text characters.</strong> Multiple executable files (exes) are provided for different date formats, but the basic operation is identical; only the output format differs. You can manage the application by right-clicking the icon in the system tray to open the menu:</p>
   <ul>
-    <li><strong>Start on user login:</strong> Controls automatic execution at login. 
+    <li><strong>Start on user login:</strong> Controls automatic execution at login.
       <ul>
         <li>Clicking to enable this creates a shortcut in the <strong>user-specific</strong> startup folder: <code>%AppData%\Microsoft\Windows\Start Menu\Programs\Startup</code> and adds a checkmark to the menu.</li>
         <li>Clicking again to disable it removes the shortcut from the folder and clears the checkmark.</li>
@@ -92,9 +396,9 @@
   </div>
 </section>
 
-<section id="ja">
+<section id="ja" data-lang="ja">
   <h1>利用規約・特定商取引法に基づく表記</h1>
-  <p>最終更新日：2026年2月13日 (ver 1.0)</p>
+  <p class="last-updated">最終更新日：2026年2月13日 (ver 1.0)</p>
 
   <h2>1. 動作仕様・操作方法</h2>
   <p>InsertDate（以下「本ソフトウェア」）は常駐型ユーティリティです。<strong>常駐している間は、Insertキーを押すとテキスト文字として現在の日付が挿入されます。</strong> 日付形式ごとに実行ファイル（exe）が分かれていますが、基本動作はすべて共通であり、入力される日付の形式のみが異なります。タスクトレイのアイコンを右クリックするとメニューが開き、以下の操作が行えます。</p>
@@ -144,9 +448,9 @@
   </div>
 </section>
 
-<section id="zh-hans">
+<section id="zh-hans" data-lang="zh-hans">
   <h1>法律声明 / 服务协议</h1>
-  <p>最后更新：2026-02-13 (ver 1.0)</p>
+  <p class="last-updated">最后更新：2026-02-13 (ver 1.0)</p>
 
   <h2>1. 运行规格与操作方法</h2>
   <p>InsertDate 是一款常驻实用工具。<strong>在运行时，按下 Insert 键即可将当前日期作为文本字符插入。</strong> 我们为不同的日期格式提供了多个可执行文件 (exe)，但基本操作完全相同，仅输入的日期格式有所不同。右键单击系统托盘中的图标即可打开菜单，并进行以下操作：</p>
@@ -160,8 +464,8 @@
     <li><strong>退出 (Exit):</strong> 退出本软件并恢复标准 Insert 键功能。</li>
     <li><strong>不使用注册表:</strong> 无论是保存设置还是注册启动项，均不使用系统注册表。</li>
     <li><strong>无网络通信:</strong> 本软件不会进行任何外部网络通信，也不收集个人信息。</li>
-    <li><strong>非系统服务:</strong> 本软件不会注册为“Windows 服务”，仅作为标准用户程序运行。</li>
-    <li><strong>管理员权限:</strong> 若要在管理员权限应用中输入，本软件也需“以管理员身份运行”（根据 Windows 系统规范）。</li>
+    <li><strong>非系统服务:</strong> 本软件不会注册为"Windows 服务"，仅作为标准用户程序运行。</li>
+    <li><strong>管理员权限:</strong> 若要在管理员权限应用中输入，本软件也需"以管理员身份运行"（根据 Windows 系统规范）。</li>
   </ul>
 
   <h2>2. 授权定义与更新</h2>
@@ -181,18 +485,18 @@
   <h2>5. 卸载方法</h2>
   <p>如需卸载本软件，请按照以下步骤操作：</p>
   <ol>
-    <li>在菜单中关闭“Start on user login”（以删除启动项快捷方式）。</li>
+    <li>在菜单中关闭"Start on user login"（以删除启动项快捷方式）。</li>
     <li>退出软件（Exit）。</li>
     <li>手动删除 <code>InsertDate.exe</code> 执行文件。</li>
   </ol>
 </section>
 
-<section id="zh-hant">
+<section id="zh-hant" data-lang="zh-hant">
   <h1>法律聲明 / 服務條款</h1>
-  <p>最後更新：2026-02-13 (ver 1.0)</p>
+  <p class="last-updated">最後更新：2026-02-13 (ver 1.0)</p>
 
   <h2>1. 運作規格與操作方式</h2>
-  <p>InsertDate 是一款常駐實用工具。**在執行期間，按下 Insert 鍵即可將目前日期作為文字字元插入。** 針對不同的日期格式提供多個執行檔 (exe)，但基本運作完全相同，僅輸入的日期格式有所不同。右鍵按一下系統匣中的圖示即可開啟選單，進行以下操作：</p>
+  <p>InsertDate 是一款常駐實用工具。<strong>在執行期間，按下 Insert 鍵即可將目前日期作為文字字元插入。</strong> 針對不同的日期格式提供多個執行檔 (exe)，但基本運作完全相同，僅輸入的日期格式有所不同。右鍵按一下系統匣中的圖示即可開啟選單，進行以下操作：</p>
   <ul>
     <li><strong>登入時自啟 (Start on user login):</strong> 設定登入時自動執行。
       <ul>
@@ -230,53 +534,139 @@
   </ol>
 </section>
 
-<footer>
-  <small><a href="/">← Back to Home</a></small><br>
-  <small>© InsertDate. All rights reserved.</small>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer role="contentinfo">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>InsertDate</h4>
+        <p>Professional date standardization<br>for modern businesses.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Product</h4>
+        <ul class="footer-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/#pricing">Pricing</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Support</h4>
+        <ul class="footer-links">
+          <li><a href="mailto:info@insertdate.com">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Legal</h4>
+        <ul class="footer-links">
+          <li><a href="/privacy.html">Privacy Policy</a></li>
+          <li><a href="/legal.html">Legal Notice</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Developed in Japan. Trusted worldwide.</p>
+      <p>© 2026 InsertDate. All rights reserved.</p>
+    </div>
+  </div>
 </footer>
 
-</main>
-
 <script>
-function setLang(lang) {
-  document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
-  const target = document.getElementById(lang);
-  if (target) target.classList.add('active');
-  
-  const activeBtn = document.querySelector(`.lang-switch button[onclick="setLang('${lang}')"]`);
-  document.querySelectorAll('.lang-switch button').forEach(btn => { 
-    btn.classList.remove('primary'); 
-    btn.classList.add('secondary','outline'); 
-  });
-  if (activeBtn) { 
-    activeBtn.classList.remove('secondary','outline'); 
-    activeBtn.classList.add('primary'); 
-  }
-  
-  const map = { en:'en', ja:'ja', 'zh-hans':'zh-Hans', 'zh-hant':'zh-Hant' };
-  document.documentElement.lang = map[lang] || 'en';
-}
+(function() {
+  'use strict';
 
-function detectLang() {
-  const params = new URLSearchParams(window.location.search);
-  const urlLang = params.get('lang');
-  if (urlLang) {
-    const l = urlLang.toLowerCase();
-    if (l.startsWith('ja')) return 'ja';
-    if (l.startsWith('zh-tw') || l.startsWith('zh-hant')) return 'zh-hant';
-    if (l.startsWith('zh')) return 'zh-hans';
-    if (l.startsWith('en')) return 'en';
+  function setLang(lang) {
+    // すべてのアクティブなセクションを非アクティブ化
+    const allActive = document.querySelectorAll('section[data-lang].active');
+    allActive.forEach(function(section) {
+      section.classList.remove('active');
+    });
+
+    // 選択された言語のセクションをアクティブ化
+    const targetSection = document.querySelector('section[data-lang="' + lang + '"]');
+    if (targetSection) {
+      targetSection.classList.add('active');
+    }
+
+    // ボタンの状態を更新
+    document.querySelectorAll('.lang-switcher button').forEach(function(btn) {
+      const isActive = btn.getAttribute('data-lang') === lang;
+      if (isActive) {
+        btn.classList.add('active');
+        btn.setAttribute('aria-current', 'true');
+      } else {
+        btn.classList.remove('active');
+        btn.removeAttribute('aria-current');
+      }
+    });
+
+    // HTML lang属性を更新
+    const langMap = { 'en': 'en', 'ja': 'ja', 'zh-hans': 'zh-Hans', 'zh-hant': 'zh-Hant' };
+    document.documentElement.lang = langMap[lang] || 'en';
+
+    // URLを更新（リロードせずハッシュは保持）
+    const url = new URL(window.location);
+    url.searchParams.set('lang', lang);
+    window.history.pushState({}, '', url);
+
+    // localStorageに保存
+    try {
+      localStorage.setItem('preferredLanguage', lang);
+    } catch (e) {
+      // localStorage が使えない環境では無視
+    }
   }
-  const langs = navigator.languages || [navigator.language];
-  for (const l of langs) {
-    if (l.startsWith('ja')) return 'ja';
-    if (l.startsWith('zh-TW') || l.startsWith('zh-HK')) return 'zh-hant';
-    if (l.startsWith('zh')) return 'zh-hans';
-    if (l.startsWith('en')) return 'en';
+
+  // 初期言語設定
+  function detectLang() {
+    // 1. URLパラメータをチェック
+    const params = new URLSearchParams(window.location.search);
+    const urlLang = params.get('lang');
+    if (urlLang) {
+      const normalized = urlLang.toLowerCase();
+      if (normalized === 'en' || normalized === 'ja' || normalized === 'zh-hans' || normalized === 'zh-hant') {
+        return normalized;
+      }
+    }
+
+    // 2. localStorageをチェック
+    try {
+      const savedLang = localStorage.getItem('preferredLanguage');
+      if (savedLang) {
+        return savedLang;
+      }
+    } catch (e) {
+      // localStorage が使えない環境では無視
+    }
+
+    // 3. ブラウザ言語設定から判定
+    const browserLang = navigator.language || navigator.userLanguage || '';
+    const lowerLang = browserLang.toLowerCase();
+
+    if (lowerLang.startsWith('ja')) {
+      return 'ja';
+    } else if (lowerLang.includes('zh')) {
+      // 繁体字判定
+      if (lowerLang.includes('tw') || lowerLang.includes('hk') || lowerLang.includes('hant')) {
+        return 'zh-hant';
+      }
+      return 'zh-hans';
+    }
+
+    // デフォルトは英語
+    return 'en';
   }
-  return 'en';
-}
-setLang(detectLang());
+
+  // グローバルに公開
+  window.setLang = setLang;
+
+  // ページ読み込み時に初期言語を設定
+  const initialLang = detectLang();
+  setLang(initialLang);
+})();
 </script>
 </body>
 </html>
