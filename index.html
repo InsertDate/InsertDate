@@ -758,34 +758,131 @@
         padding: 0 16px;
       }
 
+      .hero {
+        padding: 60px 0 40px;
+      }
+
       .hero h1 {
-        font-size: 36px;
+        font-size: 32px;
+        line-height: 1.2;
       }
 
       .hero .subtitle {
-        font-size: 18px;
+        font-size: 16px;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .btn {
+        width: 100%;
+        text-align: center;
       }
 
       .section-header h2 {
-        font-size: 32px;
+        font-size: 28px;
+      }
+
+      .section-header p {
+        font-size: 16px;
       }
 
       .problem-grid,
       .how-it-works,
       .benefits-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .problem-card,
+      .benefit-card {
+        padding: 24px;
+      }
+
+      .demo-container {
+        padding: 24px;
       }
 
       .pricing-card.featured {
         transform: scale(1);
       }
 
+      .pricing-card {
+        padding: 32px 24px;
+      }
+
       .specs-table {
         overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
       }
 
       table {
         min-width: 600px;
+        font-size: 14px;
+      }
+
+      th, td {
+        padding: 12px 8px;
+      }
+
+      .hash-code {
+        font-size: 10px;
+      }
+
+      .lang-switcher {
+        flex-wrap: wrap;
+        gap: 4px;
+      }
+
+      .lang-switcher button {
+        font-size: 12px;
+        padding: 6px 10px;
+      }
+
+      .logo-link {
+        font-size: 20px;
+      }
+
+      .step-number {
+        width: 48px;
+        height: 48px;
+        font-size: 20px;
+      }
+
+      .benefit-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 28px;
+      }
+
+      .hero .subtitle {
+        font-size: 15px;
+      }
+
+      .section-header h2 {
+        font-size: 24px;
+      }
+
+      .price {
+        font-size: 48px;
+      }
+
+      .btn {
+        padding: 12px 24px;
+        font-size: 15px;
       }
     }
   </style>
@@ -807,7 +904,7 @@
 </nav>
 
 <!-- English Version -->
-<section data-lang="en">
+<section data-lang="en" id="en-section">
   <div class="hero">
     <div class="container">
       <div class="hero-content">
@@ -1551,7 +1648,7 @@
       <div class="footer-section">
         <h4>Support</h4>
         <ul class="footer-links">
-          <li><a href="mailto:info@insertdate.com">Contact Us</a></li>
+          <li><a href="/cdn-cgi/l/email-protection#94fdfaf2fbd4fdfae7f1e6e0f0f5e0f1baf7fbf9">Contact Us</a></li>
         </ul>
       </div>
       <div class="footer-section">
@@ -1569,7 +1666,7 @@
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 const binaries = [
   { 
     name: 'InsertDate_v1.0.zip', 
@@ -1650,7 +1747,7 @@ function setLang(lang) {
   const langCode = lang === 'zh-hans' ? 'zh-Hans' : (lang === 'zh-hant' ? 'zh-Hant' : lang);
   document.documentElement.lang = langCode;
   
-  // Update URL without reload
+  // Update URL without reload but preserve hash
   const url = new URL(window.location);
   if (lang === 'en') {
     url.searchParams.delete('lang');
@@ -1658,6 +1755,16 @@ function setLang(lang) {
     url.searchParams.set('lang', lang);
   }
   window.history.replaceState({}, '', url);
+  
+  // If there's a hash in URL, scroll to it after language switch
+  if (window.location.hash) {
+    setTimeout(() => {
+      const element = document.querySelector(window.location.hash);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 100);
+  }
 }
 
 // Initialize
