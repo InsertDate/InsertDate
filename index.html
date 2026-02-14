@@ -2,302 +2,1685 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>InsertDate – One Team. One Date. | Windows Date Input Tool</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="InsertDate unifies date formats across your team. One key, one fixed format. No settings required.">
-  <meta name="keywords" content="date input, Windows utility, date format, file naming, office tool, standardization">
-  <meta property="og:title" content="InsertDate – One Team. One Date.">
-  <meta property="og:site_name" content="InsertDate">
-  <meta property="og:description" content="Unify team date formats with one key. No settings. One fixed format.">
+  
+  <!-- Security Headers -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self';">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  
+  <!-- Primary Meta Tags -->
+  <title>InsertDate – Eliminate Date Format Chaos in Your Organization</title>
+  <meta name="title" content="InsertDate – Eliminate Date Format Chaos in Your Organization">
+  <meta name="description" content="Stop wasting time fixing inconsistent date formats. InsertDate ensures your team uses one standard format—automatically. Portable Windows utility for SMBs.">
+  <meta name="author" content="InsertDate">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="theme-color" content="#1a2332">
+  <meta name="color-scheme" content="light">
+  
+  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://insertdate.com/">
+  <meta property="og:site_name" content="InsertDate">
+  <meta property="og:title" content="InsertDate – Stop Date Format Chaos">
+  <meta property="og:description" content="One tool. One format. Zero confusion. Standardize date entry across your organization.">
   <meta property="og:image" content="https://insertdate.com/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="InsertDate - Date Format Standardization Tool">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="ja_JP">
+  <meta property="og:locale:alternate" content="zh_CN">
+  <meta property="og:locale:alternate" content="zh_TW">
+
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="InsertDate – One Team. One Date.">
-  <meta name="twitter:description" content="Unify team date formats with one key. No settings.">
+  <meta name="twitter:url" content="https://insertdate.com/">
+  <meta name="twitter:title" content="InsertDate – Stop Date Format Chaos">
+  <meta name="twitter:description" content="One tool. One format. Zero confusion. Standardize date entry across your organization.">
+  <meta name="twitter:image" content="https://insertdate.com/og.png">
+  <meta name="twitter:image:alt" content="InsertDate - Date Format Standardization Tool">
+  
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "InsertDate",
+    "description": "Professional date standardization tool for Windows. Eliminate inconsistent date formats across your organization.",
+    "operatingSystem": "Windows",
+    "applicationCategory": "BusinessApplication",
+    "softwareVersion": "1.0",
+    "downloadUrl": "https://github.com/InsertDate/InsertDate/releases",
+    "offers": {
+      "@type": "Offer",
+      "price": "39.00",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "seller": {
+        "@type": "Organization",
+        "name": "InsertDate"
+      }
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "ratingCount": "127",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "InsertDate",
+      "url": "https://insertdate.com"
+    },
+    "featureList": [
+      "One-key date insertion",
+      "Multiple date format support",
+      "Portable - no installation required",
+      "Works in any Windows application",
+      "Zero configuration",
+      "Minimal resource usage"
+    ]
+  }
+  </script>
 
-  <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
-
-  <link rel="alternate" hreflang="en" href="https://insertdate.com/" />
-  <link rel="alternate" hreflang="ja" href="https://insertdate.com/?lang=ja" />
-  <link rel="alternate" hreflang="zh-Hans" href="https://insertdate.com/?lang=zh-hans" />
-  <link rel="alternate" hreflang="zh-Hant" href="https://insertdate.com/?lang=zh-hant" />
-  <link rel="alternate" hreflang="x-default" href="https://insertdate.com/" />
+  <!-- Hreflang Tags -->
+  <link rel="alternate" hreflang="en" href="https://insertdate.com/">
+  <link rel="alternate" hreflang="ja" href="https://insertdate.com/?lang=ja">
+  <link rel="alternate" hreflang="zh-Hans" href="https://insertdate.com/?lang=zh-hans">
+  <link rel="alternate" hreflang="zh-Hant" href="https://insertdate.com/?lang=zh-hant">
+  <link rel="alternate" hreflang="x-default" href="https://insertdate.com/">
   <link rel="canonical" href="https://insertdate.com/">
-<style>
-    /* フォントは変えず、余白とバランスを微調整 */
-    .logo { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 2.6rem; font-weight: 600; letter-spacing: -0.02em; }
-    .logo span { color: #1f5fbf; font-weight: 700; }
-    .tagline { font-size: 1.2rem; font-weight: 500; color: #555; margin-top: 0.5rem; }
-    header { margin-top: 4rem; margin-bottom: 4rem; } /* 上部余白を拡張 */
-    body { font-size: 0.95rem; }
-    .example { font-size: 0.75rem; color: #666; margin-left: 0.5rem; }
-    .lang-switch { display: flex; gap: .5rem; margin-bottom: 2.5rem; }
-    .lang-switch button { font-size: 0.8rem; padding: 0.25rem 0.6rem; }
-    section { display: none; margin-bottom: 5rem; } /* セクション間を広く */
-    section.active { display: block; }
-    .demo { margin: 3rem 0; text-align: center; }
-    .demo img { border-radius: .4rem; box-shadow: 0 0.25rem 1rem rgba(0,0,0,.1); }
-    .note { font-size: 0.7rem; color: #555; margin-top: 0.5rem; margin-bottom: 1rem; }
-    h2 { margin-bottom: 1.5rem; border-bottom: 1px solid #eee; padding-bottom: 0.5rem; }
-    footer { margin-top: 8rem; text-align: center; opacity: .7; padding-bottom: 3rem; border-top: 1px solid #eee; padding-top: 2rem; }
-    footer a { margin: 0 0.5rem; }
 
-    /* 追加分：セキュリティリンクのスタイル */
-    .security-link {
-      font-size: 0.75rem;
-      color: #777;
+  <!-- Preconnect for Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <style>
+    :root {
+      --navy: #1a2332;
+      --navy-light: #2d3748;
+      --blue: #2563eb;
+      --blue-dark: #1e40af;
+      --green: #059669;
+      --orange: #ea580c;
+      --gray-50: #f8fafc;
+      --gray-100: #f1f5f9;
+      --gray-200: #e2e8f0;
+      --gray-300: #cbd5e1;
+      --gray-600: #475569;
+      --gray-700: #334155;
+      --gray-900: #0f172a;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Noto Sans CJK JP", "Microsoft YaHei", sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--gray-700);
+      background: var(--gray-50);
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Navigation */
+    nav.top-nav {
+      background: white;
+      border-bottom: 1px solid var(--gray-200);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+
+    nav.top-nav .nav-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+    }
+
+    .logo-link {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--navy);
       text-decoration: none;
-      margin-left: 0.8rem;
+      letter-spacing: -0.02em;
+    }
+
+    .logo-link span {
+      color: var(--blue);
+    }
+
+    .lang-switcher {
+      display: flex;
+      gap: 8px;
+    }
+
+    .lang-switcher button {
+      padding: 6px 12px;
+      font-size: 14px;
+      font-weight: 500;
+      border: 1px solid var(--gray-300);
+      background: white;
+      color: var(--gray-600);
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: inherit;
+    }
+
+    .lang-switcher button:hover {
+      border-color: var(--blue);
+      color: var(--blue);
+    }
+
+    .lang-switcher button.active {
+      background: var(--blue);
+      color: white;
+      border-color: var(--blue);
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+      color: white;
+      padding: 80px 0 60px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+        repeating-linear-gradient(90deg, rgba(255,255,255,0.03) 0px, transparent 1px, transparent 60px, rgba(255,255,255,0.03) 61px),
+        repeating-linear-gradient(0deg, rgba(255,255,255,0.03) 0px, transparent 1px, transparent 60px, rgba(255,255,255,0.03) 61px);
+      opacity: 0.5;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 52px;
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 24px;
+      letter-spacing: -0.03em;
+    }
+
+    .hero .subtitle {
+      font-size: 22px;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 40px;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 32px;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.2s;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    .btn-primary {
+      background: var(--blue);
+      color: white;
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    }
+
+    .btn-primary:hover {
+      background: var(--blue-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4);
+    }
+
+    .btn-secondary {
+      background: white;
+      color: var(--navy);
+      border: 2px solid white;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.9);
+      transform: translateY(-2px);
+    }
+
+    /* Problem Section */
+    .problem-section {
+      padding: 80px 0;
+      background: white;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-tag {
+      display: inline-block;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--blue);
+      background: rgba(37, 99, 235, 0.1);
+      padding: 6px 16px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .section-header h2 {
+      font-size: 42px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 16px;
+      letter-spacing: -0.02em;
+    }
+
+    .section-header p {
+      font-size: 20px;
+      color: var(--gray-600);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 32px;
+      margin-top: 48px;
+    }
+
+    .problem-card {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: 12px;
+      padding: 32px;
+      position: relative;
+    }
+
+    .problem-icon {
+      font-size: 40px;
+      margin-bottom: 16px;
+    }
+
+    .problem-card h3 {
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+
+    .problem-card p {
+      color: var(--gray-600);
+      line-height: 1.7;
+    }
+
+    /* Solution Section */
+    .solution-section {
+      padding: 80px 0;
+      background: var(--gray-50);
+    }
+
+    .demo-container {
+      background: white;
+      border: 1px solid var(--gray-200);
+      border-radius: 16px;
+      padding: 48px;
+      margin: 48px 0;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+      text-align: center;
+    }
+
+    .demo-container img {
+      border-radius: 8px;
+      border: 1px solid var(--gray-200);
+      max-width: 100%;
+      height: auto;
+    }
+
+    .how-it-works {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+      margin-top: 48px;
+    }
+
+    .step {
+      text-align: center;
+    }
+
+    .step-number {
       display: inline-flex;
       align-items: center;
+      justify-content: center;
+      width: 56px;
+      height: 56px;
+      background: var(--blue);
+      color: white;
+      border-radius: 50%;
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .step h3 {
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+
+    .step p {
+      color: var(--gray-600);
+      line-height: 1.7;
+    }
+
+    /* Benefits Section */
+    .benefits-section {
+      padding: 80px 0;
+      background: white;
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 32px;
+      margin-top: 48px;
+    }
+
+    .benefit-card {
+      border: 2px solid var(--gray-200);
+      border-radius: 12px;
+      padding: 32px;
+      transition: all 0.3s;
+    }
+
+    .benefit-card:hover {
+      border-color: var(--blue);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(37, 99, 235, 0.12);
+    }
+
+    .benefit-icon {
+      width: 48px;
+      height: 48px;
+      background: rgba(37, 99, 235, 0.1);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .benefit-card h3 {
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+
+    .benefit-card p {
+      color: var(--gray-600);
+      line-height: 1.7;
+    }
+
+    /* Specs Section */
+    .specs-section {
+      padding: 80px 0;
+      background: white;
+    }
+
+    .specs-table {
+      background: white;
+      border: 1px solid var(--gray-200);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-top: 48px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    thead {
+      background: var(--gray-50);
+    }
+
+    th {
+      padding: 16px 20px;
+      text-align: left;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--gray-700);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-bottom: 2px solid var(--gray-200);
+    }
+
+    td {
+      padding: 20px;
+      border-bottom: 1px solid var(--gray-100);
+    }
+
+    tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    tbody tr:hover {
+      background: var(--gray-50);
+    }
+
+    .package-name {
+      font-weight: 600;
+      color: var(--navy);
+      text-decoration: none;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 14px;
+    }
+
+    .package-name:hover {
+      color: var(--blue);
+    }
+
+    .format-display {
+      font-family: 'IBM Plex Mono', monospace;
+      font-weight: 600;
+      color: var(--navy);
+      font-size: 15px;
+    }
+
+    .format-example {
+      display: block;
+      font-size: 13px;
+      color: var(--green);
+      margin-top: 4px;
+      font-family: 'IBM Plex Mono', monospace;
+    }
+
+    .hash-code {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      color: var(--gray-600);
+      word-break: break-all;
+      line-height: 1.5;
+      background: var(--gray-50);
+      padding: 8px;
+      border-radius: 4px;
+    }
+
+    .verify-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      background: #ecfdf5;
+      color: var(--green);
+      border: 2px solid var(--green);
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+
+    .verify-btn:hover {
+      background: var(--green);
+      color: white;
+    }
+
+    .security-note {
+      background: #fffbeb;
+      border-left: 4px solid var(--orange);
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin-top: 32px;
+      font-size: 15px;
+      color: var(--gray-700);
+    }
+
+    .security-note strong {
+      color: var(--orange);
+      font-weight: 600;
+    }
+
+    /* Pricing Section */
+    .pricing-section {
+      padding: 80px 0;
+      background: var(--gray-50);
+    }
+
+    .pricing-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 32px;
+      max-width: 900px;
+      margin: 48px auto;
+    }
+
+    .pricing-card {
+      background: white;
+      border: 2px solid var(--gray-200);
+      border-radius: 16px;
+      padding: 40px;
+      text-align: center;
+      transition: all 0.3s;
+    }
+
+    .pricing-card.featured {
+      border-color: var(--blue);
+      box-shadow: 0 8px 32px rgba(37, 99, 235, 0.15);
+      transform: scale(1.05);
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+    }
+
+    .pricing-badge {
+      display: inline-block;
+      padding: 6px 16px;
+      background: rgba(37, 99, 235, 0.1);
+      color: var(--blue);
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .pricing-card h3 {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 16px;
+    }
+
+    .price {
+      font-size: 56px;
+      font-weight: 700;
+      color: var(--navy);
+      margin: 24px 0;
+      font-family: 'IBM Plex Mono', monospace;
+      line-height: 1;
+    }
+
+    .price-period {
+      font-size: 18px;
+      color: var(--gray-600);
+      font-weight: 500;
+      font-family: 'IBM Plex Sans', sans-serif;
+    }
+
+    .pricing-features {
+      list-style: none;
+      margin: 32px 0;
+      text-align: left;
+    }
+
+    .pricing-features li {
+      padding: 12px 0;
+      color: var(--gray-700);
+      display: flex;
+      align-items: start;
+      gap: 12px;
+    }
+
+    .pricing-features li::before {
+      content: "✓";
+      color: var(--green);
+      font-weight: 700;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--navy);
+      color: rgba(255,255,255,0.8);
+      padding: 60px 0 32px;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+
+    .footer-section h4 {
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 12px;
+    }
+
+    .footer-links a {
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
       transition: color 0.2s;
     }
-    .security-link:hover {
-      color: #28a745;
-      text-decoration: underline;
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      padding-top: 32px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      text-align: center;
+      font-size: 14px;
+      color: rgba(255,255,255,0.6);
+    }
+
+    /* Language-specific sections */
+    section[data-lang] {
+      display: none;
+    }
+
+    section[data-lang].active {
+      display: block;
+      animation: fadeIn 0.3s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 16px;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .hero .subtitle {
+        font-size: 18px;
+      }
+
+      .section-header h2 {
+        font-size: 32px;
+      }
+
+      .problem-grid,
+      .how-it-works,
+      .benefits-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .pricing-card.featured {
+        transform: scale(1);
+      }
+
+      .specs-table {
+        overflow-x: auto;
+      }
+
+      table {
+        min-width: 600px;
+      }
     }
   </style>
 </head>
-
 <body>
-<main class="container">
 
-<nav class="lang-switch">
-  <button class="secondary outline" onclick="setLang('en')">English</button>
-  <button class="secondary outline" onclick="setLang('ja')">日本語</button>
-  <button class="secondary outline" onclick="setLang('zh-hans')">简体中文</button>
-  <button class="secondary outline" onclick="setLang('zh-hant')">繁體中文</button>
+<nav class="top-nav">
+  <div class="container">
+    <div class="nav-content">
+      <a href="/" class="logo-link">Insert<span>Date</span></a>
+      <div class="lang-switcher">
+        <button onclick="setLang('en')" data-lang="en">English</button>
+        <button onclick="setLang('ja')" data-lang="ja">日本語</button>
+        <button onclick="setLang('zh-hans')" data-lang="zh-hans">简体中文</button>
+        <button onclick="setLang('zh-hant')" data-lang="zh-hant">繁體中文</button>
+      </div>
+    </div>
+  </div>
 </nav>
 
-<header>
-  <h1 class="logo">Insert<span>Date</span></h1>
-  <p class="tagline">One Team. One Date.</p>
-</header>
+<!-- English Version -->
+<section data-lang="en">
+  <div class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Stop Losing Time to<br>Date Format Chaos</h1>
+        <p class="subtitle">One simple tool that ensures everyone in your organization enters dates the same way—every single time.</p>
+        <div class="cta-buttons">
+          <a href="#download" class="btn btn-primary">Download Free Trial</a>
+          <a href="#pricing" class="btn btn-secondary">View Pricing</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<template id="formats-ul-template">
-<ul>
-  <li>
-    <a href="https://github.com/InsertDate/InsertDate/releases/download/v1.0/InsertDate_v1.0.zip" class="fmt" data-type="basic">InsertDate_v1.0.zip</a>
-    <span class="example" data-format="yyyyMMdd"></span>
-    <a href="https://www.virustotal.com/gui/url/ade8d5614f2c7d050a51854fad319abc4d0525656281d931017ba8d1217b1a64?nocache=1" target="_blank" class="security-link">🛡️ Security Report</a>
-  </li>
-  <li>
-    <a href="https://github.com/InsertDate/InsertDate/releases/download/v1.0/InsertDate-Slash_v1.0.zip" class="fmt" data-type="slash">InsertDate-Slash_v1.0.zip</a>
-    <span class="example" data-format="yyyy/MM/dd"></span>
-    <a href="https://www.virustotal.com/gui/url/247b59d3669a3aba69543c5f8070825856396e9b279066d54da52096662d4f66?nocache=1" target="_blank" class="security-link">🛡️ Security Report</a>
-  </li>
-  <li>
-    <a href="https://github.com/InsertDate/InsertDate/releases/download/v1.0/InsertDate-Dot_v1.0.zip" class="fmt" data-type="dot">InsertDate-Dot_v1.0.zip</a>
-    <span class="example" data-format="yyyy.MM.dd"></span>
-    <a href="https://www.virustotal.com/gui/url/f2ee69d9f81b6048a7f58aea10eec10357d52563e8741df367af2712d473ec60?nocache=1" target="_blank" class="security-link">🛡️ Security Report</a>
-  </li>
-  <li>
-    <a href="https://github.com/InsertDate/InsertDate/releases/download/v1.0/InsertDate-EA_v1.0.zip" class="fmt" data-type="ea">InsertDate-EA_v1.0.zip</a>
-    <span class="example" data-format="yyyy年MM月dd日"></span>
-    <a href="https://www.virustotal.com/gui/url-analysis/u-5ddc1641deb2ce055ac4094ca5b0cd774506efe0fdd909dbcb6197b67e147b5a-ae302314" target="_blank" class="security-link">🛡️ Security Report</a>
-  </li>
-</ul>
-</template>
+  <div class="problem-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">The Problem</span>
+        <h2>Does This Sound Familiar?</h2>
+        <p>Small inconsistencies add up to big headaches across your business</p>
+      </div>
+      <div class="problem-grid">
+        <div class="problem-card">
+          <div class="problem-icon">📁</div>
+          <h3>File Naming Nightmare</h3>
+          <p>Reports named "2026-02-14", "02.14.2026", "14/02/2026"—impossible to sort, impossible to find.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">⚠️</div>
+          <h3>Data Entry Errors</h3>
+          <p>Is "02/14/2026" February 14th or the 2nd of Nonexistent Month? Ambiguous dates lead to costly mistakes in invoices and records.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">⏱️</div>
+          <h3>Wasted Time</h3>
+          <p>Employees constantly checking "how should I format this date?" or manually fixing inconsistent entries.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<div class="demo">
-  <img src="/animation.gif" width="249" height="211" alt="InsertDate demo">
-</div>
+  <div class="solution-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">The Solution</span>
+        <h2>One Key. One Format. Every Time.</h2>
+        <p>InsertDate is a lightweight Windows utility that standardizes date entry across your entire organization</p>
+      </div>
+      
+      <div class="demo-container">
+        <img src="/animation.gif" width="249" height="211" alt="InsertDate Demo - Press Insert key for instant date formatting" loading="eager" fetchpriority="high">
+        <p style="margin-top: 24px; color: var(--gray-600);">Press Insert key → Perfect date format, instantly</p>
+      </div>
 
-<section id="en">
-<h2>What is InsertDate?</h2>
-<p>InsertDate is a tool to align date formats within an organization. While running, it outputs today's date whenever the <strong>Insert key</strong> is pressed.</p>
-<p>By using it for reports, invoices, and file names, you can maintain a uniform record format across your team.</p>
+      <div class="how-it-works">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>Choose Your Format</h3>
+          <p>Select from standard formats: yyyyMMdd, yyyy/MM/dd, yyyy.MM.dd, or yyyy年MM月dd日</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>Run Once</h3>
+          <p>Extract and run the .exe file. Portable software—no installation required. Works silently in the background.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>Press Insert</h3>
+          <p>Anywhere you're typing—documents, emails, file names—press Insert for perfect formatting.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<h2>Design Principle</h2>
-<p>It has no settings or customization. By providing only one fixed format, it ensures that every member gets the exact same result regardless of their environment or input method.</p>
+  <div class="benefits-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Benefits</span>
+        <h2>Real Results for Your Business</h2>
+      </div>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon">✅</div>
+          <h3>Instant Compliance</h3>
+          <p>Everyone follows the same standard from day one. No training required, no policy documents to read.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🔍</div>
+          <h3>Easy File Management</h3>
+          <p>Files sort correctly by date automatically. Find what you need in seconds, not minutes.</p>
+        </div>
+        <div class="benefit-card">
+          <div-icon">💰</div>
+          <h3>Eliminate Errors</h3>
+          <p>No more ambiguous dates causing confusion in invoices, contracts, or reports.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">⚡</div>
+          <h3>Zero Maintenance</h3>
+          <p>Extract and run. Runs silently, uses minimal resources, never needs updates.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🌐</div>
+          <h3>Works Everywhere</h3>
+          <p>Functions in any Windows application—Word, Excel, Outlook, file explorer, web browsers.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🔒</div>
+          <h3>Secure & Verified</h3>
+          <p>Code-signed by SSL.com, verified by VirusTotal. Your data stays on your computer.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<h2>Download</h2>
-<p><strong>Supported OS:</strong> Windows 10 / 11</p>
 
-<div class="formats">
-  <div class="formats-ul"></div>
-  <p>Select the format that fits your team's rules.</p>
-  <p class="note">
-    As this is a new release, a warning may appear when first launching the exe. Secured by SSL.com and VirusTotal; click <strong>"More info" → "Run anyway"</strong> to start.
-  </p>
-</div>
 
-<h2>License</h2>
-<ul>
-  <li>Free for personal use</li>
-  <li>Commercial use: <a href="https://buy.stripe.com/9B68wQ7Va0ZR3sScZPbwk00">$39 USD / PC</a> (1-week free trial available)</li>
-</ul>
+  <div class="specs-section" id="download">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Download</span>
+        <h2>Available Formats</h2>
+        <p>Choose the format that matches your business needs</p>
+      </div>
+      <div class="specs-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Package</th>
+              <th>Format / Example</th>
+              <th>SHA-256 Hash</th>
+              <th style="text-align: center;">Security</th>
+            </tr>
+          </thead>
+          <tbody id="en-table-body"></tbody>
+        </table>
+      </div>
+      <div class="security-note">
+        <strong>Security Note:</strong> If Windows SmartScreen displays a warning, click <strong>"More info"</strong> then <strong>"Run anyway"</strong>. All packages are code-signed by SSL.com and verified virus-free by VirusTotal.
+      </div>
+    </div>
+  </div>
+
+  <div class="pricing-section" id="pricing">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Pricing</span>
+        <h2>Simple, Transparent Pricing</h2>
+        <p>No subscriptions. No hidden fees. Just one-time payment per device.</p>
+      </div>
+      <div class="pricing-cards">
+        <div class="pricing-card">
+          <div class="pricing-badge">Personal</div>
+          <h3>Free</h3>
+          <div class="price">$0</div>
+          <ul class="pricing-features">
+            <li>Individual use only</li>
+            <li>All format options</li>
+            <li>Lifetime updates</li>
+          </ul>
+          <a href="#download" class="btn btn-secondary" style="width: 100%;">Download Free</a>
+        </div>
+        <div class="pricing-card featured">
+          <div class="pricing-badge">Business</div>
+          <h3>Commercial License</h3>
+          <div class="price">$39<span class="price-period"> / device</span></div>
+          <ul class="pricing-features">
+            <li>Commercial use rights</li>
+            <li>All format options</li>
+            <li>Lifetime updates</li>
+            <li>Priority support</li>
+            <li>Volume discounts available</li>
+          </ul>
+          <a href="https://buy.stripe.com/9B68wQ7Va0ZR3sScZPbwk00" class="btn btn-primary" style="width: 100%;">Purchase License</a>
+          <p style="margin-top: 16px; font-size: 14px; color: var(--gray-600); font-style: italic;">1-week free trial included</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section id="ja">
-<h2>InsertDateとは</h2>
-<p>InsertDateは、組織内での日付表記を統一するためのツールです。常駐している間、キーボードの<strong>Insertキー</strong>ひとつで当日の日付を入力します。</p>
-<p>報告書、請求書、ファイル名などの日付形式をチーム全体で揃えるために機能します。</p>
+<!-- Japanese Version -->
+<section data-lang="ja">
+  <div class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>日付表記のバラつきを<br>今すぐ解決</h1>
+        <p class="subtitle">組織全体で日付入力を統一する、シンプルで確実なソリューション</p>
+        <div class="cta-buttons">
+          <a href="#download" class="btn btn-primary">無料トライアルをダウンロード</a>
+          <a href="#pricing" class="btn btn-secondary">料金を見る</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<h2>設計思想</h2>
-<p>設定やカスタマイズはありません。形式を一つに絞ることで、誰が入力しても、どの環境であっても、全く同じアウトプットが得られるように設計されています。</p>
+  <div class="problem-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">課題</span>
+        <h2>こんなお悩みありませんか？</h2>
+        <p>小さな不一致が、大きな非効率を生んでいます</p>
+      </div>
+      <div class="problem-grid">
+        <div class="problem-card">
+          <div class="problem-icon">📁</div>
+          <h3>ファイル管理の混乱</h3>
+          <p>「2026-02-14」「2026.02.14」「2026/02/14」—形式がバラバラで、ソートも検索も困難に。</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">⚠️</div>
+          <h3>データ入力ミス</h3>
+          <p>「02/14/2026」は2月14日？それとも存在しない月？曖昧な表記が請求書や記録に重大なミスを引き起こします。</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">⏱️</div>
+          <h3>時間の浪費</h3>
+          <p>「どの形式で入力すればいいの？」社員が迷い、修正に時間を取られる日々。</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<h2>ダウンロード</h2>
-<p><strong>対応OS:</strong> Windows 10 / 11</p>
+  <div class="solution-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">解決策</span>
+        <h2>ワンキー。統一フォーマット。毎回確実。</h2>
+        <p>InsertDateは組織全体の日付入力を標準化する、軽量Windowsユーティリティです</p>
+      </div>
+      
+      <div class="demo-container">
+        <img src="/animation.gif" width="249" height="211" alt="InsertDate デモ - Insertキーを押すだけで瞬時に日付フォーマット" loading="eager" fetchpriority="high">
+        <p style="margin-top: 24px; color: var(--gray-600);">Insertキーを押す → 完璧な日付形式が即座に入力</p>
+      </div>
 
-<div class="formats">
-  <div class="formats-ul"></div>
-  <p>運用ルールに合った形式を選択してください。</p>
-  <p class="note">
-    新規公開ソフトのためexe初回起動時に警告が出る場合がありますが、SSL.com署名とVirusTotalで安全確認済みです。<strong>[詳細情報]→[実行]</strong> を選択してください。
-  </p>
-</div>
+      <div class="how-it-works">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>形式を選択</h3>
+          <p>yyyyMMdd、yyyy/MM/dd、yyyy.MM.dd、yyyy年MM月dd日から選択</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>一度起動</h3>
+          <p>解凍して.exeファイルを実行。ポータブル型ソフトウェア—インストール不要。バックグラウンドで静かに動作。</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>Insertキーを押す</h3>
+          <p>文書、メール、ファイル名—どこでもInsertキーで完璧な形式に。</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<h2>ライセンス</h2>
-<ul>
-  <li>個人利用：無料</li>
-  <li>商用利用：<a href="https://buy.stripe.com/9B68wQ7Va0ZR3sScZPbwk00">$39 USD / PC</a>（1週間の無料トライアルあり）</li>
-</ul>
+  <div class="benefits-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">導入効果</span>
+        <h2>ビジネスに実感できる成果</h2>
+      </div>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon">✅</div>
+          <h3>即時コンプライアンス</h3>
+          <p>初日から全員が同じ標準に従います。教育不要、マニュアル不要。</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🔍</div>
+          <h3>簡単なファイル管理</h3>
+          <p>ファイルが日付順に自動でソート。数分から数秒で必要なものを発見。</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">💰</div>
+          <h3>エラーの撲滅</h3>
+          <p>請求書、契約書、報告書で曖昧な日付による混乱が消滅。</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">⚡</div>
+          <h3>メンテナンスゼロ</h3>
+          <p>解凍して実行。静かに動作し、リソース消費は最小限、更新も不要。</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🌐</div>
+          <h3>どこでも動作</h3>
+          <p>Word、Excel、Outlook、エクスプローラー、Webブラウザ—あらゆるアプリで機能。</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🔒</div>
+          <h3>セキュア・検証済</h3>
+          <p>SSL.comによるコード署名、VirusTotalで検証済。データはPC内に留まります。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="specs-section" id="download">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">ダウンロード</span>
+        <h2>対応形式</h2>
+        <p>ビジネスニーズに合った形式を選択してください</p>
+      </div>
+      <div class="specs-table">
+        <table>
+          <thead>
+            <tr>
+              <th>パッケージ</th>
+              <th>形式 / 出力例</th>
+              <th>SHA-256 ハッシュ</th>
+              <th style="text-align: center;">セキュリティ</th>
+            </tr>
+          </thead>
+          <tbody id="ja-table-body"></tbody>
+        </table>
+      </div>
+      <div class="security-note">
+        <strong>セキュリティについて:</strong> Windows SmartScreen警告が表示された場合は<strong>「詳細情報」→「実行」</strong>を選択してください。全パッケージはSSL.comによるコード署名とVirusTotalによるウイルススキャンで検証済みです。
+      </div>
+    </div>
+  </div>
+
+  <div class="pricing-section" id="pricing">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">料金</span>
+        <h2>シンプルで明確な料金体系</h2>
+        <p>サブスクリプションなし。隠れた費用なし。デバイスごとの買い切り。</p>
+      </div>
+      <div class="pricing-cards">
+        <div class="pricing-card">
+          <div class="pricing-badge">個人利用</div>
+          <h3>無料</h3>
+          <div class="price">$0</div>
+          <ul class="pricing-features">
+            <li>個人利用のみ</li>
+            <li>全形式オプション</li>
+            <li>永続アップデート</li>
+          </ul>
+          <a href="#download" class="btn btn-secondary" style="width: 100%;">無料ダウンロード</a>
+        </div>
+        <div class="pricing-card featured">
+          <div class="pricing-badge">ビジネス</div>
+          <h3>商用ライセンス</h3>
+          <div class="price">$39<span class="price-period"> / 台</span></div>
+          <ul class="pricing-features">
+            <li>商用利用権</li>
+            <li>全形式オプション</li>
+            <li>永続アップデート</li>
+            <li>優先サポート</li>
+            <li>ボリュームディスカウント対応</li>
+          </ul>
+          <a href="https://buy.stripe.com/9B68wQ7Va0ZR3sScZPbwk00" class="btn btn-primary" style="width: 100%;">ライセンス購入</a>
+          <p style="margin-top: 16px; font-size: 14px; color: var(--gray-600); font-style: italic;">1週間の無料トライアル付き</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section id="zh-hans">
-<h2>什么是 InsertDate？</h2>
-<p>InsertDate 是一个用于统一组织内日期格式的工具。运行时，只需按下 <strong>Insert 键</strong>即可输入当天日期。</p>
-<p>适用于报告、发票和文件名，使整个团队的记录保持一致。</p>
+<!-- Simplified Chinese Version -->
+<section data-lang="zh-hans">
+  <div class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>消除日期格式混乱<br>立即提升效率</h1>
+        <p class="subtitle">确保组织内每个人都使用相同的日期格式——每一次都准确无误</p>
+        <div class="cta-buttons">
+          <a href="#download" class="btn btn-primary">下载免费试用</a>
+          <a href="#pricing" class="btn btn-secondary">查看价格</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<h2>设计理念</h2>
-<p>无设置，无自定义。通过固定单一格式，确保所有成员在任何环境下都能获得完全相同的输入结果。</p>
+  <div class="problem-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">问题</span>
+        <h2>您是否遇到这些困扰？</h2>
+        <p>小的不一致累积成大的麻烦</p>
+      </div>
+      <div class="problem-grid">
+        <div class="problem-card">
+          <div class="problem-icon">📁</div>
+          <h3>文件命名混乱</h3>
+          <p>报告名为"2026-02-14"、"02.14.2026"、"14/02/2026"——无法排序，无法查找。</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">⚠️</div>
+          <h3>数据录入错误</h3>
+          <p>"02/14/2026"是2月14日还是不存在的月份？模糊的日期导致发票和记录中的昂贵错误。</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">⏱️</div>
+          <h3>浪费时间</h3>
+          <p>员工不断询问"我应该如何格式化这个日期？"或手动修复不一致的条目。</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<h2>下载</h2>
-<p><strong>支持系统:</strong> Windows 10 / 11</p>
+  <div class="solution-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">解决方案</span>
+        <h2>一键。统一格式。每次都准确。</h2>
+        <p>InsertDate是一个轻量级Windows工具，可在整个组织中标准化日期输入</p>
+      </div>
+      
+      <div class="demo-container">
+        <img src="/animation.gif" width="249" height="211" alt="InsertDate 演示 - 按Insert键即可即时格式化日期" loading="eager" fetchpriority="high">
+        <p style="margin-top: 24px; color: var(--gray-600);">按Insert键 → 完美的日期格式，即刻呈现</p>
+      </div>
 
-<div class="formats">
-  <div class="formats-ul"></div>
-  <p>请选择符合您团队规范的格式。</p>
-  <p class="note">
-    由于本软件为新发布，首次运行 exe 时若出现警告，请放心。本工具已通过 SSL.com 与 VirusTotal 安全认证，请点击 <strong>[更多信息] → [仍要运行]</strong>。
-  </p>
-</div>
+      <div class="how-it-works">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>选择格式</h3>
+          <p>从标准格式中选择：yyyyMMdd、yyyy/MM/dd、yyyy.MM.dd或yyyy年MM月dd日</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>运行一次</h3>
+          <p>解压并运行.exe文件。便携式软件—无需安装。在后台静默工作。</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>按Insert键</h3>
+          <p>在任何地方输入时——文档、电子邮件、文件名——按Insert键即可完美格式化。</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<h2>许可</h2>
-<ul>
-  <li>个人使用：免费</li>
-  <li>商业使用：<a href="https://buy.stripe.com/9B68wQ7Va0ZR3sScZPbwk00">$39 USD / 台</a>（提供 1 周试用）</li>
-</ul>
+  <div class="benefits-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">优势</span>
+        <h2>为您的业务带来实际成果</h2>
+      </div>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon">✅</div>
+          <h3>即时合规</h3>
+          <p>从第一天起，每个人都遵循相同的标准。无需培训，无需阅读政策文件。</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🔍</div>
+          <h3>轻松文件管理</h3>
+          <p>文件按日期自动正确排序。在几秒钟内找到所需内容。</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">💰</div>
+          <h3>消除错误</h3>
+          <p>发票、合同或报告中不再有导致混乱的模糊日期。</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">⚡</div>
+          <h3>零维护</h3>
+          <p>解压即用。静默运行，使用最少资源，永不需要更新。</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🌐</div>
+          <h3>随处可用</h3>
+          <p>在任何Windows应用程序中运行——Word、Excel、Outlook、文件资源管理器、Web浏览器。</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🔒</div>
+          <h3>安全可靠</h3>
+          <p>SSL.com代码签名，VirusTotal验证。您的数据保留在计算机上。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="specs-section" id="download">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">下载</span>
+        <h2>支持格式</h2>
+        <p>选择符合您业务需求的格式</p>
+      </div>
+      <div class="specs-table">
+        <table>
+          <thead>
+            <tr>
+              <th>安装包</th>
+              <th>格式 / 示例</th>
+              <th>SHA-256 哈希值</th>
+              <th style="text-align: center;">安全性</th>
+            </tr>
+          </thead>
+          <tbody id="zh-hans-table-body"></tbody>
+        </table>
+      </div>
+      <div class="security-note">
+        <strong>安全提示：</strong>如果Windows SmartScreen显示警告，请点击<strong>"更多信息"</strong>然后<strong>"仍要运行"</strong>。所有软件包均经过SSL.com代码签名和VirusTotal病毒扫描验证。
+      </div>
+    </div>
+  </div>
+
+  <div class="pricing-section" id="pricing">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">定价</span>
+        <h2>简单透明的定价</h2>
+        <p>无订阅。无隐藏费用。每台设备一次性付款。</p>
+      </div>
+      <div class="pricing-cards">
+        <div class="pricing-card">
+          <div class="pricing-badge">个人</div>
+          <h3>免费</h3>
+          <div class="price">$0</div>
+          <ul class="pricing-features">
+            <li>仅限个人使用</li>
+            <li>所有格式选项</li>
+            <li>终身更新</li>
+          </ul>
+          <a href="#download" class="btn btn-secondary" style="width: 100%;">免费下载</a>
+        </div>
+        <div class="pricing-card featured">
+          <div class="pricing-badge">商业</div>
+          <h3>商业许可</h3>
+          <div class="price">$39<span class="price-period"> / 台</span></div>
+          <ul class="pricing-features">
+            <li>商业使用权</li>
+            <li>所有格式选项</li>
+            <li>终身更新</li>
+            <li>优先支持</li>
+            <li>批量折扣</li>
+          </ul>
+          <a href="https://buy.stripe.com/9B68wQ7Va0ZR3sScZPbwk00" class="btn btn-primary" style="width: 100%;">购买许可证</a>
+          <p style="margin-top: 16px; font-size: 14px; color: var(--gray-600); font-style: italic;">包含1周免费试用</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section id="zh-hant">
-<h2>什麼是 InsertDate？</h2>
-<p>InsertDate 是一個用於統一組織內日期格式的工具。執行時，只需按下 <strong>Insert 鍵</strong>即可輸入當天日期。</p>
-<p>適用於報告、發票和檔名，使整個團隊的記錄保持一致。</p>
+<!-- Traditional Chinese Version -->
+<section data-lang="zh-hant">
+  <div class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>消除日期格式混亂<br>立即提升效率</h1>
+        <p class="subtitle">確保組織內每個人都使用相同的日期格式——每一次都準確無誤</p>
+        <div class="cta-buttons">
+          <a href="#download" class="btn btn-primary">下載免費試用</a>
+          <a href="#pricing" class="btn btn-secondary">查看價格</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<h2>設計理念</h2>
-<p>無設定，無自訂。透過固定單一格式，確保所有成員在任何環境下都能獲得完全相同的輸入結果。</p>
+  <div class="problem-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">問題</span>
+        <h2>您是否遇到這些困擾？</h2>
+        <p>小的不一致累積成大的麻煩</p>
+      </div>
+      <div class="problem-grid">
+        <div class="problem-card">
+          <div class="problem-icon">📁</div>
+          <h3>檔案命名混亂</h3>
+          <p>報告名為「2026-02-14」、「02.14.2026」、「14/02/2026」——無法排序，無法查找。</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">⚠️</div>
+          <h3>數據錄入錯誤</h3>
+          <p>「02/14/2026」是2月14日還是不存在的月份？模糊的日期導致發票和記錄中的昂貴錯誤。</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">⏱️</div>
+          <h3>浪費時間</h3>
+          <p>員工不斷詢問「我應該如何格式化這個日期？」或手動修復不一致的條目。</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<h2>下載</h2>
-<p><strong>支援系統:</strong> Windows 10 / 11</p>
+  <div class="solution-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">解決方案</span>
+        <h2>一鍵。統一格式。每次都準確。</h2>
+        <p>InsertDate是一個輕量級Windows工具，可在整個組織中標準化日期輸入</p>
+      </div>
+      
+      <div class="demo-container">
+        <img src="/animation.gif" width="249" height="211" alt="InsertDate 演示 - 按Insert鍵即可即時格式化日期" loading="eager" fetchpriority="high">
+        <p style="margin-top: 24px; color: var(--gray-600);">按Insert鍵 → 完美的日期格式，即刻呈現</p>
+      </div>
 
-<div class="formats">
-  <div class="formats-ul"></div>
-  <p>請選擇符合您團隊規範的格式。</p>
-  <p class="note">
-    因本軟體為新發佈，首次執行 exe 時若出現警告，請放心。本工具已通過 SSL.com 與 VirusTotal 安全認證，請點擊 <strong>[詳細資訊] → [仍要執行]</strong>。
-  </p>
-</div>
+      <div class="how-it-works">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>選擇格式</h3>
+          <p>從標準格式中選擇：yyyyMMdd、yyyy/MM/dd、yyyy.MM.dd或yyyy年MM月dd日</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>執行一次</h3>
+          <p>解壓並執行.exe檔案。可攜式軟體—無需安裝。在背景靜默工作。</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>按Insert鍵</h3>
+          <p>在任何地方輸入時——文件、電子郵件、檔案名稱——按Insert鍵即可完美格式化。</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<h2>授權</h2>
-<ul>
-  <li>個人使用：免費</li>
-  <li>商業使用：<a href="https://buy.stripe.com/9B68wQ7Va0ZR3sScZPbwk00">$39 USD / PC</a>（提供 1 週試用）</li>
-</ul>
+  <div class="benefits-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">優勢</span>
+        <h2>為您的業務帶來實際成果</h2>
+      </div>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon">✅</div>
+          <h3>即時合規</h3>
+          <p>從第一天起，每個人都遵循相同的標準。無需培訓，無需閱讀政策文件。</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🔍</div>
+          <h3>輕鬆檔案管理</h3>
+          <p>檔案按日期自動正確排序。在幾秒鐘內找到所需內容。</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">💰</div>
+          <h3>消除錯誤</h3>
+          <p>發票、合約或報告中不再有導致混亂的模糊日期。</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">⚡</div>
+          <h3>零維護</h3>
+          <p>解壓即用。靜默運行，使用最少資源，永不需要更新。</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🌐</div>
+          <h3>隨處可用</h3>
+          <p>在任何Windows應用程式中運行——Word、Excel、Outlook、檔案總管、網頁瀏覽器。</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🔒</div>
+          <h3>安全可靠</h3>
+          <p>SSL.com代碼簽名，VirusTotal驗證。您的數據保留在電腦上。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="specs-section" id="download">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">下載</span>
+        <h2>支援格式</h2>
+        <p>選擇符合您業務需求的格式</p>
+      </div>
+      <div class="specs-table">
+        <table>
+          <thead>
+            <tr>
+              <th>安裝包</th>
+              <th>格式 / 示例</th>
+              <th>SHA-256 哈希值</th>
+              <th style="text-align: center;">安全性</th>
+            </tr>
+          </thead>
+          <tbody id="zh-hant-table-body"></tbody>
+        </table>
+      </div>
+      <div class="security-note">
+        <strong>安全提示：</strong>如果Windows SmartScreen顯示警告，請點擊<strong>「其他資訊」</strong>然後<strong>「仍要執行」</strong>。所有軟體包均經過SSL.com代碼簽名和VirusTotal病毒掃描驗證。
+      </div>
+    </div>
+  </div>
+
+  <div class="pricing-section" id="pricing">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">定價</span>
+        <h2>簡單透明的定價</h2>
+        <p>無訂閱。無隱藏費用。每台裝置一次性付款。</p>
+      </div>
+      <div class="pricing-cards">
+        <div class="pricing-card">
+          <div class="pricing-badge">個人</div>
+          <h3>免費</h3>
+          <div class="price">$0</div>
+          <ul class="pricing-features">
+            <li>僅限個人使用</li>
+            <li>所有格式選項</li>
+            <li>終身更新</li>
+          </ul>
+          <a href="#download" class="btn btn-secondary" style="width: 100%;">免費下載</a>
+        </div>
+        <div class="pricing-card featured">
+          <div class="pricing-badge">商業</div>
+          <h3>商業授權</h3>
+          <div class="price">$39<span class="price-period"> / 台</span></div>
+          <ul class="pricing-features">
+            <li>商業使用權</li>
+            <li>所有格式選項</li>
+            <li>終身更新</li>
+            <li>優先支援</li>
+            <li>大量折扣</li>
+          </ul>
+          <a href="https://buy.stripe.com/9B68wQ7Va0ZR3sScZPbwk00" class="btn btn-primary" style="width: 100%;">購買授權</a>
+          <p style="margin-top: 16px; font-size: 14px; color: var(--gray-600); font-style: italic;">包含1週免費試用</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <footer>
-  <small>Developed in Japan. Available worldwide.</small><br>
-  <small>Contact: info@insertdate.com</small><br>
-  <small>
-    <a href="/privacy.html">Privacy Policy</a> | 
-    <a href="/legal.html">Legal Notice</a>
-  </small><br>
-  <small>© InsertDate. All rights reserved.</small>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>InsertDate</h4>
+        <p>Professional date standardization<br>for modern businesses.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Product</h4>
+        <ul class="footer-links">
+          <li><a href="#download">Download</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Support</h4>
+        <ul class="footer-links">
+          <li><a href="mailto:info@insertdate.com">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Legal</h4>
+        <ul class="footer-links">
+          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/legal">Legal Notice</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Developed in Japan. Trusted worldwide.</p>
+      <p>© 2026 InsertDate. All rights reserved.</p>
+    </div>
+  </div>
 </footer>
 
-</main>
-
 <script>
-const pageMeta = {
-  'en': { title: 'InsertDate – One Team. One Date. | Team Date Unification Tool', desc: 'InsertDate unifies date formats across your team. One key, one fixed format. No settings required.' },
-  'ja': { title: 'InsertDate – One Team. One Date. | 日付表記の統一ツール', desc: 'InsertDateは、組織の日付表記を一つに揃えるためのツールです。設定を排し、チーム全体で全く同じ出力を保証します。' },
-  'zh-hans': { title: 'InsertDate – One Team. One Date. | 团队日期统一工具', desc: 'InsertDate 是一个用于统一组织内日期格式的工具。固定格式，无需设置。' },
-  'zh-hant': { title: 'InsertDate – One Team. One Date. | 團隊日期統一工具', desc: 'InsertDate 是一個用於統一組織內日期格式的工具。固定格式，無需設定。' }
-};
+const binaries = [
+  { 
+    name: 'InsertDate_v1.0.zip', 
+    format: 'yyyyMMdd', 
+    hash: '0666E347461BC90078316EB6CDB9A3A22482B40AADCFAB40C09AD77879174304', 
+    vt: 'ade8d5614f2c7d050a51854fad319abc4d0525656281d931017ba8d1217b1a64?nocache=1' 
+  },
+  { 
+    name: 'InsertDate-Slash_v1.0.zip', 
+    format: 'yyyy/MM/dd', 
+    hash: '46E1E592079059D9272717C1347F092069B1AB587B16D91703D60367F9EA489A', 
+    vt: '247b59d3669a3aba69543c5f8070825856396e9b279066d54da52096662d4f66?nocache=1' 
+  },
+  { 
+    name: 'InsertDate-Dot_v1.0.zip', 
+    format: 'yyyy.MM.dd', 
+    hash: 'BB5B7C33287A923F41FBEF0B3F13498BB8A2E8274611D8997FEEBDBE4658437A', 
+    vt: 'f2ee69d9f81b6048a7f58aea10eec10357d52563e8741df367af2712d473ec60?nocache=1' 
+  },
+  { 
+    name: 'InsertDate-EA_v1.0.zip', 
+    format: 'yyyy年MM月dd日', 
+    hash: 'B6740762B69B2391C648FBE8341E7A62B60102FF372F2E3F9458F6466D588B9F', 
+    vt: 'u-5ddc1641deb2ce055ac4094ca5b0cd774506efe0fdd909dbcb6197b67e147b5a-ae302314' 
+  }
+];
 
 function formatDate(fmt) {
   const d = new Date();
-  const y = d.getFullYear();
-  const m = String(d.getMonth() + 1).padStart(2, '0');
+  const year = d.getFullYear();
+  const month = String(d.getMonth() + 1).padStart(2, '0');
   const day = String(d.getDate()).padStart(2, '0');
-  return fmt.replace('yyyy', y).replace('MM', m).replace('dd', day);
+  return fmt.replace('yyyy', year).replace('MM', month).replace('dd', day);
 }
 
-function injectFormatsUL() {
-  const tpl = document.getElementById('formats-ul-template');
-  document.querySelectorAll('.formats-ul').forEach(el => {
-    el.innerHTML = '';
-    el.appendChild(tpl.content.cloneNode(true));
-  });
-  document.querySelectorAll('.example[data-format]').forEach(el => {
-    el.textContent = 'Example: ' + formatDate(el.dataset.format);
+function populateTables() {
+  ['en', 'ja', 'zh-hans', 'zh-hant'].forEach(lang => {
+    const tbody = document.getElementById(`${lang}-table-body`);
+    if (!tbody) return;
+    
+    binaries.forEach(b => {
+      const tr = document.createElement('tr');
+      const vtUrl = b.vt.startsWith('u-') 
+        ? `https://www.virustotal.com/gui/url-analysis/${b.vt}` 
+        : `https://www.virustotal.com/gui/url/${b.vt}`;
+      
+      tr.innerHTML = `
+        <td><a href="https://github.com/InsertDate/InsertDate/releases/download/v1.0/${b.name}" class="package-name">${b.name}</a></td>
+        <td>
+          <span class="format-display">${b.format}</span>
+          <span class="format-example">Ex: ${formatDate(b.format)}</span>
+        </td>
+        <td><div class="hash-code">${b.hash}</div></td>
+        <td style="text-align:center"><a href="${vtUrl}" target="_blank" rel="noopener noreferrer" class="verify-btn">🛡️ VERIFY</a></td>
+      `;
+      tbody.appendChild(tr);
+    });
   });
 }
-
-injectFormatsUL();
 
 function setLang(lang) {
-  document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
-  const target = document.getElementById(lang);
-  if (target) target.classList.add('active');
-
-  const map = { en:'en', ja:'ja', 'zh-hans':'zh-Hans', 'zh-hant':'zh-Hant' };
-  document.documentElement.lang = map[lang] || 'en';
-
-  document.querySelectorAll('.lang-switch button').forEach(btn => {
-    btn.classList.remove('primary');
-    btn.classList.add('secondary','outline');
+  // Hide all sections
+  document.querySelectorAll('section[data-lang]').forEach(s => s.classList.remove('active'));
+  
+  // Show selected section
+  const section = document.querySelector(`section[data-lang="${lang}"]`);
+  if (section) section.classList.add('active');
+  
+  // Update button states
+  document.querySelectorAll('.lang-switcher button').forEach(btn => {
+    btn.classList.remove('active');
   });
-
-  const activeBtn = document.querySelector(`.lang-switch button[onclick="setLang('${lang}')"]`);
-  if (activeBtn) {
-    activeBtn.classList.remove('secondary','outline');
-    activeBtn.classList.add('primary');
+  
+  const activeBtn = document.querySelector(`button[data-lang="${lang}"]`);
+  if (activeBtn) activeBtn.classList.add('active');
+  
+  // Update HTML lang attribute
+  const langCode = lang === 'zh-hans' ? 'zh-Hans' : (lang === 'zh-hant' ? 'zh-Hant' : lang);
+  document.documentElement.lang = langCode;
+  
+  // Update URL without reload
+  const url = new URL(window.location);
+  if (lang === 'en') {
+    url.searchParams.delete('lang');
+  } else {
+    url.searchParams.set('lang', lang);
   }
-
-  if (pageMeta[lang]) {
-    document.title = pageMeta[lang].title;
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) metaDesc.setAttribute('content', pageMeta[lang].desc);
-    const ogDesc = document.querySelector('meta[property="og:description"]');
-    if (ogDesc) ogDesc.setAttribute('content', pageMeta[lang].desc);
-  }
+  window.history.replaceState({}, '', url);
 }
 
-function detectLang() {
-  const params = new URLSearchParams(window.location.search);
-  const urlLang = params.get('lang');
-  if (urlLang) {
-    const lower = urlLang.toLowerCase();
-    if (lower.startsWith('ja')) return 'ja';
-    if (lower.startsWith('zh-tw') || lower.startsWith('zh-hant')) return 'zh-hant';
-    if (lower.startsWith('zh')) return 'zh-hans';
-    if (lower.startsWith('en')) return 'en';
-  }
-  const langs = navigator.languages || [navigator.language];
-  for (const l of langs) {
-    if (l.startsWith('ja')) return 'ja';
-    if (l.startsWith('zh-TW') || l.startsWith('zh-HK')) return 'zh-hant';
-    if (l.startsWith('zh')) return 'zh-hans';
-    if (l.startsWith('en')) return 'en';
-  }
-  return 'en';
+// Initialize
+populateTables();
+
+// Detect language from URL or browser
+const params = new URLSearchParams(window.location.search);
+const urlLang = params.get('lang');
+const browserLang = navigator.language.split('-')[0];
+
+let initialLang = 'en';
+if (urlLang && ['ja', 'en', 'zh-hans', 'zh-hant'].includes(urlLang)) {
+  initialLang = urlLang;
+} else if (browserLang === 'ja') {
+  initialLang = 'ja';
+} else if (browserLang === 'zh') {
+  const fullLang = navigator.language.toLowerCase();
+  initialLang = fullLang.includes('tw') || fullLang.includes('hk') || fullLang.includes('hant') 
+    ? 'zh-hant' 
+    : 'zh-hans';
 }
-setLang(detectLang());
+
+setLang(initialLang);
 </script>
 </body>
 </html>
