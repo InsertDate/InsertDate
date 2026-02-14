@@ -939,6 +939,53 @@
       font-weight: 600;
     }
 
+    /* FAQ Section */
+    .faq {
+      padding: 80px 0;
+      background: var(--background-secondary);
+    }
+
+    .faq h2 {
+      text-align: center;
+      margin-bottom: 50px;
+      font-size: 32px;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .faq-list {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      background: var(--neutral-white);
+      border-radius: 8px;
+      padding: 24px 28px;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+      transition: box-shadow 0.2s ease;
+    }
+
+    .faq-item:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .faq-question {
+      font-weight: 600;
+      font-size: 17px;
+      color: var(--text-primary);
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+
+    .faq-answer {
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--text-secondary);
+      margin: 0;
+    }
+
     /* Language-specific sections */
     section[data-lang] {
       display: none;
@@ -1275,9 +1322,9 @@
           <h3>Individual Use</h3>
           <div class="price">FREE</div>
           <ul class="pricing-features">
-            <li>Non-commercial use only <a href="mailto:info@insertdate.com?subject=Commercial Use Definition" style="color: var(--primary-blue); text-decoration: none; font-size: 13px;" title="Personal projects, education, non-profit organizations. Any business use requires a commercial license.">(?)</a></li>
+            <li>Non-commercial use only</li>
             <li>All format options</li>
-            <li>Lifetime updates</li>
+            <li>Free updates</li>
           </ul>
           <a href="#download" class="btn btn-secondary" style="width: 100%;">Download Free</a>
         </div>
@@ -1288,7 +1335,7 @@
           <ul class="pricing-features">
             <li>Commercial deployment rights</li>
             <li>All format options</li>
-            <li>Lifetime updates</li>
+            <li>Free updates</li>
             <li>Priority support</li>
             <li>Volume licensing available <a href="mailto:info@insertdate.com?subject=Volume Licensing Inquiry" style="color: var(--primary-blue); text-decoration: underline; font-size: 13px;">(Contact us)</a></li>
           </ul>
@@ -1462,9 +1509,9 @@
           <h3>個人利用</h3>
           <div class="price">無料</div>
           <ul class="pricing-features">
-            <li>非商用利用のみ <a href="mailto:info@insertdate.com?subject=商用利用の定義について" style="color: var(--primary-blue); text-decoration: none; font-size: 13px;" title="個人プロジェクト、教育、非営利団体。ビジネス用途には商用ライセンスが必要です。">(?)</a></li>
+            <li>非商用利用のみ</li>
             <li>全形式オプション</li>
-            <li>永続的な更新</li>
+            <li>無料アップデート</li>
           </ul>
           <a href="#download" class="btn btn-secondary" style="width: 100%;">無料ダウンロード</a>
         </div>
@@ -1475,7 +1522,7 @@
           <ul class="pricing-features">
             <li>商用展開権限</li>
             <li>全形式オプション</li>
-            <li>永続的な更新</li>
+            <li>無料アップデート</li>
             <li>優先サポート</li>
             <li>ボリュームライセンス対応 <a href="mailto:info@insertdate.com?subject=ボリュームライセンスのお問い合わせ" style="color: var(--primary-blue); text-decoration: underline; font-size: 13px;">(お問い合わせ)</a></li>
           </ul>
@@ -1649,9 +1696,9 @@
           <h3>个人使用</h3>
           <div class="price">免费</div>
           <ul class="pricing-features">
-            <li>仅限非商业使用 <a href="mailto:info@insertdate.com?subject=关于商业使用定义" style="color: var(--primary-blue); text-decoration: none; font-size: 13px;" title="个人项目、教育、非营利组织。任何商业用途需要商业许可证。">(?)</a></li>
+            <li>仅限非商业使用</li>
             <li>所有格式选项</li>
-            <li>终身更新</li>
+            <li>免费更新</li>
           </ul>
           <a href="#download" class="btn btn-secondary" style="width: 100%;">免费下载</a>
         </div>
@@ -1662,7 +1709,7 @@
           <ul class="pricing-features">
             <li>商业部署权</li>
             <li>所有格式选项</li>
-            <li>终身更新</li>
+            <li>免费更新</li>
             <li>优先支持</li>
             <li>批量许可可用 <a href="mailto:info@insertdate.com?subject=批量许可咨询" style="color: var(--primary-blue); text-decoration: underline; font-size: 13px;">(联系我们)</a></li>
           </ul>
@@ -1836,9 +1883,9 @@
           <h3>個人使用</h3>
           <div class="price">免費</div>
           <ul class="pricing-features">
-            <li>僅限非商業使用 <a href="mailto:info@insertdate.com?subject=關於商業使用定義" style="color: var(--primary-blue); text-decoration: none; font-size: 13px;" title="個人專案、教育、非營利組織。任何商業用途需要商業授權。">(?)</a></li>
+            <li>僅限非商業使用</li>
             <li>所有格式選項</li>
-            <li>終身更新</li>
+            <li>免費更新</li>
           </ul>
           <a href="#download" class="btn btn-secondary" style="width: 100%;">免費下載</a>
         </div>
@@ -1849,12 +1896,192 @@
           <ul class="pricing-features">
             <li>商業部署權</li>
             <li>所有格式選項</li>
-            <li>終身更新</li>
+            <li>免費更新</li>
             <li>優先支援</li>
             <li>大量授權可用 <a href="mailto:info@insertdate.com?subject=大量授權諮詢" style="color: var(--primary-blue); text-decoration: underline; font-size: 13px;">(聯絡我們)</a></li>
           </ul>
           <a href="https://buy.stripe.com/9B68wQ7Va0ZR3sScZPbwk00" class="btn btn-primary" style="width: 100%;">購買授權</a>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section - English -->
+<section id="en-faq" class="faq" data-lang="en">
+  <div class="container">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <h3 class="faq-question">How do I install InsertDate?</h3>
+        <p class="faq-answer">No installation needed. InsertDate is a portable .exe file. Simply download, save it anywhere (Desktop, Documents, USB drive), and double-click to run. Ready in 5 seconds.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">Does InsertDate require an internet connection? Is my data sent anywhere?</h3>
+        <p class="faq-answer">No internet required. InsertDate works 100% offline. Your data is processed locally on your device and never transmitted to any server. Complete privacy guaranteed.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">What operating systems are supported?</h3>
+        <p class="faq-answer">Officially supported: Windows 10 and Windows 11 (64-bit). InsertDate may work on older Windows versions or 32-bit systems, but these are not officially supported.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">What's the difference between Individual and Commercial licenses?</h3>
+        <p class="faq-answer">Individual Use (Free): For personal projects, education, and non-profit organizations only. Commercial License ($39/device): Required for any business use, including freelance work, company operations, or any profit-generating activity.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">Can I use InsertDate on multiple devices?</h3>
+        <p class="faq-answer">Individual Use is free on unlimited personal devices. Commercial licenses are per-device—you need one license for each computer used in a business context.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">How do updates work?</h3>
+        <p class="faq-answer">All updates are free. When a new version is released, simply download the latest .exe and replace your current file. Your settings are preserved. No subscription or recurring fees.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">What support is available?</h3>
+        <p class="faq-answer">Both Individual and Commercial users receive email support at info@insertdate.com. We respond within 48 hours on business days. Commercial license holders receive priority handling.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">How do I uninstall InsertDate?</h3>
+        <p class="faq-answer">Simply delete the InsertDate.exe file. If you registered it to run at startup, also remove it from Windows Startup settings (Task Manager > Startup tab). No leftover files or registry entries.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">Can I run InsertDate from a USB drive?</h3>
+        <p class="faq-answer">Yes. InsertDate is fully portable. Copy the .exe to any USB drive and run it directly from there. Perfect for using the same tool across multiple computers without installation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section - Japanese -->
+<section id="ja-faq" class="faq" data-lang="ja">
+  <div class="container">
+    <h2>よくある質問</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <h3 class="faq-question">InsertDateのインストール方法は？</h3>
+        <p class="faq-answer">インストール不要です。InsertDateはポータブルな.exeファイルです。ダウンロードして任意の場所（デスクトップ、ドキュメント、USBドライブなど）に保存し、ダブルクリックで起動するだけ。5秒で使えます。</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">InsertDateはインターネット接続が必要ですか？データは外部送信されますか？</h3>
+        <p class="faq-answer">インターネット接続は不要です。InsertDateは100%オフラインで動作します。データは端末内でのみ処理され、サーバーに送信されることはありません。完全なプライバシー保護を保証します。</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">対応OSは？</h3>
+        <p class="faq-answer">正式サポート：Windows 10およびWindows 11（64ビット）。古いWindowsバージョンや32ビットシステムでも動作する可能性がありますが、正式サポート対象外です。</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">個人利用と商用ライセンスの違いは？</h3>
+        <p class="faq-answer">個人利用（無料）：個人プロジェクト、教育、非営利団体のみ。商用ライセンス（$39/台）：ビジネス用途（フリーランス業務、企業運営、収益活動全般）に必要です。</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">複数のデバイスでInsertDateを使えますか？</h3>
+        <p class="faq-answer">個人利用は無制限のデバイスで無料で使えます。商用ライセンスはデバイスごとです—ビジネスで使用する各コンピューターに1つのライセンスが必要です。</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">アップデートはどうなりますか？</h3>
+        <p class="faq-answer">すべてのアップデートは無料です。新バージョンがリリースされたら、最新の.exeをダウンロードして現在のファイルを置き換えるだけです。設定は保持されます。サブスクリプションや継続料金はありません。</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">サポートは受けられますか？</h3>
+        <p class="faq-answer">個人・商用ともにinfo@insertdate.comでメールサポートを受けられます。営業日48時間以内に返信します。商用ライセンス保有者は優先対応されます。</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">InsertDateのアンインストール方法は？</h3>
+        <p class="faq-answer">InsertDate.exeファイルを削除するだけです。スタートアップ登録していた場合は、Windowsのスタートアップ設定からも削除してください（タスクマネージャー > スタートアップタブ）。残存ファイルやレジストリエントリはありません。</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">USBドライブからInsertDateを実行できますか？</h3>
+        <p class="faq-answer">はい。InsertDateは完全にポータブルです。.exeファイルをUSBドライブにコピーして、そこから直接実行できます。複数のコンピューターでインストール不要で同じツールを使うのに最適です。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section - Simplified Chinese -->
+<section id="zh-hans-faq" class="faq" data-lang="zh-hans">
+  <div class="container">
+    <h2>常见问题</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <h3 class="faq-question">如何安装 InsertDate？</h3>
+        <p class="faq-answer">无需安装。InsertDate 是一个便携式 .exe 文件。只需下载并保存到任意位置（桌面、文档、U盘等），双击即可运行。5 秒即可使用。</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">InsertDate 需要互联网连接吗？我的数据会被发送到哪里吗？</h3>
+        <p class="faq-answer">无需互联网连接。InsertDate 100% 离线运行。您的数据仅在本地设备上处理，绝不会传输到任何服务器。保证完全隐私。</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">支持哪些操作系统？</h3>
+        <p class="faq-answer">正式支持：Windows 10 和 Windows 11（64 位）。InsertDate 可能在较旧的 Windows 版本或 32 位系统上运行，但不提供正式支持。</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">个人使用和商业许可有什么区别？</h3>
+        <p class="faq-answer">个人使用（免费）：仅限个人项目、教育和非营利组织。商业许可（$39/设备）：任何商业用途（包括自由职业、公司运营或任何盈利活动）均需购买。</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">可以在多台设备上使用 InsertDate 吗？</h3>
+        <p class="faq-answer">个人使用可在无限台个人设备上免费使用。商业许可按设备计费——每台用于商业环境的计算机需要一个许可证。</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">更新如何进行？</h3>
+        <p class="faq-answer">所有更新均免费。新版本发布时，只需下载最新 .exe 文件并替换当前文件即可。您的设置将被保留。无订阅或定期费用。</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">提供哪些支持服务？</h3>
+        <p class="faq-answer">个人和商业用户均可通过 info@insertdate.com 获得电子邮件支持。我们在工作日 48 小时内回复。商业许可证持有者享有优先处理。</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">如何卸载 InsertDate？</h3>
+        <p class="faq-answer">只需删除 InsertDate.exe 文件即可。如果您将其注册到启动项，还需从 Windows 启动设置中删除（任务管理器 > 启动选项卡）。不留任何残留文件或注册表项。</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">可以从 USB 驱动器运行 InsertDate 吗？</h3>
+        <p class="faq-answer">可以。InsertDate 完全便携。将 .exe 文件复制到任何 USB 驱动器并直接从那里运行。非常适合在多台计算机上使用同一工具而无需安装。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section - Traditional Chinese -->
+<section id="zh-hant-faq" class="faq" data-lang="zh-hant">
+  <div class="container">
+    <h2>常見問題</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <h3 class="faq-question">如何安裝 InsertDate？</h3>
+        <p class="faq-answer">無需安裝。InsertDate 是一個可攜式 .exe 檔案。只需下載並儲存到任意位置（桌面、文件、USB 隨身碟等），雙擊即可執行。5 秒即可使用。</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">InsertDate 需要網際網路連線嗎？我的數據會被傳送到哪裡嗎？</h3>
+        <p class="faq-answer">無需網際網路連線。InsertDate 100% 離線運行。您的數據僅在本機裝置上處理，絕不會傳輸到任何伺服器。保證完全隱私。</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">支援哪些作業系統？</h3>
+        <p class="faq-answer">正式支援：Windows 10 和 Windows 11（64 位元）。InsertDate 可能在較舊的 Windows 版本或 32 位元系統上執行，但不提供正式支援。</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">個人使用和商業授權有什麼區別？</h3>
+        <p class="faq-answer">個人使用（免費）：僅限個人專案、教育和非營利組織。商業授權（$39/裝置）：任何商業用途（包括自由工作、公司營運或任何獲利活動）均需購買。</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">可以在多台裝置上使用 InsertDate 嗎？</h3>
+        <p class="faq-answer">個人使用可在無限台個人裝置上免費使用。商業授權按裝置計費——每台用於商業環境的電腦需要一個授權。</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">更新如何進行？</h3>
+        <p class="faq-answer">所有更新均免費。新版本發布時，只需下載最新 .exe 檔案並取代目前檔案即可。您的設定將被保留。無訂閱或定期費用。</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">提供哪些支援服務？</h3>
+        <p class="faq-answer">個人和商業用戶均可透過 info@insertdate.com 獲得電子郵件支援。我們在工作日 48 小時內回覆。商業授權持有者享有優先處理。</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">如何解除安裝 InsertDate？</h3>
+        <p class="faq-answer">只需刪除 InsertDate.exe 檔案即可。如果您將其註冊到啟動項，還需從 Windows 啟動設定中刪除（工作管理員 > 啟動索引標籤）。不留任何殘留檔案或登錄項目。</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">可以從 USB 隨身碟執行 InsertDate 嗎？</h3>
+        <p class="faq-answer">可以。InsertDate 完全可攜。將 .exe 檔案複製到任何 USB 隨身碟並直接從那裡執行。非常適合在多台電腦上使用同一工具而無需安裝。</p>
       </div>
     </div>
   </div>
@@ -1877,6 +2104,7 @@
         <ul class="footer-links">
           <li><a href="#download">Download</a></li>
           <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#faq">FAQ</a></li>
         </ul>
       </div>
       <div class="footer-section">
@@ -1999,19 +2227,17 @@
   }
 
   function setLang(lang) {
-    // 現在アクティブなセクションを取得
-    const currentActive = document.querySelector('section[data-lang].active');
+    // すべてのアクティブなセクションを非アクティブ化
+    const allActive = document.querySelectorAll('section[data-lang].active');
+    allActive.forEach(function(section) {
+      section.classList.remove('active');
+    });
 
-    // アクティブなセクションがあれば非アクティブ化
-    if (currentActive) {
-      currentActive.classList.remove('active');
-    }
-
-    // 選択されたセクションをアクティブ化
-    const targetSection = document.querySelector('section[data-lang="' + lang + '"]');
-    if (targetSection) {
-      targetSection.classList.add('active');
-    }
+    // 選択された言語のすべてのセクションをアクティブ化
+    const targetSections = document.querySelectorAll('section[data-lang="' + lang + '"]');
+    targetSections.forEach(function(section) {
+      section.classList.add('active');
+    });
 
     // スティッキーCTAのテキストを更新
     const stickyCta = document.getElementById('sticky-cta');
@@ -2073,7 +2299,7 @@
     if (!link) return;
 
     const hash = link.getAttribute('href');
-    if (hash === '#download' || hash === '#pricing') {
+    if (hash === '#download' || hash === '#pricing' || hash === '#faq') {
       e.preventDefault();
       scrollToAnchor(hash);
     }
@@ -2100,7 +2326,7 @@
   // ページ読み込み時のハッシュ処理
   function handleInitialHash() {
     const hash = window.location.hash;
-    if (hash === '#download' || hash === '#pricing') {
+    if (hash === '#download' || hash === '#pricing' || hash === '#faq') {
       setTimeout(function() {
         scrollToAnchor(hash);
       }, 300); // 言語設定後にスクロール
