@@ -12,7 +12,7 @@
     .logo { font-family: system-ui, -apple-system, sans-serif; font-size: 2rem; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 0.5rem; }
     .logo span { color: #1f5fbf; font-weight: 700; }
     .logo a { text-decoration: none; color: inherit; }
-    body { font-size: 0.85rem; line-height: 1.6; }
+    body { font-size: 1rem; line-height: 1.6; }
     header { margin-top: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1rem; }
     h2 { font-size: 1.4rem; margin-top: 2rem; border-left: 4px solid #1f5fbf; padding-left: 0.5rem; }
     h3 { font-size: 1.1rem; margin-top: 1.5rem; text-decoration: underline; }
@@ -32,15 +32,15 @@
 
 <header>
   <div class="logo"><a href="/">Insert<span>Date</span></a></div>
-  <nav class="lang-switch">
-    <button class="secondary outline" onclick="setLang('en')">English</button>
-    <button class="secondary outline" onclick="setLang('ja')">日本語</button>
-    <button class="secondary outline" onclick="setLang('zh-hans')">简体中文</button>
-    <button class="secondary outline" onclick="setLang('zh-hant')">繁體中文</button>
+  <nav class="lang-switch" aria-label="Language selection">
+    <button class="secondary outline" onclick="setLang('en')" aria-label="English">English</button>
+    <button class="secondary outline" onclick="setLang('ja')" aria-label="Japanese">日本語</button>
+    <button class="secondary outline" onclick="setLang('zh-hans')" aria-label="Simplified Chinese">简体中文</button>
+    <button class="secondary outline" onclick="setLang('zh-hant')" aria-label="Traditional Chinese">繁體中文</button>
   </nav>
 </header>
 
-<section id="en">
+<section id="en" lang="en">
   <h1>Legal Notice / Terms of Service</h1>
   <p>Last Updated: 2026-02-13 (ver 1.0)</p>
 
@@ -92,7 +92,7 @@
   </div>
 </section>
 
-<section id="ja">
+<section id="ja" lang="ja">
   <h1>利用規約・特定商取引法に基づく表記</h1>
   <p>最終更新日：2026年2月13日 (ver 1.0)</p>
 
@@ -144,7 +144,7 @@
   </div>
 </section>
 
-<section id="zh-hans">
+<section id="zh-hans" lang="zh-Hans">
   <h1>法律声明 / 服务协议</h1>
   <p>最后更新：2026-02-13 (ver 1.0)</p>
 
@@ -187,7 +187,7 @@
   </ol>
 </section>
 
-<section id="zh-hant">
+<section id="zh-hant" lang="zh-Hant">
   <h1>法律聲明 / 服務條款</h1>
   <p>最後更新：2026-02-13 (ver 1.0)</p>
 

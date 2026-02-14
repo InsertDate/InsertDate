@@ -12,7 +12,7 @@
     .logo { font-family: system-ui, -apple-system, sans-serif; font-size: 2rem; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 0.5rem; }
     .logo span { color: #1f5fbf; font-weight: 700; }
     .logo a { text-decoration: none; color: inherit; }
-    body { font-size: 0.85rem; line-height: 1.6; }
+    body { font-size: 1rem; line-height: 1.6; }
     header { margin-top: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1rem; }
     h2 { font-size: 1.4rem; margin-top: 2rem; border-left: 4px solid #1f5fbf; padding-left: 0.5rem; }
     h3 { font-size: 1.1rem; margin-top: 1.5rem; text-decoration: underline; }
@@ -31,15 +31,15 @@
 
 <header>
   <div class="logo"><a href="/">Insert<span>Date</span></a></div>
-  <nav class="lang-switch">
-    <button class="secondary outline" onclick="setLang('en')">English</button>
-    <button class="secondary outline" onclick="setLang('ja')">日本語</button>
-    <button class="secondary outline" onclick="setLang('zh-hans')">简体中文</button>
-    <button class="secondary outline" onclick="setLang('zh-hant')">繁體中文</button>
+  <nav class="lang-switch" aria-label="Language selection">
+    <button class="secondary outline" onclick="setLang('en')" aria-label="English">English</button>
+    <button class="secondary outline" onclick="setLang('ja')" aria-label="Japanese">日本語</button>
+    <button class="secondary outline" onclick="setLang('zh-hans')" aria-label="Simplified Chinese">简体中文</button>
+    <button class="secondary outline" onclick="setLang('zh-hant')" aria-label="Traditional Chinese">繁體中文</button>
   </nav>
 </header>
 
-<section id="en">
+<section id="en" lang="en">
   <h1>Privacy Policy</h1>
   <p>Last Updated: 2026-02-11</p>
   <p class="important-privacy">Zero-Tracking Policy: We respect your privacy.</p>
@@ -52,10 +52,10 @@
   <h2>3. Information via Stripe</h2>
   <p>We collect only your <strong>Email Address</strong> via Stripe for support and critical updates. Credit card details are never seen by us.</p>
   <h2>4. Your Rights (GDPR/PIPL)</h2>
-  <p>You have the right to request the deletion of your email address from our records. Please contact: <strong>info@insertdate.com</strong></p>
+  <p>You have the right to request the deletion of your email address from our records. Please contact: <strong><span class="email-protect" data-user="info" data-domain="insertdate.com"></span></strong></p>
 </section>
 
-<section id="ja">
+<section id="ja" lang="ja">
   <h1>プライバシーポリシー</h1>
   <p>最終更新日：2026年2月11日</p>
   <p class="important-privacy">ゼロ・トラッキング宣言：あなたのプライバシーを尊重します</p>
@@ -68,10 +68,10 @@
   <h2>3. Stripe経由で取得する情報</h2>
   <p>決済時、サポート用に<strong>メールアドレス</strong>のみ取得します。カード情報は作者には開示されません。</p>
   <h2>4. データの管理と権利</h2>
-  <p>個人データの消去を希望される場合は、<strong>info@insertdate.com</strong> までご連絡ください。</p>
+  <p>個人データの消去を希望される場合は、<strong><span class="email-protect" data-user="info" data-domain="insertdate.com"></span></strong> までご連絡ください。</p>
 </section>
 
-<section id="zh-hans">
+<section id="zh-hans" lang="zh-Hans">
   <h1>隐私政策</h1>
   <p>最后更新：2026-02-11</p>
   <p class="important-privacy">零追踪宣言：我们尊重您的隐私</p>
@@ -84,10 +84,10 @@
   <h2>3. 通过 Stripe 收集的信息</h2>
   <p>我们仅通过 Stripe 收集您的<strong>电子邮件地址</strong>，用于提供支持和发送重要通知。我们无法查阅您的信用卡详细信息。</p>
   <h2>4. 您的权利</h2>
-  <p>如需查询或要求删除您的相关信息，请联系：<strong>info@insertdate.com</strong></p>
+  <p>如需查询或要求删除您的相关信息，请联系：<strong><span class="email-protect" data-user="info" data-domain="insertdate.com"></span></strong></p>
 </section>
 
-<section id="zh-hant">
+<section id="zh-hant" lang="zh-Hant">
   <h1>隱私政策</h1>
   <p>最後更新：2026-02-11</p>
   <p class="important-privacy">零追蹤宣言：我們尊重您的隱私</p>
@@ -100,7 +100,7 @@
   <h2>3. 透過 Stripe 收集的資訊</h2>
   <p>我們僅透過 Stripe 收集您的<strong>電子郵件地址</strong>，用於提供支援和發送重要通知。我們無法查閱您的信用卡詳細資訊。</p>
   <h2>4. 您的權利</h2>
-  <p>如需查詢或要求刪除您的相關資訊，請聯繫：<strong>info@insertdate.com</strong></p>
+  <p>如需查詢或要求刪除您的相關資訊，請聯繫：<strong><span class="email-protect" data-user="info" data-domain="insertdate.com"></span></strong></p>
 </section>
 
 <footer>
@@ -147,6 +147,16 @@ function detectLang() {
   return 'en';
 }
 setLang(detectLang());
+
+document.querySelectorAll('.email-protect').forEach(el => {
+  const u = el.getAttribute('data-user');
+  const d = el.getAttribute('data-domain');
+  const addr = u + '@' + d;
+  const a = document.createElement('a');
+  a.href = 'mailto:' + addr;
+  a.textContent = addr;
+  el.appendChild(a);
+});
 </script>
 </body>
 </html>
