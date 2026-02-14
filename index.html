@@ -214,6 +214,7 @@
       --primary-blue: #0078D4;
       --primary-blue-dark: #005A9E;
       --primary-blue-light: #50A0D8;
+      --primary-blue-vivid: #00A4EF;
       --accent-blue: #106EBE;
       --neutral-white: #FFFFFF;
       --neutral-gray-10: #FAF9F8;
@@ -391,14 +392,14 @@
     }
 
     .btn-primary {
-      background: var(--primary-blue);
+      background: linear-gradient(135deg, #0078D4 0%, #00A4EF 100%);
       color: var(--neutral-white);
-      border-color: var(--primary-blue);
+      border: none;
     }
 
     .btn-primary:hover {
-      background: var(--primary-blue-dark);
-      border-color: var(--primary-blue-dark);
+      background: linear-gradient(135deg, #005A9E 0%, #0078D4 100%);
+      border: none;
     }
 
     .btn-secondary {
@@ -556,6 +557,32 @@
     .benefits-section {
       padding: 80px 0;
       background: var(--neutral-white);
+    }
+
+    /* CTA Section */
+    .cta-section {
+      padding: 60px 0;
+      background: var(--neutral-gray-10);
+      text-align: center;
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .cta-section h2 {
+      font-size: 32px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 20px;
+      letter-spacing: -0.01em;
+    }
+
+    .cta-section p {
+      font-size: 18px;
+      color: var(--text-secondary);
+      margin-bottom: 32px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .benefits-grid {
@@ -887,6 +914,31 @@
       color: var(--text-secondary);
     }
 
+    /* Sticky Mobile CTA */
+    .sticky-mobile-cta {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: var(--neutral-white);
+      padding: 12px 16px;
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      display: none;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .sticky-mobile-cta.visible {
+      display: block;
+    }
+
+    .sticky-mobile-cta .btn {
+      width: 100%;
+      padding: 14px 24px;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
     /* Language-specific sections */
     section[data-lang] {
       display: none;
@@ -910,6 +962,10 @@
     @media (max-width: 768px) {
       .container {
         padding: 0 16px;
+      }
+
+      .sticky-mobile-cta {
+        display: block;
       }
 
       .hero {
@@ -1061,8 +1117,8 @@
   <div class="hero">
     <div class="container">
       <div class="hero-content" id="main-content">
-        <h1>Eliminate Date Format Inconsistency</h1>
-        <p class="subtitle">Enterprise-grade date standardization for your organization. One tool. One format. Complete compliance.</p>
+        <h1>Stop Wasting Time on Date Format Fixes</h1>
+        <p class="subtitle">One tool. One format. Zero confusion. Standardize date entry across your organization.</p>
         <div class="cta-buttons">
           <a href="#download" class="btn btn-primary">Download Free</a>
           <a href="#pricing" class="btn btn-secondary">View Pricing</a>
@@ -1172,6 +1228,14 @@
     </div>
   </div>
 
+  <div class="cta-section">
+    <div class="container">
+      <h2>Ready to Standardize Your Dates?</h2>
+      <p>Join hundreds of teams who have eliminated date format confusion.</p>
+      <a href="#en-download" class="btn btn-primary">Download Free Now</a>
+    </div>
+  </div>
+
   <div class="specs-section" id="en-download">
     <div class="container">
       <div class="section-header">
@@ -1218,7 +1282,7 @@
           <a href="#download" class="btn btn-secondary" style="width: 100%;">Download Free</a>
         </div>
         <div class="pricing-card featured">
-          <div class="pricing-badge">Business</div>
+          <div class="pricing-badge">Business (Recommended)</div>
           <h3>Commercial License</h3>
           <div class="price">USD 39<span class="price-period"> / device</span></div>
           <ul class="pricing-features">
@@ -1240,8 +1304,8 @@
   <div class="hero">
     <div class="container">
       <div class="hero-content">
-        <h1>日付表記の不統一を解消</h1>
-        <p class="subtitle">企業レベルの日付標準化。一つのツール。一つの形式。完全なコンプライアンス。</p>
+        <h1>日付修正の時間を無駄にしない</h1>
+        <p class="subtitle">一つのツール。一つの形式。混乱ゼロ。組織全体で日付入力を標準化。</p>
         <div class="cta-buttons">
           <a href="#download" class="btn btn-primary">無料ダウンロード</a>
           <a href="#pricing" class="btn btn-secondary">料金を見る</a>
@@ -1351,6 +1415,14 @@
     </div>
   </div>
 
+  <div class="cta-section">
+    <div class="container">
+      <h2>日付を標準化する準備はできましたか？</h2>
+      <p>日付形式の混乱を解消した数百のチームに参加しましょう。</p>
+      <a href="#ja-download" class="btn btn-primary">今すぐ無料ダウンロード</a>
+    </div>
+  </div>
+
   <div class="specs-section" id="ja-download">
     <div class="container">
       <div class="section-header">
@@ -1397,7 +1469,7 @@
           <a href="#download" class="btn btn-secondary" style="width: 100%;">無料ダウンロード</a>
         </div>
         <div class="pricing-card featured">
-          <div class="pricing-badge">ビジネス</div>
+          <div class="pricing-badge">ビジネス (推奨)</div>
           <h3>商用ライセンス</h3>
           <div class="price">USD 39<span class="price-period"> / デバイス</span></div>
           <ul class="pricing-features">
@@ -1419,8 +1491,8 @@
   <div class="hero">
     <div class="container">
       <div class="hero-content">
-        <h1>消除日期格式不一致</h1>
-        <p class="subtitle">企业级日期标准化。一个工具。一个格式。完全合规。</p>
+        <h1>不再浪费时间修正日期格式</h1>
+        <p class="subtitle">一个工具。一种格式。零混乱。在整个组织中标准化日期输入。</p>
         <div class="cta-buttons">
           <a href="#download" class="btn btn-primary">免费下载</a>
           <a href="#pricing" class="btn btn-secondary">查看价格</a>
@@ -1530,6 +1602,14 @@
     </div>
   </div>
 
+  <div class="cta-section">
+    <div class="container">
+      <h2>准备好标准化您的日期了吗？</h2>
+      <p>加入数百个已消除日期格式混乱的团队。</p>
+      <a href="#zh-hans-download" class="btn btn-primary">立即免费下载</a>
+    </div>
+  </div>
+
   <div class="specs-section" id="zh-hans-download">
     <div class="container">
       <div class="section-header">
@@ -1576,7 +1656,7 @@
           <a href="#download" class="btn btn-secondary" style="width: 100%;">免费下载</a>
         </div>
         <div class="pricing-card featured">
-          <div class="pricing-badge">商业</div>
+          <div class="pricing-badge">商业 (推荐)</div>
           <h3>商业许可</h3>
           <div class="price">USD 39<span class="price-period"> / 设备</span></div>
           <ul class="pricing-features">
@@ -1598,8 +1678,8 @@
   <div class="hero">
     <div class="container">
       <div class="hero-content">
-        <h1>消除日期格式不一致</h1>
-        <p class="subtitle">企業級日期標準化。一個工具。一個格式。完全合規。</p>
+        <h1>不再浪費時間修正日期格式</h1>
+        <p class="subtitle">一個工具。一種格式。零混亂。在整個組織中標準化日期輸入。</p>
         <div class="cta-buttons">
           <a href="#download" class="btn btn-primary">免費下載</a>
           <a href="#pricing" class="btn btn-secondary">查看價格</a>
@@ -1709,6 +1789,14 @@
     </div>
   </div>
 
+  <div class="cta-section">
+    <div class="container">
+      <h2>準備好標準化您的日期了嗎？</h2>
+      <p>加入數百個已消除日期格式混亂的團隊。</p>
+      <a href="#zh-hant-download" class="btn btn-primary">立即免費下載</a>
+    </div>
+  </div>
+
   <div class="specs-section" id="zh-hant-download">
     <div class="container">
       <div class="section-header">
@@ -1755,7 +1843,7 @@
           <a href="#download" class="btn btn-secondary" style="width: 100%;">免費下載</a>
         </div>
         <div class="pricing-card featured">
-          <div class="pricing-badge">商業</div>
+          <div class="pricing-badge">商業 (推薦)</div>
           <h3>商業授權</h3>
           <div class="price">USD 39<span class="price-period"> / 裝置</span></div>
           <ul class="pricing-features">
@@ -1771,6 +1859,11 @@
     </div>
   </div>
 </section>
+
+<!-- Sticky Mobile CTA -->
+<div class="sticky-mobile-cta" id="sticky-cta">
+  <a href="#download" class="btn btn-primary">Download Free</a>
+</div>
 
 <footer role="contentinfo">
   <div class="container">
@@ -1908,16 +2001,31 @@
   function setLang(lang) {
     // 現在アクティブなセクションを取得
     const currentActive = document.querySelector('section[data-lang].active');
-    
+
     // アクティブなセクションがあれば非アクティブ化
     if (currentActive) {
       currentActive.classList.remove('active');
     }
-    
+
     // 選択されたセクションをアクティブ化
     const targetSection = document.querySelector('section[data-lang="' + lang + '"]');
     if (targetSection) {
       targetSection.classList.add('active');
+    }
+
+    // スティッキーCTAのテキストを更新
+    const stickyCta = document.getElementById('sticky-cta');
+    if (stickyCta) {
+      const ctaButton = stickyCta.querySelector('.btn');
+      if (ctaButton) {
+        const ctaTexts = {
+          'en': 'Download Free',
+          'ja': '無料ダウンロード',
+          'zh-hans': '免费下载',
+          'zh-hant': '免費下載'
+        };
+        ctaButton.textContent = ctaTexts[lang] || ctaTexts['en'];
+      }
     }
     
     // ボタンの状態を更新（アクセシビリティ属性を含む）
@@ -1959,29 +2067,84 @@
   // グローバルに公開
   window.setLang = setLang;
 
-  // アンカーリンクのハンドリング（言語対応）
-  document.addEventListener('click', function(e) {
+  // アンカーリンクハンドラー（言語対応）
+  function handleAnchorClick(e) {
     const link = e.target.closest('a[href^="#"]');
-    if (link) {
-      const hash = link.getAttribute('href');
-      if (hash === '#download' || hash === '#pricing') {
-        e.preventDefault();
+    if (!link) return;
 
-        // 現在の言語を取得
-        const currentLang = document.querySelector('section[data-lang].active')?.getAttribute('data-lang') || 'en';
-
-        // 言語に応じたIDを構築
-        const targetId = currentLang + hash; // 例: "en-download", "ja-pricing"
-        const targetElement = document.getElementById(targetId);
-
-        if (targetElement) {
-          targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          // URLのハッシュも更新
-          window.history.pushState(null, '', hash);
-        }
-      }
+    const hash = link.getAttribute('href');
+    if (hash === '#download' || hash === '#pricing') {
+      e.preventDefault();
+      scrollToAnchor(hash);
     }
+  }
+
+  // アンカーにスクロールする関数
+  function scrollToAnchor(hash) {
+    // 現在の言語を取得
+    const currentLang = document.querySelector('section[data-lang].active')?.getAttribute('data-lang') || 'en';
+
+    // 言語に応じたIDを構築（例: "en-download", "ja-pricing"）
+    const targetId = currentLang + hash; // hash は "#download" なので、結果は "en#download" になってしまう
+    const sectionName = hash.replace('#', ''); // "download" または "pricing"
+    const fullTargetId = currentLang + '-' + sectionName; // "en-download"
+    const targetElement = document.getElementById(fullTargetId);
+
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // URLのハッシュも更新
+      window.history.pushState(null, '', hash);
+    }
+  }
+
+  // ページ読み込み時のハッシュ処理
+  function handleInitialHash() {
+    const hash = window.location.hash;
+    if (hash === '#download' || hash === '#pricing') {
+      setTimeout(function() {
+        scrollToAnchor(hash);
+      }, 300); // 言語設定後にスクロール
+    }
+  }
+
+  // スティッキーCTAの表示制御
+  function handleStickyCtaVisibility() {
+    const stickyCta = document.getElementById('sticky-cta');
+    if (!stickyCta) return;
+
+    const heroSection = document.querySelector('.hero');
+    const footer = document.querySelector('footer');
+
+    if (!heroSection || !footer) return;
+
+    const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+    const footerTop = footer.offsetTop;
+    const scrollPosition = window.scrollY + window.innerHeight;
+
+    // ヒーローセクションを過ぎたら表示
+    if (window.scrollY > heroBottom) {
+      // フッターに到達したら非表示
+      if (scrollPosition >= footerTop) {
+        stickyCta.classList.remove('visible');
+      } else {
+        stickyCta.classList.add('visible');
+      }
+    } else {
+      stickyCta.classList.remove('visible');
+    }
+  }
+
+  // スクロールイベントリスナー（スロットリング付き）
+  let scrollTimeout;
+  window.addEventListener('scroll', function() {
+    if (scrollTimeout) {
+      window.cancelAnimationFrame(scrollTimeout);
+    }
+    scrollTimeout = window.requestAnimationFrame(handleStickyCtaVisibility);
   });
+
+  // イベントリスナー登録
+  document.addEventListener('click', handleAnchorClick);
 
   // 初期化
   populateTables();
@@ -2004,6 +2167,9 @@
   }
 
   setLang(initialLang);
+
+  // ページ読み込み時のハッシュ処理
+  handleInitialHash();
 })();
 </script>
 </body>
