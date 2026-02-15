@@ -236,6 +236,35 @@ footer {
   margin-bottom: 8px;
 }
 
+/* Before/After Comparison */
+.comparison-section {
+  padding: 48px 0;
+  background: var(--neutral-light);
+}
+
+.comparison-section .section-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.comparison-image {
+  text-align: center;
+}
+
+.comparison-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.comparison-caption {
+  text-align: center;
+  margin-top: 16px;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
 /* Responsive - Common */
 @media (max-width: 768px) {
   .lang-switcher {
