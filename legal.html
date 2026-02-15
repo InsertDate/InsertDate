@@ -4,121 +4,26 @@
   <meta charset="UTF-8">
   <title>Legal Notice | InsertDate</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Legal notice and terms of use for InsertDate. Software license agreement, disclaimer of warranties, and limitation of liability.">
   <meta name="robots" content="noindex">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://insertdate.com/legal.html">
+  <meta property="og:title" content="Legal Notice | InsertDate">
+  <meta property="og:description" content="Legal notice and terms of use for InsertDate.">
+  <meta property="og:image" content="https://insertdate.com/og.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Legal Notice | InsertDate">
+  <meta name="twitter:description" content="Legal notice and terms of use for InsertDate.">
+
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/common.css">
 
   <style>
-    :root {
-      /* Microsoft-inspired color palette */
-      --primary-blue: #0078D4;
-      --primary-blue-dark: #005A9E;
-      --primary-blue-light: #50A0D8;
-      --primary-blue-vivid: #00A4EF;
-      --accent-blue: #106EBE;
-      --neutral-white: #FFFFFF;
-      --neutral-gray-10: #FAF9F8;
-      --neutral-gray-20: #F3F2F1;
-      --neutral-gray-30: #EDEBE9;
-      --neutral-gray-40: #E1DFDD;
-      --neutral-gray-90: #323130;
-      --neutral-gray-130: #605E5C;
-      --neutral-gray-160: #323130;
-      --semantic-success: #107C10;
-      --semantic-warning: #D83B01;
-      --text-primary: #323130;
-      --text-secondary: #605E5C;
-      --text-muted: #8A8886;
-      --border-color: #EDEBE9;
-      --background-secondary: #FAF9F8;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Noto Sans CJK JP", "Microsoft YaHei", "PingFang SC", "Hiragino Kaku Gothic Pro", sans-serif;
-      font-size: 15px;
-      line-height: 1.6;
-      color: var(--text-primary);
-      background: var(--neutral-white);
-      -webkit-font-smoothing: antialiased;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    /* Navigation */
-    nav.top-nav {
-      background: var(--neutral-white);
-      border-bottom: 1px solid var(--border-color);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: 0 0.3px 0.9px rgba(0, 0, 0, 0.03),
-                  0 1.6px 3.6px rgba(0, 0, 0, 0.04);
-    }
-
-    nav.top-nav .nav-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 0;
-    }
-
-    .logo-link {
-      font-size: 22px;
-      font-weight: 600;
-      color: var(--text-primary);
-      text-decoration: none;
-      letter-spacing: -0.01em;
-    }
-
-    .logo-link span {
-      color: var(--primary-blue);
-      font-weight: 700;
-    }
-
-    .lang-switcher {
-      display: flex;
-      gap: 8px;
-    }
-
-    .lang-switcher button {
-      padding: 8px 16px;
-      font-size: 14px;
-      font-weight: 600;
-      border: 1px solid var(--border-color);
-      background: var(--neutral-white);
-      color: var(--text-secondary);
-      border-radius: 4px;
-      cursor: pointer;
-      transition: all 0.1s ease;
-    }
-
-    .lang-switcher button:hover {
-      background: var(--neutral-gray-20);
-      border-color: var(--neutral-gray-40);
-      color: var(--text-primary);
-    }
-
-    .lang-switcher button:focus {
-      outline: 2px solid var(--primary-blue);
-      outline-offset: 2px;
-    }
-
-    .lang-switcher button.active {
-      background: var(--primary-blue);
-      color: var(--neutral-white);
-      border-color: var(--primary-blue);
-    }
-
-    /* Content Area */
+    /* Legal Page - Specific Styles */
     .content-wrapper {
       background: var(--neutral-white);
       min-height: 60vh;
@@ -128,68 +33,6 @@
       max-width: 900px;
       margin: 0 auto;
       padding: 60px 24px;
-    }
-
-    section[data-lang] {
-      display: none;
-    }
-
-    section[data-lang].active {
-      display: block;
-    }
-
-    h1 {
-      font-size: 36px;
-      font-weight: 600;
-      color: var(--text-primary);
-      margin-bottom: 12px;
-      line-height: 1.2;
-    }
-
-    .last-updated {
-      color: var(--text-muted);
-      font-size: 14px;
-      margin-bottom: 40px;
-    }
-
-    h2 {
-      font-size: 24px;
-      font-weight: 600;
-      color: var(--text-primary);
-      margin-top: 48px;
-      margin-bottom: 20px;
-      padding-bottom: 12px;
-      border-bottom: 2px solid var(--primary-blue);
-    }
-
-    h3 {
-      font-size: 18px;
-      font-weight: 600;
-      color: var(--text-primary);
-      margin-top: 32px;
-      margin-bottom: 16px;
-    }
-
-    p {
-      margin-bottom: 16px;
-      color: var(--text-secondary);
-      line-height: 1.7;
-    }
-
-    ul, ol {
-      margin-left: 24px;
-      margin-bottom: 20px;
-    }
-
-    li {
-      margin-bottom: 12px;
-      color: var(--text-secondary);
-      line-height: 1.7;
-    }
-
-    strong {
-      color: var(--text-primary);
-      font-weight: 600;
     }
 
     code {
@@ -227,98 +70,10 @@
       line-height: 1.6;
     }
 
-    /* Footer */
-    footer {
-      background: var(--neutral-gray-20);
-      color: var(--text-secondary);
-      padding: 60px 0 32px;
-      border-top: 1px solid var(--border-color);
-    }
-
-    .footer-content {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 48px;
-      margin-bottom: 48px;
-    }
-
-    .footer-section h4 {
-      color: var(--text-primary);
-      font-size: 15px;
-      font-weight: 600;
-      margin-bottom: 20px;
-    }
-
-    .footer-section p {
-      font-size: 14px;
-      color: var(--text-secondary);
-      line-height: 1.6;
-    }
-
-    .footer-links {
-      list-style: none;
-      margin: 0;
-    }
-
-    .footer-links li {
-      margin-bottom: 12px;
-    }
-
-    .footer-links a {
-      color: var(--text-secondary);
-      text-decoration: none;
-      transition: color 0.1s ease;
-      font-size: 14px;
-    }
-
-    .footer-links a:hover {
-      color: var(--primary-blue);
-      text-decoration: underline;
-    }
-
-    .footer-bottom {
-      text-align: center;
-      padding-top: 32px;
-      border-top: 1px solid var(--neutral-gray-30);
-    }
-
-    .footer-bottom p {
-      font-size: 13px;
-      color: var(--text-muted);
-      margin-bottom: 8px;
-    }
-
-    /* Responsive */
+    /* Responsive - Page Specific */
     @media (max-width: 768px) {
-      .lang-switcher {
-        flex-wrap: wrap;
-        gap: 4px;
-      }
-
-      .lang-switcher button {
-        font-size: 12px;
-        padding: 6px 10px;
-      }
-
-      .logo-link {
-        font-size: 18px;
-      }
-
-      h1 {
-        font-size: 28px;
-      }
-
-      h2 {
-        font-size: 20px;
-      }
-
       .legal-content {
         padding: 40px 20px;
-      }
-
-      .footer-content {
-        grid-template-columns: 1fr;
-        gap: 32px;
       }
     }
   </style>

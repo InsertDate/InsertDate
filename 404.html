@@ -2,70 +2,96 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Privacy Policy | InsertDate</title>
+  <title>404 - Page Not Found | InsertDate</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="InsertDate Privacy Policy: Zero-tracking commitment. No analytics, no cookies. Your data stays on your device. Complete privacy guaranteed.">
+  <meta name="description" content="Page not found. The page you're looking for doesn't exist or has been moved.">
   <meta name="robots" content="noindex">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://insertdate.com/privacy.html">
-  <meta property="og:title" content="Privacy Policy | InsertDate">
-  <meta property="og:description" content="Zero-tracking commitment. No analytics, no cookies. Your data stays on your device.">
+  <meta property="og:url" content="https://insertdate.com/404.html">
+  <meta property="og:title" content="404 - Page Not Found | InsertDate">
+  <meta property="og:description" content="Page not found. Return to InsertDate homepage.">
   <meta property="og:image" content="https://insertdate.com/og.png">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Privacy Policy | InsertDate">
-  <meta name="twitter:description" content="Zero-tracking commitment. No analytics, no cookies. Your data stays on your device.">
+  <meta name="twitter:title" content="404 - Page Not Found | InsertDate">
+  <meta name="twitter:description" content="Page not found. Return to InsertDate homepage.">
 
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="/common.css">
 
   <style>
-    /* Privacy Page - Specific Styles */
-    .content-wrapper {
-      background: var(--neutral-white);
-      min-height: 60vh;
-    }
-
-    .privacy-content {
-      max-width: 900px;
-      margin: 0 auto;
+    /* 404 Page - Specific Styles */
+    .error-wrapper {
+      background: linear-gradient(135deg, #0078D4 0%, #50A0D8 100%);
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       padding: 60px 24px;
     }
 
-    .privacy-highlight {
-      display: block;
-      font-weight: 600;
-      color: var(--primary-blue);
-      background: #F0F7FF;
-      border: 2px dashed var(--primary-blue);
-      padding: 16px 20px;
-      border-radius: 6px;
-      margin: 24px 0;
-      line-height: 1.6;
+    .error-content {
+      max-width: 600px;
       text-align: center;
+      color: var(--neutral-white);
     }
 
-    .policy-box {
-      background: var(--background-secondary);
-      padding: 24px;
-      border-radius: 8px;
-      border-left: 4px solid var(--primary-blue);
-      margin-top: 32px;
+    .error-code {
+      font-size: 120px;
+      font-weight: 700;
+      line-height: 1;
+      margin: 0;
+      color: var(--neutral-white);
+      text-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .error-title {
+      font-size: 32px;
+      font-weight: 600;
+      margin: 24px 0 16px;
+      color: var(--neutral-white);
+    }
+
+    .error-message {
+      font-size: 18px;
+      line-height: 1.6;
       margin-bottom: 32px;
+      color: rgba(255, 255, 255, 0.9);
     }
 
-    .policy-box h3 {
-      margin-top: 0;
+    .home-button {
+      display: inline-block;
+      background: var(--neutral-white);
       color: var(--primary-blue);
+      padding: 14px 32px;
+      border-radius: 6px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     }
 
-    /* Responsive - Page Specific */
+    .home-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+      background: #f5f5f5;
+    }
+
+    /* Responsive */
     @media (max-width: 768px) {
-      .privacy-content {
-        padding: 40px 20px;
+      .error-code {
+        font-size: 80px;
+      }
+
+      .error-title {
+        font-size: 24px;
+      }
+
+      .error-message {
+        font-size: 16px;
       }
     }
   </style>
@@ -87,89 +113,49 @@
   </div>
 </nav>
 
-<!-- Content -->
-<div class="content-wrapper">
-  <div class="privacy-content">
+<!-- Error Content -->
+<div class="error-wrapper">
+  <div class="error-content">
 
-<section id="en" data-lang="en">
-  <h1>Privacy Policy</h1>
-  <p class="last-updated">Last Updated: 2026-02-11</p>
-  <p class="privacy-highlight">Zero-Tracking Policy: We respect your privacy.</p>
+    <section id="en" data-lang="en">
+      <h1 class="error-code">404</h1>
+      <h2 class="error-title">Page Not Found</h2>
+      <p class="error-message">
+        Sorry, the page you're looking for doesn't exist.<br>
+        It may have been moved or deleted.
+      </p>
+      <a href="/" class="home-button">Back to Home</a>
+    </section>
 
-  <h2>1. Zero-Tracking Commitment</h2>
-  <ul>
-    <li><strong>No Analytics / No Cookies:</strong> We do not monitor or record your activities on this website.</li>
-  </ul>
+    <section id="ja" data-lang="ja">
+      <h1 class="error-code">404</h1>
+      <h2 class="error-title">ページが見つかりません</h2>
+      <p class="error-message">
+        お探しのページは存在しません。<br>
+        移動または削除された可能性があります。
+      </p>
+      <a href="/" class="home-button">ホームに戻る</a>
+    </section>
 
-  <h2>2. Software Security</h2>
-  <p>The Software operates <strong>entirely offline</strong>. It does NOT monitor or transmit any keystrokes or usage history.</p>
+    <section id="zh-hans" data-lang="zh-hans">
+      <h1 class="error-code">404</h1>
+      <h2 class="error-title">页面未找到</h2>
+      <p class="error-message">
+        抱歉,您要查找的页面不存在。<br>
+        该页面可能已被移动或删除。
+      </p>
+      <a href="/" class="home-button">返回首页</a>
+    </section>
 
-  <h2>3. Information via Stripe</h2>
-  <p>We collect only your <strong>Email Address</strong> via Stripe for support and critical updates. Credit card details are never seen by us.</p>
-
-  <h2>4. Your Rights (GDPR/PIPL)</h2>
-  <p>You have the right to request the deletion of your email address from our records. Please contact: <strong>info@insertdate.com</strong></p>
-</section>
-
-<section id="ja" data-lang="ja">
-  <h1>プライバシーポリシー</h1>
-  <p class="last-updated">最終更新日：2026年2月11日</p>
-  <p class="privacy-highlight">ゼロ・トラッキング宣言：あなたのプライバシーを尊重します</p>
-
-  <h2>1. ゼロ・トラッキングの徹底</h2>
-  <ul>
-    <li><strong>解析ツール・Cookieの不使用:</strong> ユーザーの行動追跡や記録は一切行いません。</li>
-  </ul>
-
-  <h2>2. ソフトウェアの安全性</h2>
-  <p>本ソフトウェアは<strong>完全にオフライン</strong>で動作し、入力内容を外部に送信することはありません。</p>
-
-  <h2>3. Stripe経由で取得する情報</h2>
-  <p>決済時、サポート用に<strong>メールアドレス</strong>のみ取得します。カード情報は作者には開示されません。</p>
-
-  <h2>4. データの管理と権利</h2>
-  <p>個人データの消去を希望される場合は、<strong>info@insertdate.com</strong> までご連絡ください。</p>
-</section>
-
-<section id="zh-hans" data-lang="zh-hans">
-  <h1>隐私政策</h1>
-  <p class="last-updated">最后更新：2026-02-11</p>
-  <p class="privacy-highlight">零追踪宣言：我们尊重您的隐私</p>
-
-  <h2>1. 零追踪承诺</h2>
-  <ul>
-    <li><strong>无分析 / 无 Cookie:</strong> 我们不会通过 Cookie 或任何分析工具监控或记录您的行为。</li>
-  </ul>
-
-  <h2>2. 软件安全性</h2>
-  <p>本软件<strong>完全离线运行</strong>。不会记录或向外部服务器传输您的按键或使用记录。</p>
-
-  <h2>3. 通过 Stripe 收集的信息</h2>
-  <p>我们仅通过 Stripe 收集您的<strong>电子邮件地址</strong>，用于提供支持和发送重要通知。我们无法查阅您的信用卡详细信息。</p>
-
-  <h2>4. 您的权利</h2>
-  <p>如需查询或要求删除您的相关信息，请联系：<strong>info@insertdate.com</strong></p>
-</section>
-
-<section id="zh-hant" data-lang="zh-hant">
-  <h1>隱私政策</h1>
-  <p class="last-updated">最後更新：2026-02-11</p>
-  <p class="privacy-highlight">零追蹤宣言：我們尊重您的隱私</p>
-
-  <h2>1. 零追蹤承諾</h2>
-  <ul>
-    <li><strong>無分析 / 無 Cookie:</strong> 我們不會透過 Cookie 或任何分析工具監控或記錄您的行為。</li>
-  </ul>
-
-  <h2>2. 軟體安全性</h2>
-  <p>本軟體<strong>完全離線執行</strong>。不會記錄或向外部伺服器傳輸您的按鍵或使用記錄。</p>
-
-  <h2>3. 透過 Stripe 收集的資訊</h2>
-  <p>我們僅透過 Stripe 收集您的<strong>電子郵件地址</strong>，用於提供支援和發送重要通知。我們無法查閱您的信用卡詳細資訊。</p>
-
-  <h2>4. 您的權利</h2>
-  <p>如需查詢或要求刪除您的相關資訊，請聯繫：<strong>info@insertdate.com</strong></p>
-</section>
+    <section id="zh-hant" data-lang="zh-hant">
+      <h1 class="error-code">404</h1>
+      <h2 class="error-title">頁面未找到</h2>
+      <p class="error-message">
+        抱歉,您要查找的頁面不存在。<br>
+        該頁面可能已被移動或刪除。
+      </p>
+      <a href="/" class="home-button">返回首頁</a>
+    </section>
 
   </div>
 </div>

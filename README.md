@@ -83,10 +83,10 @@ If Windows SmartScreen displays a warning, click **"More info"** then **"Run any
 **Commercial licenses include:**
 - ✅ Commercial use rights
 - ✅ All format options
-- ✅ Lifetime updates
+- ✅ Free updates
 - ✅ Priority support
 - ✅ Volume discounts available
-- ✅ 1-week free trial
+- ✅ 7-day free trial
 
 [**Purchase Commercial License →**](https://buy.stripe.com/9B68wQ7Va0ZR3sScZPbwk00)
 
@@ -101,7 +101,7 @@ That's it! The app runs silently in your system tray.
 
 ## 💻 System Requirements
 
-- **OS**: Windows 7 or later (Windows 10/11 recommended)
+- **OS**: Windows 10/11 (officially supported)
 - **Architecture**: x64
 - **Disk Space**: < 1 MB
 - **Memory**: Minimal (runs in background)
@@ -133,8 +133,8 @@ InsertDate runs entirely locally on your computer. No data is collected, transmi
 
 ## 📜 Legal
 
-- [Privacy Policy](https://insertdate.com/privacy)
-- [Legal Notice](https://insertdate.com/legal)
+- [Privacy Policy](https://insertdate.com/privacy.html)
+- [Legal Notice](https://insertdate.com/legal.html)
 
 ---
 

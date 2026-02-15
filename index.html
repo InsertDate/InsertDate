@@ -206,51 +206,12 @@
 
   <!-- Favicon -->
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <!-- Common Styles -->
+  <link rel="stylesheet" href="/common.css">
 
   <style>
-    :root {
-      /* Microsoft-inspired color palette */
-      --primary-blue: #0078D4;
-      --primary-blue-dark: #005A9E;
-      --primary-blue-light: #50A0D8;
-      --primary-blue-vivid: #00A4EF;
-      --accent-blue: #106EBE;
-      --neutral-white: #FFFFFF;
-      --neutral-gray-10: #FAF9F8;
-      --neutral-gray-20: #F3F2F1;
-      --neutral-gray-30: #EDEBE9;
-      --neutral-gray-40: #E1DFDD;
-      --neutral-gray-90: #323130;
-      --neutral-gray-130: #605E5C;
-      --neutral-gray-160: #323130;
-      --semantic-success: #107C10;
-      --semantic-warning: #D83B01;
-      --text-primary: #323130;
-      --text-secondary: #605E5C;
-      --border-color: #EDEBE9;
-    }
-    
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Noto Sans CJK JP", "Microsoft YaHei", "PingFang SC", "Hiragino Kaku Gothic Pro", sans-serif;
-      font-size: 15px;
-      line-height: 1.6;
-      color: var(--text-primary);
-      background: var(--neutral-white);
-      -webkit-font-smoothing: antialiased;
-    }
-    
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
+    /* Landing Page - Specific Styles */
 
     /* Skip to main content link for accessibility */
     .skip-link {
@@ -267,72 +228,6 @@
 
     .skip-link:focus {
       top: 0;
-    }
-
-    /* Navigation */
-    nav.top-nav {
-      background: var(--neutral-white);
-      border-bottom: 1px solid var(--border-color);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: 0 0.3px 0.9px rgba(0, 0, 0, 0.03),
-                  0 1.6px 3.6px rgba(0, 0, 0, 0.04);
-    }
-
-    nav.top-nav .nav-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 0;
-    }
-
-    .logo-link {
-      font-size: 22px;
-      font-weight: 600;
-      color: var(--text-primary);
-      text-decoration: none;
-      letter-spacing: -0.01em;
-    }
-
-    .logo-link span {
-      color: var(--primary-blue);
-      font-weight: 700;
-    }
-
-    .lang-switcher {
-      display: flex;
-      gap: 8px;
-    }
-
-    .lang-switcher button {
-      padding: 8px 16px;
-      font-size: 14px;
-      font-weight: 600;
-      border: 1px solid var(--border-color);
-      background: var(--neutral-white);
-      color: var(--text-secondary);
-      border-radius: 2px;
-      cursor: pointer;
-      transition: all 0.1s ease;
-      font-family: inherit;
-    }
-
-    .lang-switcher button:hover {
-      background: var(--neutral-gray-20);
-      border-color: var(--neutral-gray-40);
-      color: var(--text-primary);
-    }
-
-    .lang-switcher button:focus {
-      outline: 2px solid var(--primary-blue);
-      outline-offset: 2px;
-    }
-
-    .lang-switcher button.active {
-      background: var(--primary-blue);
-      color: var(--neutral-white);
-      border-color: var(--primary-blue);
     }
 
     /* Hero Section */
@@ -860,58 +755,10 @@
     }
 
     /* Footer */
-    footer {
-      background: var(--neutral-gray-20);
-      color: var(--text-secondary);
-      padding: 60px 0 32px;
-      border-top: 1px solid var(--border-color);
-    }
-
-    .footer-content {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 48px;
-      margin-bottom: 48px;
-    }
-
-    .footer-section h4 {
-      color: var(--text-primary);
-      font-size: 15px;
-      font-weight: 600;
-      margin-bottom: 20px;
-    }
-
-    .footer-links {
-      list-style: none;
-    }
-
-    .footer-links li {
-      margin-bottom: 12px;
-    }
-
-    .footer-links a {
-      color: var(--text-secondary);
-      text-decoration: none;
-      transition: color 0.1s ease;
-      font-size: 14px;
-    }
-
-    .footer-links a:hover {
-      color: var(--primary-blue);
-      text-decoration: underline;
-    }
-
+    /* Footer - Index specific additions */
     .footer-links a:focus {
       outline: 2px solid var(--primary-blue);
       outline-offset: 2px;
-    }
-
-    .footer-bottom {
-      padding-top: 32px;
-      border-top: 1px solid var(--border-color);
-      text-align: center;
-      font-size: 13px;
-      color: var(--text-secondary);
     }
 
     /* Sticky Mobile CTA */
@@ -1031,11 +878,16 @@
       .cta-buttons {
         flex-direction: column;
         width: 100%;
+        gap: 12px;
       }
 
       .btn {
         width: 100%;
         text-align: center;
+        min-height: 48px; /* Touch target optimization */
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
 
       .section-header h2 {
@@ -1044,6 +896,7 @@
 
       .section-header p {
         font-size: 16px;
+        padding: 0 8px;
       }
 
       .problem-grid,
@@ -1060,16 +913,53 @@
       }
 
       .demo-container {
-        padding: 24px;
+        padding: 24px 16px;
+      }
+
+      /* Image responsive */
+      .demo-container img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      /* Pricing cards mobile optimization */
+      .pricing-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 0 8px;
       }
 
       .pricing-card {
         padding: 32px 24px;
+        margin: 0;
       }
 
+      .pricing-card ul {
+        margin: 24px 0;
+      }
+
+      .pricing-card li {
+        font-size: 14px;
+        line-height: 1.8;
+      }
+
+      /* Language switcher mobile optimization */
+      .lang-switcher {
+        gap: 4px;
+      }
+
+      .lang-switcher button {
+        padding: 6px 8px;
+        font-size: 12px;
+        min-height: 36px; /* Touch target */
+      }
+
+      /* Specs table mobile optimization */
       .specs-table {
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
+        margin: 0 -16px;
+        padding: 0 16px;
       }
 
       table {
@@ -1083,22 +973,10 @@
 
       .hash-code {
         font-size: 9px;
+        word-break: break-all;
       }
 
-      .lang-switcher {
-        flex-wrap: wrap;
-        gap: 4px;
-      }
-
-      .lang-switcher button {
-        font-size: 12px;
-        padding: 6px 10px;
-      }
-
-      .logo-link {
-        font-size: 18px;
-      }
-
+      /* Step numbers and icons */
       .step-number {
         width: 40px;
         height: 40px;
@@ -1111,31 +989,97 @@
         font-size: 18px;
       }
 
-      .footer-content {
-        grid-template-columns: 1fr;
-        gap: 32px;
+      /* FAQ mobile optimization */
+      .faq-item {
+        padding: 20px 16px;
+      }
+
+      .faq-question {
+        font-size: 16px;
+        line-height: 1.5;
+        padding-right: 32px;
+      }
+
+      /* Sticky CTA mobile optimization */
+      .sticky-mobile-cta .btn {
+        font-size: 15px;
+        font-weight: 600;
+        padding: 14px 24px;
       }
     }
 
     @media (max-width: 480px) {
       .hero h1 {
-        font-size: 28px;
+        font-size: 26px;
+        padding: 0 8px;
       }
 
       .hero .subtitle {
         font-size: 15px;
+        padding: 0 8px;
       }
 
       .section-header h2 {
-        font-size: 24px;
+        font-size: 22px;
+        line-height: 1.3;
+      }
+
+      .section-header p {
+        font-size: 15px;
       }
 
       .price {
-        font-size: 40px;
+        font-size: 36px;
       }
 
       .btn {
-        padding: 10px 24px;
+        padding: 12px 20px;
+        font-size: 14px;
+        min-height: 48px;
+      }
+
+      /* Language switcher extra small screens */
+      .lang-switcher button {
+        padding: 6px 6px;
+        font-size: 11px;
+      }
+
+      /* Pricing card extra small */
+      .pricing-card {
+        padding: 24px 16px;
+      }
+
+      .pricing-card h3 {
+        font-size: 20px;
+      }
+
+      .pricing-card .price {
+        font-size: 32px;
+      }
+
+      /* Demo container */
+      .demo-container {
+        padding: 20px 12px;
+      }
+
+      /* Problem and benefit cards */
+      .problem-card,
+      .benefit-card {
+        padding: 20px 16px;
+      }
+
+      /* Navigation logo */
+      .logo-link {
+        font-size: 18px;
+      }
+
+      /* Footer optimization */
+      .footer-section h4 {
+        font-size: 16px;
+      }
+
+      .footer-section p,
+      .footer-links a {
         font-size: 14px;
       }
     }
@@ -1164,11 +1108,11 @@
   <div class="hero">
     <div class="container">
       <div class="hero-content" id="main-content">
-        <h1>Stop Wasting Time on Date Format Fixes</h1>
-        <p class="subtitle">One tool. One format. Zero confusion. Standardize date entry across your organization.</p>
+        <h1>Stop Wasting Time on Date Formatting</h1>
+        <p class="subtitle">One key press inserts today's date in the correct format. Never think about formatting again.</p>
         <div class="cta-buttons">
-          <a href="#download" class="btn btn-primary">Download Free</a>
-          <a href="#pricing" class="btn btn-secondary">View Pricing</a>
+          <a href="#download" class="btn btn-primary">Download Free (Personal Use)</a>
+          <a href="#download" class="btn btn-secondary">Buy Commercial License ($39)</a>
         </div>
       </div>
     </div>
@@ -1177,25 +1121,25 @@
   <div class="problem-section">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Challenge</span>
-        <h2>The Cost of Inconsistency</h2>
-        <p>Fragmented date formats create operational inefficiencies across your business</p>
+        <span class="section-tag">The Problem</span>
+        <h2>Everyday Date Entry Frustrations</h2>
+        <p>Small annoyances add up when you're entering dates all day</p>
       </div>
       <div class="problem-grid">
         <div class="problem-card">
-          <div class="problem-icon">📁</div>
-          <h3>File Management Complexity</h3>
-          <p>Files named "2026-02-14", "02.14.2026", "14/02/2026" cannot be sorted systematically, reducing operational efficiency.</p>
-        </div>
-        <div class="problem-card">
-          <div class="problem-icon">⚠️</div>
-          <h3>Data Integrity Issues</h3>
-          <p>Ambiguous formats like "02/14/2026" lead to misinterpretation in invoices, contracts, and compliance documents.</p>
-        </div>
-        <div class="problem-card">
           <div class="problem-icon">⏱️</div>
-          <h3>Productivity Loss</h3>
-          <p>Staff repeatedly verify formatting standards, consuming valuable time that should be allocated to core business functions.</p>
+          <h3>Wasting Time</h3>
+          <p>Typing "2026-02-15" takes time. Do it 50 times a day and you've lost precious minutes.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">🤔</div>
+          <h3>Which Format Again?</h3>
+          <p>Was it "2026/02/15" or "2026-02-15"? Constantly wondering which format to use is mentally draining.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">😓</div>
+          <h3>Typos Happen</h3>
+          <p>It's easy to type "2026-02-51" instead of "2026-02-15" when you're moving fast. Manual entry means mistakes.</p>
         </div>
       </div>
     </div>
@@ -1237,39 +1181,39 @@
   <div class="benefits-section">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Business Impact</span>
-        <h2>Measurable Operational Improvements</h2>
+        <span class="section-tag">Why You'll Love It</span>
+        <h2>Effortless Date Formatting</h2>
       </div>
       <div class="benefits-grid">
         <div class="benefit-card">
-          <div class="benefit-icon">✅</div>
-          <h3>Immediate Compliance</h3>
-          <p>Organization-wide adherence to date standards from deployment. No training infrastructure required.</p>
-        </div>
-        <div class="benefit-card">
-          <div class="benefit-icon">🔍</div>
-          <h3>Enhanced File Systems</h3>
-          <p>Chronological sorting functions correctly by default. Reduces time spent locating documents.</p>
-        </div>
-        <div class="benefit-card">
-          <div class="benefit-icon">💰</div>
-          <h3>Risk Mitigation</h3>
-          <p>Eliminates ambiguous date entries in financial documents, contracts, and regulatory filings.</p>
-        </div>
-        <div class="benefit-card">
           <div class="benefit-icon">⚡</div>
-          <h3>Zero Maintenance</h3>
-          <p>Deploy and operate. Minimal resource consumption. No update cycle required.</p>
+          <h3>Lightning Fast Input</h3>
+          <p>One key press completes it. Much faster than manual typing, with zero typos.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🎯</div>
+          <h3>Never Think About Formatting</h3>
+          <p>No need to remember date formats. Just press Insert and the correct format appears instantly.</p>
         </div>
         <div class="benefit-card">
           <div class="benefit-icon">🌐</div>
-          <h3>Universal Compatibility</h3>
-          <p>Functions across all Windows applications—Microsoft Office, web browsers, file explorers, enterprise software.</p>
+          <h3>Works Everywhere</h3>
+          <p>Compatible with all Windows applications—Word, Excel, Outlook, Chrome, Slack, and more.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🔍</div>
+          <h3>Better File Organization</h3>
+          <p>Files sort chronologically by default. Find documents faster with consistent date formatting.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">✅</div>
+          <h3>Perfect for Teams</h3>
+          <p>Deploy once, standardize everywhere. Great for businesses needing consistent formatting.</p>
         </div>
         <div class="benefit-card">
           <div class="benefit-icon">🔒</div>
-          <h3>Security Verified</h3>
-          <p>SSL.com code signing certificate. VirusTotal verification. All data remains on local systems.</p>
+          <h3>Secure & Verified</h3>
+          <p>Code-signed certificate. VirusTotal verified. All data stays on your computer.</p>
         </div>
       </div>
     </div>
@@ -1277,8 +1221,8 @@
 
   <div class="cta-section">
     <div class="container">
-      <h2>Ready to Standardize Your Dates?</h2>
-      <p>Join hundreds of teams who have eliminated date format confusion.</p>
+      <h2>Ready to Simplify Date Entry?</h2>
+      <p>Free for personal use. No sign-up required.</p>
       <a href="#en-download" class="btn btn-primary">Download Free Now</a>
     </div>
   </div>
@@ -1333,13 +1277,16 @@
           <h3>Commercial License</h3>
           <div class="price">USD 39<span class="price-period"> / device</span></div>
           <ul class="pricing-features">
+            <li>7-day free trial</li>
             <li>Commercial deployment rights</li>
             <li>All format options</li>
             <li>Free updates</li>
             <li>Priority support</li>
-            <li>Volume licensing available <a href="mailto:info@insertdate.com?subject=Volume Licensing Inquiry" style="color: var(--primary-blue); text-decoration: underline; font-size: 13px;">(Contact us)</a></li>
           </ul>
-          <a href="https://buy.stripe.com/9B68wQ7Va0ZR3sScZPbwk00" class="btn btn-primary" style="width: 100%;">Purchase License</a>
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <a href="#download" class="btn btn-primary" style="width: 100%;">Start 7-Day Free Trial</a>
+            <a href="https://buy.stripe.com/9B68wQ7Va0ZR3sScZPbwk00" class="btn btn-secondary" style="width: 100%;">Buy Now ($39/device)</a>
+          </div>
         </div>
       </div>
     </div>
@@ -1351,11 +1298,11 @@
   <div class="hero">
     <div class="container">
       <div class="hero-content">
-        <h1>日付修正の時間を無駄にしない</h1>
-        <p class="subtitle">一つのツール。一つの形式。混乱ゼロ。組織全体で日付入力を標準化。</p>
+        <h1>日付入力、もう迷わない</h1>
+        <p class="subtitle">Insertキーひとつで、今日の日付が正しい形式で入力されます。フォーマットを覚える必要はありません。</p>
         <div class="cta-buttons">
-          <a href="#download" class="btn btn-primary">無料ダウンロード</a>
-          <a href="#pricing" class="btn btn-secondary">料金を見る</a>
+          <a href="#download" class="btn btn-primary">無料ダウンロード（個人利用）</a>
+          <a href="#download" class="btn btn-secondary">商用ライセンス購入（$39）</a>
         </div>
       </div>
     </div>
@@ -1364,25 +1311,25 @@
   <div class="problem-section">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">課題</span>
-        <h2>不統一がもたらすコスト</h2>
-        <p>断片化された日付形式は、ビジネス全体の業務効率を低下させます</p>
+        <span class="section-tag">よくある悩み</span>
+        <h2>日付入力の小さなストレス</h2>
+        <p>毎日の作業だからこそ、ちょっとした手間が積み重なります</p>
       </div>
       <div class="problem-grid">
         <div class="problem-card">
-          <div class="problem-icon">📁</div>
-          <h3>ファイル管理の複雑化</h3>
-          <p>「2026-02-14」「2026.02.14」「2026/02/14」—形式が統一されていないため、体系的なソートができず、業務効率が低下します。</p>
-        </div>
-        <div class="problem-card">
-          <div class="problem-icon">⚠️</div>
-          <h3>データ整合性の問題</h3>
-          <p>「02/14/2026」のような曖昧な形式は、請求書、契約書、コンプライアンス文書での誤解を招きます。</p>
-        </div>
-        <div class="problem-card">
           <div class="problem-icon">⏱️</div>
-          <h3>生産性の損失</h3>
-          <p>スタッフが繰り返し書式基準を確認し、本来の業務に割くべき貴重な時間を消費しています。</p>
+          <h3>時間がかかる</h3>
+          <p>「2026年02月15日」と手入力するのは地味に時間がかかります。1日50回やったら、数分のロスです。</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">🤔</div>
+          <h3>どっちだっけ？</h3>
+          <p>「2026/02/15」か「2026-02-15」か。毎回どっちだったか考えるのは面倒です。</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">😓</div>
+          <h3>打ち間違える</h3>
+          <p>急いでいると「2026-02-51」とか間違えます。手入力だとミスは避けられません。</p>
         </div>
       </div>
     </div>
@@ -1391,9 +1338,9 @@
   <div class="solution-section">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">ソリューション</span>
+        <span class="section-tag">解決策</span>
         <h2>標準化された日付入力システム</h2>
-        <p>InsertDateは、Windows環境全体でエンタープライズレベルの一貫性を提供します</p>
+        <p>InsertDateで、Windows環境全体の日付入力を統一できます</p>
       </div>
       
       <div class="demo-container">
@@ -1404,18 +1351,18 @@
       <div class="how-it-works">
         <div class="step">
           <div class="step-number">1</div>
-          <h3>標準を選択</h3>
+          <h3>形式を選択</h3>
           <p>組織の形式を選択：yyyyMMdd、yyyy/MM/dd、yyyy.MM.dd、yyyy年MM月dd日</p>
         </div>
         <div class="step">
           <div class="step-number">2</div>
-          <h3>アプリケーションを展開</h3>
-          <p>ポータブル実行ファイル—インストール不要。最小限のシステムリソース。バックグラウンドで静かに動作。</p>
+          <h3>配布・導入</h3>
+          <p>インストール不要のポータブル実行ファイル。システムリソースをほとんど使わず、バックグラウンドで静かに動作します。</p>
         </div>
         <div class="step">
           <div class="step-number">3</div>
-          <h3>機能を実行</h3>
-          <p>任意のアプリケーション—ドキュメント、メール、ファイル名—でInsertキーを押すだけで一貫した形式に。</p>
+          <h3>使い始める</h3>
+          <p>ドキュメント、メール、ファイル名など、どこでもInsertキーを押すだけで統一された形式で入力できます。</p>
         </div>
       </div>
     </div>
@@ -1424,39 +1371,39 @@
   <div class="benefits-section">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">ビジネスへの影響</span>
-        <h2>測定可能な業務改善</h2>
+        <span class="section-tag">選ばれる理由</span>
+        <h2>日付入力がもっと楽になる</h2>
       </div>
       <div class="benefits-grid">
         <div class="benefit-card">
-          <div class="benefit-icon">✅</div>
-          <h3>即座のコンプライアンス</h3>
-          <p>展開から組織全体で日付標準への準拠。トレーニングインフラは不要です。</p>
-        </div>
-        <div class="benefit-card">
-          <div class="benefit-icon">🔍</div>
-          <h3>ファイルシステムの強化</h3>
-          <p>時系列ソート機能がデフォルトで正しく動作。ドキュメントの検索時間を削減します。</p>
-        </div>
-        <div class="benefit-card">
-          <div class="benefit-icon">💰</div>
-          <h3>リスクの軽減</h3>
-          <p>財務書類、契約書、規制文書での曖昧な日付入力を排除します。</p>
-        </div>
-        <div class="benefit-card">
           <div class="benefit-icon">⚡</div>
-          <h3>メンテナンス不要</h3>
-          <p>展開して運用。最小限のリソース消費。更新サイクルは不要です。</p>
+          <h3>入力が速い</h3>
+          <p>Insertキー1回で完了。手入力より圧倒的に速く、タイプミスもありません。</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🎯</div>
+          <h3>フォーマットを覚えなくていい</h3>
+          <p>日付の書き方を考える必要はありません。Insertキーを押すだけで、正しい形式が自動入力されます。</p>
         </div>
         <div class="benefit-card">
           <div class="benefit-icon">🌐</div>
-          <h3>汎用的な互換性</h3>
-          <p>すべてのWindowsアプリケーションで機能—Microsoft Office、Webブラウザ、ファイルエクスプローラー、エンタープライズソフトウェア。</p>
+          <h3>どこでも使える</h3>
+          <p>Word、Excel、Outlook、Chrome、Slackなど、すべてのWindowsアプリで使えます。</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🔍</div>
+          <h3>ファイル整理が簡単</h3>
+          <p>ファイルが日付順に正しく並びます。ファイル名が統一されるので、探すのも簡単です。</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">✅</div>
+          <h3>チームでも使える</h3>
+          <p>配布するだけで、全員が同じ形式を使えます。企業での統一フォーマットにも最適です。</p>
         </div>
         <div class="benefit-card">
           <div class="benefit-icon">🔒</div>
-          <h3>セキュリティ検証済</h3>
-          <p>SSL.comコード署名証明書。VirusTotal検証。すべてのデータはローカルシステムに保持されます。</p>
+          <h3>安心して使える</h3>
+          <p>コード署名証明書付き。VirusTotal検証済。データはすべてローカルに保持されます。</p>
         </div>
       </div>
     </div>
@@ -1464,8 +1411,8 @@
 
   <div class="cta-section">
     <div class="container">
-      <h2>日付を標準化する準備はできましたか？</h2>
-      <p>日付形式の混乱を解消した数百のチームに参加しましょう。</p>
+      <h2>日付入力を楽にしませんか？</h2>
+      <p>個人利用は完全無料。登録も不要です。</p>
       <a href="#ja-download" class="btn btn-primary">今すぐ無料ダウンロード</a>
     </div>
   </div>
@@ -1501,7 +1448,7 @@
       <div class="section-header">
         <span class="section-tag">ライセンス</span>
         <h2>透明な料金体系</h2>
-        <p>サブスクリプションなし。継続的な費用なし。デバイスごとの一回限りのライセンス。</p>
+        <p>サブスクリプションなし。買い切り型で継続費用もかかりません。</p>
       </div>
       <div class="pricing-cards">
         <div class="pricing-card">
@@ -1520,13 +1467,16 @@
           <h3>商用ライセンス</h3>
           <div class="price">USD 39<span class="price-period"> / デバイス</span></div>
           <ul class="pricing-features">
-            <li>商用展開権限</li>
+            <li>7日間無料トライアル</li>
+            <li>商用利用権</li>
             <li>全形式オプション</li>
             <li>無料アップデート</li>
             <li>優先サポート</li>
-            <li>ボリュームライセンス対応 <a href="mailto:info@insertdate.com?subject=ボリュームライセンスのお問い合わせ" style="color: var(--primary-blue); text-decoration: underline; font-size: 13px;">(お問い合わせ)</a></li>
           </ul>
-          <a href="https://buy.stripe.com/9B68wQ7Va0ZR3sScZPbwk00" class="btn btn-primary" style="width: 100%;">ライセンスを購入</a>
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <a href="#download" class="btn btn-primary" style="width: 100%;">7日間無料で試す</a>
+            <a href="https://buy.stripe.com/9B68wQ7Va0ZR3sScZPbwk00" class="btn btn-secondary" style="width: 100%;">今すぐ購入（$39/デバイス）</a>
+          </div>
         </div>
       </div>
     </div>
@@ -1538,11 +1488,11 @@
   <div class="hero">
     <div class="container">
       <div class="hero-content">
-        <h1>不再浪费时间修正日期格式</h1>
-        <p class="subtitle">一个工具。一种格式。零混乱。在整个组织中标准化日期输入。</p>
+        <h1>日期格式，一键搞定</h1>
+        <p class="subtitle">按一次Insert键，今天的日期自动以正确格式输入。再也不用记格式了。</p>
         <div class="cta-buttons">
-          <a href="#download" class="btn btn-primary">免费下载</a>
-          <a href="#pricing" class="btn btn-secondary">查看价格</a>
+          <a href="#download" class="btn btn-primary">免费下载（个人使用）</a>
+          <a href="#download" class="btn btn-secondary">购买商业许可（$39）</a>
         </div>
       </div>
     </div>
@@ -1551,25 +1501,25 @@
   <div class="problem-section">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">挑战</span>
-        <h2>不一致的成本</h2>
-        <p>碎片化的日期格式在整个业务中造成运营效率低下</p>
+        <span class="section-tag">常见问题</span>
+        <h2>日期输入的日常烦恼</h2>
+        <p>每天都要做的事，小麻烦会累积成大问题</p>
       </div>
       <div class="problem-grid">
         <div class="problem-card">
-          <div class="problem-icon">📁</div>
-          <h3>文件管理复杂性</h3>
-          <p>文件名为"2026-02-14"、"02.14.2026"、"14/02/2026"无法系统排序，降低运营效率。</p>
-        </div>
-        <div class="problem-card">
-          <div class="problem-icon">⚠️</div>
-          <h3>数据完整性问题</h3>
-          <p>"02/14/2026"等模糊格式在发票、合同和合规文档中导致误解。</p>
-        </div>
-        <div class="problem-card">
           <div class="problem-icon">⏱️</div>
-          <h3>生产力损失</h3>
-          <p>员工反复验证格式标准，消耗本应分配给核心业务功能的宝贵时间。</p>
+          <h3>浪费时间</h3>
+          <p>手动输入"2026-02-15"很费时。一天输50次，就浪费了好几分钟。</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">🤔</div>
+          <h3>记不住格式</h3>
+          <p>到底是"2026/02/15"还是"2026-02-15"？每次都要想一下，很烦。</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">😓</div>
+          <h3>容易打错</h3>
+          <p>手快了就会打成"2026-02-51"。手动输入难免出错。</p>
         </div>
       </div>
     </div>
@@ -1580,9 +1530,9 @@
       <div class="section-header">
         <span class="section-tag">解决方案</span>
         <h2>标准化日期输入系统</h2>
-        <p>InsertDate在Windows环境中提供企业级一致性</p>
+        <p>InsertDate 统一Windows环境的日期输入</p>
       </div>
-      
+
       <div class="demo-container">
         <img src="/animation.gif" width="249" height="211" alt="InsertDate演示显示使用Insert键即时格式化日期" loading="eager" fetchpriority="high">
         <p style="margin-top: 24px; color: var(--text-secondary);">按Insert键 → 标准化日期格式立即应用</p>
@@ -1591,18 +1541,18 @@
       <div class="how-it-works">
         <div class="step">
           <div class="step-number">1</div>
-          <h3>选择标准</h3>
+          <h3>选择格式</h3>
           <p>选择组织格式：yyyyMMdd、yyyy/MM/dd、yyyy.MM.dd或yyyy年MM月dd日</p>
         </div>
         <div class="step">
           <div class="step-number">2</div>
-          <h3>部署应用程序</h3>
-          <p>便携式可执行文件—无需安装。最少系统资源。静默后台操作。</p>
+          <h3>安装部署</h3>
+          <p>免安装的便携程序，占用资源极少，后台静默运行。</p>
         </div>
         <div class="step">
           <div class="step-number">3</div>
-          <h3>执行功能</h3>
-          <p>在任何应用程序中—文档、电子邮件、文件命名—按Insert键即可获得一致的格式。</p>
+          <h3>开始使用</h3>
+          <p>在文档、邮件、文件命名等任何场景，按Insert键即可统一格式。</p>
         </div>
       </div>
     </div>
@@ -1611,39 +1561,39 @@
   <div class="benefits-section">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">业务影响</span>
-        <h2>可衡量的运营改进</h2>
+        <span class="section-tag">为什么选择我们</span>
+        <h2>让日期输入更轻松</h2>
       </div>
       <div class="benefits-grid">
         <div class="benefit-card">
-          <div class="benefit-icon">✅</div>
-          <h3>即时合规</h3>
-          <p>从部署开始，全组织遵守日期标准。无需培训基础设施。</p>
-        </div>
-        <div class="benefit-card">
-          <div class="benefit-icon">🔍</div>
-          <h3>增强文件系统</h3>
-          <p>时间顺序排序功能默认正确运行。减少查找文档所需的时间。</p>
-        </div>
-        <div class="benefit-card">
-          <div class="benefit-icon">💰</div>
-          <h3>风险缓解</h3>
-          <p>消除财务文档、合同和监管文件中的模糊日期条目。</p>
-        </div>
-        <div class="benefit-card">
           <div class="benefit-icon">⚡</div>
-          <h3>零维护</h3>
-          <p>部署并运行。最少资源消耗。无需更新周期。</p>
+          <h3>输入更快</h3>
+          <p>按一次Insert键即可完成。比手动输入快得多，不会打错。</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🎯</div>
+          <h3>不用记格式</h3>
+          <p>无需记住日期格式。只需按Insert键，正确格式的日期立即出现。</p>
         </div>
         <div class="benefit-card">
           <div class="benefit-icon">🌐</div>
-          <h3>通用兼容性</h3>
-          <p>在所有Windows应用程序中运行—Microsoft Office、网络浏览器、文件资源管理器、企业软件。</p>
+          <h3>随处可用</h3>
+          <p>在所有Windows应用中运行—Word、Excel、Outlook、Chrome、Slack等。</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🔍</div>
+          <h3>文件整理更方便</h3>
+          <p>文件按日期正确排序。统一的文件命名，搜索更容易。</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">✅</div>
+          <h3>团队也适用</h3>
+          <p>部署一次，全员使用相同格式。适合需要统一格式的企业。</p>
         </div>
         <div class="benefit-card">
           <div class="benefit-icon">🔒</div>
-          <h3>安全验证</h3>
-          <p>SSL.com代码签名证书。VirusTotal验证。所有数据保留在本地系统上。</p>
+          <h3>安全可靠</h3>
+          <p>代码签名证书。VirusTotal验证。数据全部保留在本地。</p>
         </div>
       </div>
     </div>
@@ -1651,8 +1601,8 @@
 
   <div class="cta-section">
     <div class="container">
-      <h2>准备好标准化您的日期了吗？</h2>
-      <p>加入数百个已消除日期格式混乱的团队。</p>
+      <h2>准备简化日期输入了吗？</h2>
+      <p>个人使用完全免费。无需注册。</p>
       <a href="#zh-hans-download" class="btn btn-primary">立即免费下载</a>
     </div>
   </div>
@@ -1688,7 +1638,7 @@
       <div class="section-header">
         <span class="section-tag">许可</span>
         <h2>透明定价结构</h2>
-        <p>无订阅。无经常性费用。每台设备一次性许可。</p>
+        <p>无订阅，一次性付费，无后续费用。</p>
       </div>
       <div class="pricing-cards">
         <div class="pricing-card">
@@ -1707,13 +1657,16 @@
           <h3>商业许可</h3>
           <div class="price">USD 39<span class="price-period"> / 设备</span></div>
           <ul class="pricing-features">
-            <li>商业部署权</li>
+            <li>7 天免费试用</li>
+            <li>商业使用权</li>
             <li>所有格式选项</li>
             <li>免费更新</li>
             <li>优先支持</li>
-            <li>批量许可可用 <a href="mailto:info@insertdate.com?subject=批量许可咨询" style="color: var(--primary-blue); text-decoration: underline; font-size: 13px;">(联系我们)</a></li>
           </ul>
-          <a href="https://buy.stripe.com/9B68wQ7Va0ZR3sScZPbwk00" class="btn btn-primary" style="width: 100%;">购买许可证</a>
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <a href="#download" class="btn btn-primary" style="width: 100%;">免费试用 7 天</a>
+            <a href="https://buy.stripe.com/9B68wQ7Va0ZR3sScZPbwk00" class="btn btn-secondary" style="width: 100%;">立即购买（$39/设备）</a>
+          </div>
         </div>
       </div>
     </div>
@@ -1725,11 +1678,11 @@
   <div class="hero">
     <div class="container">
       <div class="hero-content">
-        <h1>不再浪費時間修正日期格式</h1>
-        <p class="subtitle">一個工具。一種格式。零混亂。在整個組織中標準化日期輸入。</p>
+        <h1>日期格式，一鍵搞定</h1>
+        <p class="subtitle">按一次Insert鍵，今天的日期自動以正確格式輸入。再也不用記格式了。</p>
         <div class="cta-buttons">
-          <a href="#download" class="btn btn-primary">免費下載</a>
-          <a href="#pricing" class="btn btn-secondary">查看價格</a>
+          <a href="#download" class="btn btn-primary">免費下載（個人使用）</a>
+          <a href="#download" class="btn btn-secondary">購買商業授權（$39）</a>
         </div>
       </div>
     </div>
@@ -1738,25 +1691,25 @@
   <div class="problem-section">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">挑戰</span>
-        <h2>不一致的成本</h2>
-        <p>碎片化的日期格式在整個業務中造成運營效率低下</p>
+        <span class="section-tag">常見問題</span>
+        <h2>日期輸入的日常煩惱</h2>
+        <p>每天都要做的事，小麻煩會累積成大問題</p>
       </div>
       <div class="problem-grid">
         <div class="problem-card">
-          <div class="problem-icon">📁</div>
-          <h3>檔案管理複雜性</h3>
-          <p>檔案名為「2026-02-14」、「02.14.2026」、「14/02/2026」無法系統排序，降低運營效率。</p>
-        </div>
-        <div class="problem-card">
-          <div class="problem-icon">⚠️</div>
-          <h3>資料完整性問題</h3>
-          <p>「02/14/2026」等模糊格式在發票、合約和合規文件中導致誤解。</p>
-        </div>
-        <div class="problem-card">
           <div class="problem-icon">⏱️</div>
-          <h3>生產力損失</h3>
-          <p>員工反覆驗證格式標準，消耗本應分配給核心業務功能的寶貴時間。</p>
+          <h3>浪費時間</h3>
+          <p>手動輸入「2026-02-15」很費時。一天輸50次，就浪費了好幾分鐘。</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">🤔</div>
+          <h3>記不住格式</h3>
+          <p>到底是「2026/02/15」還是「2026-02-15」？每次都要想一下，很煩。</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">😓</div>
+          <h3>容易打錯</h3>
+          <p>手快了就會打成「2026-02-51」。手動輸入難免出錯。</p>
         </div>
       </div>
     </div>
@@ -1767,9 +1720,9 @@
       <div class="section-header">
         <span class="section-tag">解決方案</span>
         <h2>標準化日期輸入系統</h2>
-        <p>InsertDate在Windows環境中提供企業級一致性</p>
+        <p>InsertDate 統一Windows環境的日期輸入</p>
       </div>
-      
+
       <div class="demo-container">
         <img src="/animation.gif" width="249" height="211" alt="InsertDate演示顯示使用Insert鍵即時格式化日期" loading="eager" fetchpriority="high">
         <p style="margin-top: 24px; color: var(--text-secondary);">按Insert鍵 → 標準化日期格式立即應用</p>
@@ -1778,18 +1731,18 @@
       <div class="how-it-works">
         <div class="step">
           <div class="step-number">1</div>
-          <h3>選擇標準</h3>
+          <h3>選擇格式</h3>
           <p>選擇組織格式：yyyyMMdd、yyyy/MM/dd、yyyy.MM.dd或yyyy年MM月dd日</p>
         </div>
         <div class="step">
           <div class="step-number">2</div>
-          <h3>部署應用程式</h3>
-          <p>可攜式執行檔—無需安裝。最少系統資源。靜默背景操作。</p>
+          <h3>安裝部署</h3>
+          <p>免安裝的便攜程式，佔用資源極少，背景靜默運行。</p>
         </div>
         <div class="step">
           <div class="step-number">3</div>
-          <h3>執行功能</h3>
-          <p>在任何應用程式中—文件、電子郵件、檔案命名—按Insert鍵即可獲得一致的格式。</p>
+          <h3>開始使用</h3>
+          <p>在文件、郵件、檔案命名等任何場景，按Insert鍵即可統一格式。</p>
         </div>
       </div>
     </div>
@@ -1798,39 +1751,39 @@
   <div class="benefits-section">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">業務影響</span>
-        <h2>可衡量的運營改進</h2>
+        <span class="section-tag">為什麼選擇我們</span>
+        <h2>讓日期輸入更輕鬆</h2>
       </div>
       <div class="benefits-grid">
         <div class="benefit-card">
-          <div class="benefit-icon">✅</div>
-          <h3>即時合規</h3>
-          <p>從部署開始，全組織遵守日期標準。無需培訓基礎設施。</p>
-        </div>
-        <div class="benefit-card">
-          <div class="benefit-icon">🔍</div>
-          <h3>增強檔案系統</h3>
-          <p>時間順序排序功能預設正確運行。減少尋找文件所需的時間。</p>
-        </div>
-        <div class="benefit-card">
-          <div class="benefit-icon">💰</div>
-          <h3>風險緩解</h3>
-          <p>消除財務文件、合約和監管文件中的模糊日期條目。</p>
-        </div>
-        <div class="benefit-card">
           <div class="benefit-icon">⚡</div>
-          <h3>零維護</h3>
-          <p>部署並運行。最少資源消耗。無需更新週期。</p>
+          <h3>輸入更快</h3>
+          <p>按一次Insert鍵即可完成。比手動輸入快得多，不會打錯。</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🎯</div>
+          <h3>不用記格式</h3>
+          <p>無需記住日期格式。只需按Insert鍵，正確格式的日期立即出現。</p>
         </div>
         <div class="benefit-card">
           <div class="benefit-icon">🌐</div>
-          <h3>通用相容性</h3>
-          <p>在所有Windows應用程式中運行—Microsoft Office、網路瀏覽器、檔案總管、企業軟體。</p>
+          <h3>隨處可用</h3>
+          <p>在所有Windows應用中運行—Word、Excel、Outlook、Chrome、Slack等。</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🔍</div>
+          <h3>檔案整理更方便</h3>
+          <p>檔案按日期正確排序。統一的檔案命名，搜尋更容易。</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">✅</div>
+          <h3>團隊也適用</h3>
+          <p>部署一次，全員使用相同格式。適合需要統一格式的企業。</p>
         </div>
         <div class="benefit-card">
           <div class="benefit-icon">🔒</div>
-          <h3>安全驗證</h3>
-          <p>SSL.com代碼簽名證書。VirusTotal驗證。所有資料保留在本地系統上。</p>
+          <h3>安全可靠</h3>
+          <p>程式碼簽名證書。VirusTotal驗證。資料全部保留在本地。</p>
         </div>
       </div>
     </div>
@@ -1838,8 +1791,8 @@
 
   <div class="cta-section">
     <div class="container">
-      <h2>準備好標準化您的日期了嗎？</h2>
-      <p>加入數百個已消除日期格式混亂的團隊。</p>
+      <h2>準備簡化日期輸入了嗎？</h2>
+      <p>個人使用完全免費。無需註冊。</p>
       <a href="#zh-hant-download" class="btn btn-primary">立即免費下載</a>
     </div>
   </div>
@@ -1875,7 +1828,7 @@
       <div class="section-header">
         <span class="section-tag">授權</span>
         <h2>透明定價結構</h2>
-        <p>無訂閱。無經常性費用。每台裝置一次性授權。</p>
+        <p>無訂閱，一次性付費，無後續費用。</p>
       </div>
       <div class="pricing-cards">
         <div class="pricing-card">
@@ -1894,13 +1847,16 @@
           <h3>商業授權</h3>
           <div class="price">USD 39<span class="price-period"> / 裝置</span></div>
           <ul class="pricing-features">
-            <li>商業部署權</li>
+            <li>7 天免費試用</li>
+            <li>商業使用權</li>
             <li>所有格式選項</li>
             <li>免費更新</li>
             <li>優先支援</li>
-            <li>大量授權可用 <a href="mailto:info@insertdate.com?subject=大量授權諮詢" style="color: var(--primary-blue); text-decoration: underline; font-size: 13px;">(聯絡我們)</a></li>
           </ul>
-          <a href="https://buy.stripe.com/9B68wQ7Va0ZR3sScZPbwk00" class="btn btn-primary" style="width: 100%;">購買授權</a>
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <a href="#download" class="btn btn-primary" style="width: 100%;">免費試用 7 天</a>
+            <a href="https://buy.stripe.com/9B68wQ7Va0ZR3sScZPbwk00" class="btn btn-secondary" style="width: 100%;">立即購買（$39/裝置）</a>
+          </div>
         </div>
       </div>
     </div>
@@ -1931,6 +1887,10 @@
       <div class="faq-item">
         <h3 class="faq-question">Can I use InsertDate on multiple devices?</h3>
         <p class="faq-answer">Individual Use is free on unlimited personal devices. Commercial licenses are per-device—you need one license for each computer used in a business context.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">What happens after I purchase a Commercial License?</h3>
+        <p class="faq-answer">After purchasing, you can immediately download and use InsertDate on the number of devices you purchased licenses for. There are no license keys, activation codes, or registration required. Your organization is responsible for tracking compliance—ensuring the number of devices using InsertDate matches the number of licenses purchased. Simple and straightforward.</p>
       </div>
       <div class="faq-item">
         <h3 class="faq-question">How do updates work?</h3>
@@ -1978,6 +1938,10 @@
         <p class="faq-answer">個人利用は無制限のデバイスで無料で使えます。商用ライセンスはデバイスごとです—ビジネスで使用する各コンピューターに1つのライセンスが必要です。</p>
       </div>
       <div class="faq-item">
+        <h3 class="faq-question">商用ライセンス購入後はどうなりますか？</h3>
+        <p class="faq-answer">購入後、購入したライセンス数分のデバイスで即座にInsertDateをダウンロードして使用できます。ライセンスキー、アクティベーションコード、登録は一切不要です。組織は、InsertDateを使用しているデバイス数が購入したライセンス数と一致していることを自己管理する責任があります。シンプルで分かりやすいシステムです。</p>
+      </div>
+      <div class="faq-item">
         <h3 class="faq-question">アップデートはどうなりますか？</h3>
         <p class="faq-answer">すべてのアップデートは無料です。新バージョンがリリースされたら、最新の.exeをダウンロードして現在のファイルを置き換えるだけです。設定は保持されます。サブスクリプションや継続料金はありません。</p>
       </div>
@@ -2021,6 +1985,10 @@
       <div class="faq-item">
         <h3 class="faq-question">可以在多台设备上使用 InsertDate 吗？</h3>
         <p class="faq-answer">个人使用可在无限台个人设备上免费使用。商业许可按设备计费——每台用于商业环境的计算机需要一个许可证。</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">购买商业许可证后会发生什么？</h3>
+        <p class="faq-answer">购买后，您可以立即在购买许可证数量的设备上下载和使用 InsertDate。无需许可证密钥、激活代码或注册。您的组织负责跟踪合规性——确保使用 InsertDate 的设备数量与购买的许可证数量相符。简单直接。</p>
       </div>
       <div class="faq-item">
         <h3 class="faq-question">更新如何进行？</h3>
@@ -2068,6 +2036,10 @@
         <p class="faq-answer">個人使用可在無限台個人裝置上免費使用。商業授權按裝置計費——每台用於商業環境的電腦需要一個授權。</p>
       </div>
       <div class="faq-item">
+        <h3 class="faq-question">購買商業授權後會發生什麼？</h3>
+        <p class="faq-answer">購買後，您可以立即在購買授權數量的裝置上下載和使用 InsertDate。無需授權金鑰、啟用代碼或註冊。您的組織負責追蹤合規性——確保使用 InsertDate 的裝置數量與購買的授權數量相符。簡單直接。</p>
+      </div>
+      <div class="faq-item">
         <h3 class="faq-question">更新如何進行？</h3>
         <p class="faq-answer">所有更新均免費。新版本發布時，只需下載最新 .exe 檔案並取代目前檔案即可。您的設定將被保留。無訂閱或定期費用。</p>
       </div>
@@ -2089,7 +2061,7 @@
 
 <!-- Sticky Mobile CTA -->
 <div class="sticky-mobile-cta" id="sticky-cta">
-  <a href="#download" class="btn btn-primary">Download Free</a>
+  <a href="#download" class="btn btn-primary">Start 7-Day Free Trial</a>
 </div>
 
 <footer role="contentinfo">
