@@ -682,6 +682,12 @@
       text-align: center;
       box-shadow: 0 0.3px 0.9px rgba(0, 0, 0, 0.03),
                   0 1.6px 3.6px rgba(0, 0, 0, 0.04);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .pricing-card > :last-child {
+      margin-top: auto;
     }
 
     .pricing-card.featured {
@@ -773,6 +779,7 @@
       z-index: 1000;
       display: none;
       border-top: 1px solid var(--border-color);
+      text-align: center;
     }
 
     .sticky-mobile-cta.visible {
@@ -850,6 +857,74 @@
       to {
         opacity: 1;
       }
+    }
+
+    /* Before/After Comparison */
+    .comparison-section {
+      padding: 48px 0;
+      background: var(--neutral-light);
+    }
+
+    .comparison-section .section-header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .comparison-image {
+      text-align: center;
+    }
+
+    .comparison-image img {
+      display: block;
+      margin: 0 auto;
+      max-width: 720px;
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .comparison-image {
+      position: relative;
+    }
+
+    .comparison-labels {
+      position: absolute;
+      top: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 720px;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 16px;
+      box-sizing: border-box;
+      pointer-events: none;
+    }
+
+    .comparison-label {
+      font-size: 13px;
+      font-weight: 600;
+      padding: 4px 14px;
+      border-radius: 2px;
+      letter-spacing: 0.03em;
+    }
+
+    .comparison-label.before {
+      background: rgba(220, 53, 69, 0.85);
+      color: #fff;
+    }
+
+    .comparison-label.after {
+      background: rgba(25, 135, 84, 0.85);
+      color: #fff;
+    }
+
+    .comparison-caption {
+      text-align: center;
+      margin-top: 16px;
+      color: var(--text-secondary);
+      font-size: 14px;
     }
 
     /* Responsive */
@@ -1127,9 +1202,9 @@
       </div>
       <div class="problem-grid">
         <div class="problem-card">
-          <div class="problem-icon">⏱️</div>
-          <h3>Ugh, Typing It Again…</h3>
-          <p>Manually typing dates 50 times a day adds up. That's time you could spend on work that actually matters.</p>
+          <div class="problem-icon">📅</div>
+          <h3>Wait, What's Today's Date?</h3>
+          <p>Is it the 14th? The 15th? You check your phone, the taskbar, a calendar—just to type a date.</p>
         </div>
         <div class="problem-card">
           <div class="problem-icon">🤔</div>
@@ -1138,7 +1213,7 @@
         </div>
         <div class="problem-card">
           <div class="problem-icon">😓</div>
-          <h3>Wait, Was That Right?</h3>
+          <h3>Oops, Was That Right?</h3>
           <p>You typed "2026-02-51" instead of "2026-02-15" and didn't notice. Now it's in the report your boss already read.</p>
         </div>
       </div>
@@ -1152,7 +1227,11 @@
         <h2>See the Difference</h2>
       </div>
       <div class="comparison-image">
-        <img src="/filename-comparison.png" width="800" height="400" alt="Before: chaotic file names with inconsistent date formats. After: organized files with standardized date prefixes." loading="lazy">
+        <img src="/filename-comparison.png" width="480" height="138" alt="Before: chaotic file names with inconsistent date formats. After: organized files with standardized date prefixes." loading="lazy">
+        <div class="comparison-labels">
+          <span class="comparison-label before">Before</span>
+          <span class="comparison-label after">After</span>
+        </div>
         <p class="comparison-caption">Chaotic file names lead to wrong files sent. Consistent dates prevent costly mistakes.</p>
       </div>
     </div>
@@ -1161,31 +1240,31 @@
   <div class="solution-section">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Solution</span>
-        <h2>Standardized Date Entry System</h2>
-        <p>InsertDate provides enterprise-level consistency across your Windows environment</p>
+        <span class="section-tag">How It Works</span>
+        <h2>Three Steps. That's It.</h2>
+        <p>Works for you. Works for your whole team.</p>
       </div>
-      
+
       <div class="demo-container">
         <img src="/animation.gif" width="249" height="211" alt="InsertDate demonstration showing instant date formatting with Insert key" loading="eager" fetchpriority="high">
-        <p style="margin-top: 24px; color: var(--text-secondary);">Press Insert key → Standardized date format applied instantly</p>
+        <p style="margin-top: 24px; color: var(--text-secondary);">Press Insert → Date appears in the right format, instantly.</p>
       </div>
 
       <div class="how-it-works">
         <div class="step">
           <div class="step-number">1</div>
-          <h3>Select Standard</h3>
-          <p>Choose organizational format: yyyyMMdd, yyyy/MM/dd, yyyy.MM.dd, or yyyy年MM月dd日</p>
+          <h3>Choose Your Format</h3>
+          <p>Pick the date format you prefer: yyyyMMdd, yyyy/MM/dd, yyyy.MM.dd, or yyyy年MM月dd日. Teams can set one format for everyone.</p>
         </div>
         <div class="step">
           <div class="step-number">2</div>
-          <h3>Deploy Application</h3>
-          <p>Portable executable—no installation required. Minimal system resources. Silent background operation.</p>
+          <h3>Download & Run</h3>
+          <p>No installation needed. Just run the file. Lightweight and runs quietly in the background.</p>
         </div>
         <div class="step">
           <div class="step-number">3</div>
-          <h3>Execute Function</h3>
-          <p>Press Insert key in any application—documents, email, file naming—for consistent formatting.</p>
+          <h3>Press Insert</h3>
+          <p>In any app—Word, Excel, Chrome—press Insert and the date appears in the right format.</p>
         </div>
       </div>
     </div>
@@ -1194,7 +1273,7 @@
   <div class="benefits-section">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Why You'll Love It</span>
+        <span class="section-tag">What Changes</span>
         <h2>Effortless Date Formatting</h2>
       </div>
       <div class="benefits-grid">
@@ -1209,7 +1288,7 @@
           <p>No format to remember. Your brain stays on what you're writing, not how to write the date.</p>
         </div>
         <div class="benefit-card">
-          <div class="benefit-icon">🌐</div>
+          <div class="benefit-icon">💻</div>
           <h3>Same Key, Every App</h3>
           <p>Word, Excel, Chrome, Slack—same shortcut, same result. No switching between methods.</p>
         </div>
@@ -1244,8 +1323,8 @@
     <div class="container">
       <div class="section-header">
         <span class="section-tag">Download</span>
-        <h2>Available Format Standards</h2>
-        <p>Select the format aligned with your organizational requirements</p>
+        <h2>Choose Your Date Format</h2>
+        <p>Pick the format you want. Using it for your team? Everyone gets the same one.</p>
       </div>
       <div class="specs-table">
         <table>
@@ -1270,7 +1349,7 @@
     <div class="container">
       <div class="section-header">
         <span class="section-tag">Licensing</span>
-        <h2>Transparent Pricing Structure</h2>
+        <h2>Pricing</h2>
         <p>No subscriptions. No recurring fees. One-time licensing per device.</p>
       </div>
       <div class="pricing-cards">
@@ -1279,7 +1358,7 @@
           <h3>Individual Use</h3>
           <div class="price">FREE</div>
           <ul class="pricing-features">
-            <li>Non-commercial use only</li>
+            <li>Personal use, your own PC</li>
             <li>All format options</li>
             <li>Free updates</li>
           </ul>
@@ -1294,7 +1373,7 @@
             <li>Commercial deployment rights</li>
             <li>All format options</li>
             <li>Free updates</li>
-            <li>Priority support</li>
+            <li>Email support</li>
           </ul>
           <div style="display: flex; flex-direction: column; gap: 12px;">
             <a href="#download" class="btn btn-primary" style="width: 100%;">Start 7-Day Free Trial</a>
@@ -1330,9 +1409,9 @@
       </div>
       <div class="problem-grid">
         <div class="problem-card">
-          <div class="problem-icon">⏱️</div>
-          <h3>また手で打つの…</h3>
-          <p>1日50回の手入力。その時間、本来の仕事に使えたはずです。</p>
+          <div class="problem-icon">📅</div>
+          <h3>今日何日だっけ？</h3>
+          <p>14日？15日？スマホを見たり、タスクバーを確認したり。日付を打つためだけに手が止まります。</p>
         </div>
         <div class="problem-card">
           <div class="problem-icon">🤔</div>
@@ -1355,7 +1434,7 @@
         <h2>こんなに変わります</h2>
       </div>
       <div class="comparison-image">
-        <img src="/filename-comparison.png" width="800" height="400" alt="Before: バラバラの日付形式のファイル名。After: 統一された日付形式で整理されたファイル名。" loading="lazy">
+        <img src="/filename-comparison.png" width="480" height="138" alt="Before: バラバラの日付形式のファイル名。After: 統一された日付形式で整理されたファイル名。" loading="lazy">
         <p class="comparison-caption">バラバラのファイル名は取り違えの原因に → 統一すれば、間違ったファイルを送るミスがなくなります</p>
       </div>
     </div>
@@ -1364,31 +1443,31 @@
   <div class="solution-section">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">解決策</span>
-        <h2>標準化された日付入力システム</h2>
-        <p>InsertDateで、Windows環境全体の日付入力を統一できます</p>
+        <span class="section-tag">使い方</span>
+        <h2>3ステップで完了</h2>
+        <p>個人でも、チームでも、同じように使えます。</p>
       </div>
-      
+
       <div class="demo-container">
-        <img src="/animation.gif" width="249" height="211" alt="Insertキーによる即座の日付フォーマット適用を示すInsertDateデモンストレーション" loading="eager" fetchpriority="high">
-        <p style="margin-top: 24px; color: var(--text-secondary);">Insertキーを押す → 標準化された日付形式が即座に適用</p>
+        <img src="/animation.gif" width="249" height="211" alt="InsertDateのデモ：Insertキーを押すと日付が自動入力される" loading="eager" fetchpriority="high">
+        <p style="margin-top: 24px; color: var(--text-secondary);">Insertキーを押す → 正しい形式で日付が入力されます</p>
       </div>
 
       <div class="how-it-works">
         <div class="step">
           <div class="step-number">1</div>
-          <h3>形式を選択</h3>
-          <p>組織の形式を選択：yyyyMMdd、yyyy/MM/dd、yyyy.MM.dd、yyyy年MM月dd日</p>
+          <h3>形式を選ぶ</h3>
+          <p>使いたい日付形式を選びます：yyyyMMdd、yyyy/MM/dd、yyyy.MM.dd、yyyy年MM月dd日。チームで統一することもできます。</p>
         </div>
         <div class="step">
           <div class="step-number">2</div>
-          <h3>配布・導入</h3>
-          <p>インストール不要のポータブル実行ファイル。システムリソースをほとんど使わず、バックグラウンドで静かに動作します。</p>
+          <h3>ダウンロードして実行</h3>
+          <p>インストール不要。ファイルを実行するだけ。軽量でバックグラウンドで静かに動きます。</p>
         </div>
         <div class="step">
           <div class="step-number">3</div>
-          <h3>使い始める</h3>
-          <p>ドキュメント、メール、ファイル名など、どこでもInsertキーを押すだけで統一された形式で入力できます。</p>
+          <h3>Insertキーを押す</h3>
+          <p>Word、Excel、Chrome——どのアプリでもInsertキーを押すだけ。正しい形式で日付が入力されます。</p>
         </div>
       </div>
     </div>
@@ -1397,7 +1476,7 @@
   <div class="benefits-section">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">選ばれる理由</span>
+        <span class="section-tag">使ってみるとこう変わる</span>
         <h2>日付入力がもっと楽になる</h2>
       </div>
       <div class="benefits-grid">
@@ -1412,7 +1491,7 @@
           <p>フォーマットを考える必要がないから、目の前の仕事に集中できます。</p>
         </div>
         <div class="benefit-card">
-          <div class="benefit-icon">🌐</div>
+          <div class="benefit-icon">💻</div>
           <h3>アプリが変わっても操作は同じ</h3>
           <p>Word、Excel、Chrome、Slack——どのアプリでも同じキーで同じ結果。使い分ける必要がありません。</p>
         </div>
@@ -1447,8 +1526,8 @@
     <div class="container">
       <div class="section-header">
         <span class="section-tag">ダウンロード</span>
-        <h2>利用可能な形式標準</h2>
-        <p>組織の要件に合致した形式を選択してください</p>
+        <h2>日付形式を選ぶ</h2>
+        <p>使いたい形式を選んでください。チームで使う場合は、全員同じ形式に統一できます。</p>
       </div>
       <div class="specs-table">
         <table>
@@ -1473,7 +1552,7 @@
     <div class="container">
       <div class="section-header">
         <span class="section-tag">ライセンス</span>
-        <h2>透明な料金体系</h2>
+        <h2>料金プラン</h2>
         <p>サブスクリプションなし。買い切り型で継続費用もかかりません。</p>
       </div>
       <div class="pricing-cards">
@@ -1482,7 +1561,7 @@
           <h3>個人利用</h3>
           <div class="price">無料</div>
           <ul class="pricing-features">
-            <li>非商用利用のみ</li>
+            <li>個人のPCでずっと使える</li>
             <li>全形式オプション</li>
             <li>無料アップデート</li>
           </ul>
@@ -1497,7 +1576,7 @@
             <li>商用利用権</li>
             <li>全形式オプション</li>
             <li>無料アップデート</li>
-            <li>優先サポート</li>
+            <li>メールサポート</li>
           </ul>
           <div style="display: flex; flex-direction: column; gap: 12px;">
             <a href="#download" class="btn btn-primary" style="width: 100%;">7日間無料で試す</a>
@@ -1514,8 +1593,8 @@
   <div class="hero">
     <div class="container">
       <div class="hero-content">
-        <h1>日期格式，一键搞定</h1>
-        <p class="subtitle">按下Insert键，正确格式自动出现。再也不用纠结该用哪个格式。</p>
+        <h1>日期输入，不再纠结</h1>
+        <p class="subtitle">按下Insert键，正确格式自动出现。再也不用想该用哪个格式。</p>
         <div class="cta-buttons">
           <a href="#download" class="btn btn-primary">免费下载（个人使用）</a>
           <a href="#download" class="btn btn-secondary">购买商业许可（$39）</a>
@@ -1533,9 +1612,9 @@
       </div>
       <div class="problem-grid">
         <div class="problem-card">
-          <div class="problem-icon">⏱️</div>
-          <h3>又要手动输…</h3>
-          <p>一天手动输50次日期，那些时间本来可以做更重要的事。</p>
+          <div class="problem-icon">📅</div>
+          <h3>今天几号来着？</h3>
+          <p>14号？15号？看手机、看任务栏、看日历——就为了输个日期。</p>
         </div>
         <div class="problem-card">
           <div class="problem-icon">🤔</div>
@@ -1558,7 +1637,7 @@
         <h2>看看效果</h2>
       </div>
       <div class="comparison-image">
-        <img src="/filename-comparison.png" width="800" height="400" alt="Before: 文件名中日期格式混乱。After: 文件名使用统一的日期前缀，整齐有序。" loading="lazy">
+        <img src="/filename-comparison.png" width="480" height="138" alt="Before: 文件名中日期格式混乱。After: 文件名使用统一的日期前缀，整齐有序。" loading="lazy">
         <p class="comparison-caption">混乱的文件名导致发错文件 → 统一命名，避免低级失误</p>
       </div>
     </div>
@@ -1567,31 +1646,31 @@
   <div class="solution-section">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">解决方案</span>
-        <h2>标准化日期输入系统</h2>
-        <p>InsertDate 统一Windows环境的日期输入</p>
+        <span class="section-tag">使用方法</span>
+        <h2>三步搞定</h2>
+        <p>一个人用，还是全公司用，都一样简单。</p>
       </div>
 
       <div class="demo-container">
-        <img src="/animation.gif" width="249" height="211" alt="InsertDate演示显示使用Insert键即时格式化日期" loading="eager" fetchpriority="high">
-        <p style="margin-top: 24px; color: var(--text-secondary);">按Insert键 → 标准化日期格式立即应用</p>
+        <img src="/animation.gif" width="249" height="211" alt="InsertDate演示：按Insert键自动输入日期" loading="eager" fetchpriority="high">
+        <p style="margin-top: 24px; color: var(--text-secondary);">按下 Insert，日期格式秒搞定。</p>
       </div>
 
       <div class="how-it-works">
         <div class="step">
           <div class="step-number">1</div>
           <h3>选择格式</h3>
-          <p>选择组织格式：yyyyMMdd、yyyy/MM/dd、yyyy.MM.dd或yyyy年MM月dd日</p>
+          <p>选一个你喜欢的日期格式：yyyyMMdd、yyyy/MM/dd、yyyy.MM.dd或yyyy年MM月dd日。团队可以统一设定。</p>
         </div>
         <div class="step">
           <div class="step-number">2</div>
-          <h3>安装部署</h3>
-          <p>免安装的便携程序，占用资源极少，后台静默运行。</p>
+          <h3>下载运行</h3>
+          <p>无需安装，运行即可。轻量运行，安静待在后台。</p>
         </div>
         <div class="step">
           <div class="step-number">3</div>
-          <h3>开始使用</h3>
-          <p>在文档、邮件、文件命名等任何场景，按Insert键即可统一格式。</p>
+          <h3>按下Insert</h3>
+          <p>Word、Excel、Chrome——在任何应用中按Insert键，日期自动以正确格式出现。</p>
         </div>
       </div>
     </div>
@@ -1600,7 +1679,7 @@
   <div class="benefits-section">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">为什么选择我们</span>
+        <span class="section-tag">用了之后会怎样</span>
         <h2>让日期输入更轻松</h2>
       </div>
       <div class="benefits-grid">
@@ -1615,7 +1694,7 @@
           <p>不用记格式，注意力留给正在写的内容。</p>
         </div>
         <div class="benefit-card">
-          <div class="benefit-icon">🌐</div>
+          <div class="benefit-icon">💻</div>
           <h3>换了应用也一样</h3>
           <p>Word、Excel、Chrome、Slack——同一个键，同样的结果。不用换方法。</p>
         </div>
@@ -1650,8 +1729,8 @@
     <div class="container">
       <div class="section-header">
         <span class="section-tag">下载</span>
-        <h2>可用格式标准</h2>
-        <p>选择符合组织要求的格式</p>
+        <h2>选择日期格式</h2>
+        <p>选你想用的格式。团队使用时，可以统一设定。</p>
       </div>
       <div class="specs-table">
         <table>
@@ -1676,7 +1755,7 @@
     <div class="container">
       <div class="section-header">
         <span class="section-tag">许可</span>
-        <h2>透明定价结构</h2>
+        <h2>价格方案</h2>
         <p>无订阅，一次性付费，无后续费用。</p>
       </div>
       <div class="pricing-cards">
@@ -1685,7 +1764,7 @@
           <h3>个人使用</h3>
           <div class="price">免费</div>
           <ul class="pricing-features">
-            <li>仅限非商业使用</li>
+            <li>个人电脑上永久使用</li>
             <li>所有格式选项</li>
             <li>免费更新</li>
           </ul>
@@ -1700,7 +1779,7 @@
             <li>商业使用权</li>
             <li>所有格式选项</li>
             <li>免费更新</li>
-            <li>优先支持</li>
+            <li>邮件支持</li>
           </ul>
           <div style="display: flex; flex-direction: column; gap: 12px;">
             <a href="#download" class="btn btn-primary" style="width: 100%;">免费试用 7 天</a>
@@ -1717,8 +1796,8 @@
   <div class="hero">
     <div class="container">
       <div class="hero-content">
-        <h1>日期格式，一鍵搞定</h1>
-        <p class="subtitle">按下Insert鍵，正確格式自動出現。再也不用糾結該用哪個格式。</p>
+        <h1>日期輸入，不再糾結</h1>
+        <p class="subtitle">按下Insert鍵，正確格式自動出現。再也不用想該用哪個格式。</p>
         <div class="cta-buttons">
           <a href="#download" class="btn btn-primary">免費下載（個人使用）</a>
           <a href="#download" class="btn btn-secondary">購買商業授權（$39）</a>
@@ -1736,9 +1815,9 @@
       </div>
       <div class="problem-grid">
         <div class="problem-card">
-          <div class="problem-icon">⏱️</div>
-          <h3>又要手動輸…</h3>
-          <p>一天手動輸50次日期，那些時間本來可以做更重要的事。</p>
+          <div class="problem-icon">📅</div>
+          <h3>今天幾號來著？</h3>
+          <p>14號？15號？看手機、看工作列、看日曆——就為了輸個日期。</p>
         </div>
         <div class="problem-card">
           <div class="problem-icon">🤔</div>
@@ -1761,7 +1840,7 @@
         <h2>看看效果</h2>
       </div>
       <div class="comparison-image">
-        <img src="/filename-comparison.png" width="800" height="400" alt="Before: 檔案名中日期格式混亂。After: 檔案名使用統一的日期前綴，整齊有序。" loading="lazy">
+        <img src="/filename-comparison.png" width="480" height="138" alt="Before: 檔案名中日期格式混亂。After: 檔案名使用統一的日期前綴，整齊有序。" loading="lazy">
         <p class="comparison-caption">混亂的檔案名導致發錯檔案 → 統一命名，避免低級失誤</p>
       </div>
     </div>
@@ -1770,31 +1849,31 @@
   <div class="solution-section">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">解決方案</span>
-        <h2>標準化日期輸入系統</h2>
-        <p>InsertDate 統一Windows環境的日期輸入</p>
+        <span class="section-tag">使用方法</span>
+        <h2>三步搞定</h2>
+        <p>一個人用，還是全公司用，都一樣簡單。</p>
       </div>
 
       <div class="demo-container">
-        <img src="/animation.gif" width="249" height="211" alt="InsertDate演示顯示使用Insert鍵即時格式化日期" loading="eager" fetchpriority="high">
-        <p style="margin-top: 24px; color: var(--text-secondary);">按Insert鍵 → 標準化日期格式立即應用</p>
+        <img src="/animation.gif" width="249" height="211" alt="InsertDate演示：按Insert鍵自動輸入日期" loading="eager" fetchpriority="high">
+        <p style="margin-top: 24px; color: var(--text-secondary);">按下 Insert，日期格式秒搞定。</p>
       </div>
 
       <div class="how-it-works">
         <div class="step">
           <div class="step-number">1</div>
           <h3>選擇格式</h3>
-          <p>選擇組織格式：yyyyMMdd、yyyy/MM/dd、yyyy.MM.dd或yyyy年MM月dd日</p>
+          <p>選一個你喜歡的日期格式：yyyyMMdd、yyyy/MM/dd、yyyy.MM.dd或yyyy年MM月dd日。團隊可以統一設定。</p>
         </div>
         <div class="step">
           <div class="step-number">2</div>
-          <h3>安裝部署</h3>
-          <p>免安裝的便攜程式，佔用資源極少，背景靜默運行。</p>
+          <h3>下載運行</h3>
+          <p>無需安裝，運行即可。輕量運行，安靜待在背景。</p>
         </div>
         <div class="step">
           <div class="step-number">3</div>
-          <h3>開始使用</h3>
-          <p>在文件、郵件、檔案命名等任何場景，按Insert鍵即可統一格式。</p>
+          <h3>按下Insert</h3>
+          <p>Word、Excel、Chrome——在任何應用中按Insert鍵，日期自動以正確格式出現。</p>
         </div>
       </div>
     </div>
@@ -1803,7 +1882,7 @@
   <div class="benefits-section">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">為什麼選擇我們</span>
+        <span class="section-tag">用了之後會怎樣</span>
         <h2>讓日期輸入更輕鬆</h2>
       </div>
       <div class="benefits-grid">
@@ -1818,7 +1897,7 @@
           <p>不用記格式，注意力留給正在寫的內容。</p>
         </div>
         <div class="benefit-card">
-          <div class="benefit-icon">🌐</div>
+          <div class="benefit-icon">💻</div>
           <h3>換了應用也一樣</h3>
           <p>Word、Excel、Chrome、Slack——同一個鍵，同樣的結果。不用換方法。</p>
         </div>
@@ -1853,8 +1932,8 @@
     <div class="container">
       <div class="section-header">
         <span class="section-tag">下載</span>
-        <h2>可用格式標準</h2>
-        <p>選擇符合組織要求的格式</p>
+        <h2>選擇日期格式</h2>
+        <p>選你想用的格式。團隊使用時，可以統一設定。</p>
       </div>
       <div class="specs-table">
         <table>
@@ -1879,7 +1958,7 @@
     <div class="container">
       <div class="section-header">
         <span class="section-tag">授權</span>
-        <h2>透明定價結構</h2>
+        <h2>價格方案</h2>
         <p>無訂閱，一次性付費，無後續費用。</p>
       </div>
       <div class="pricing-cards">
@@ -1888,7 +1967,7 @@
           <h3>個人使用</h3>
           <div class="price">免費</div>
           <ul class="pricing-features">
-            <li>僅限非商業使用</li>
+            <li>個人電腦上永久使用</li>
             <li>所有格式選項</li>
             <li>免費更新</li>
           </ul>
@@ -1903,7 +1982,7 @@
             <li>商業使用權</li>
             <li>所有格式選項</li>
             <li>免費更新</li>
-            <li>優先支援</li>
+            <li>郵件支援</li>
           </ul>
           <div style="display: flex; flex-direction: column; gap: 12px;">
             <a href="#download" class="btn btn-primary" style="width: 100%;">免費試用 7 天</a>

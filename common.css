@@ -252,7 +252,10 @@ footer {
 }
 
 .comparison-image img {
-  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  max-width: 480px;
+  width: 100%;
   height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
