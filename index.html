@@ -544,7 +544,8 @@
     }
 
     table {
-      width: 100%;
+      width: auto;
+      margin: 0 auto;
       border-collapse: collapse;
     }
 
@@ -578,20 +579,52 @@
     }
 
     .package-name {
+      display: inline-block;
+      min-width: 200px;
+      padding: 10px 20px;
       font-weight: 600;
-      color: var(--primary-blue);
+      color: var(--neutral-white);
+      background: var(--primary-blue);
       text-decoration: none;
-      font-family: 'Consolas', 'Courier New', monospace;
       font-size: 13px;
+      border-radius: 4px;
+      transition: all 0.15s ease;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 120, 212, 0.2);
     }
 
     .package-name:hover {
-      text-decoration: underline;
+      background: var(--primary-blue-dark, #106ebe);
+      text-decoration: none;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 8px rgba(0, 120, 212, 0.3);
+    }
+
+    .package-name:active {
+      transform: translateY(0);
+      box-shadow: 0 1px 2px rgba(0, 120, 212, 0.2);
     }
 
     .package-name:focus {
       outline: 2px solid var(--primary-blue);
       outline-offset: 2px;
+    }
+
+    tbody tr:first-child .package-name {
+      background: linear-gradient(135deg, var(--primary-blue), #2b88d8);
+    }
+
+    .popular-badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      background: var(--semantic-success);
+      color: var(--neutral-white);
+      padding: 2px 8px;
+      border-radius: 10px;
+      margin-left: 8px;
+      vertical-align: middle;
+      letter-spacing: 0.03em;
     }
 
     .format-display {
@@ -638,6 +671,35 @@
     .verify-btn:hover {
       background: var(--semantic-success);
       color: var(--neutral-white);
+    }
+
+    .hash-col {
+      display: none;
+    }
+
+    .hash-visible .hash-col {
+      display: table-cell;
+    }
+
+    .hash-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 16px;
+      padding: 6px 14px;
+      background: var(--neutral-white);
+      color: var(--text-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: 2px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.1s ease;
+    }
+
+    .hash-toggle:hover {
+      color: var(--text-primary);
+      border-color: var(--text-secondary);
     }
 
     .verify-btn:focus {
@@ -1332,12 +1394,13 @@
             <tr>
               <th>Package</th>
               <th>Format / Output Example</th>
-              <th>SHA-256 Hash</th>
+              <th class="hash-col">SHA-256 Hash</th>
               <th style="text-align: center;">Verification</th>
             </tr>
           </thead>
           <tbody id="en-table-body"></tbody>
         </table>
+        <button class="hash-toggle" onclick="toggleHash(this)">🔑 Show SHA-256</button>
       </div>
       <div class="security-note">
         <strong>Security Notice:</strong> Windows SmartScreen automatically checks new software for safety. InsertDate may display a protection notice as it is a new release. All packages are code-signed with SSL.com certification and verified virus-free via VirusTotal. Select <strong>"More info"</strong> then <strong>"Run anyway"</strong> to proceed.
@@ -1535,12 +1598,13 @@
             <tr>
               <th>パッケージ</th>
               <th>形式 / 出力例</th>
-              <th>SHA-256 ハッシュ</th>
+              <th class="hash-col">SHA-256 ハッシュ</th>
               <th style="text-align: center;">検証</th>
             </tr>
           </thead>
           <tbody id="ja-table-body"></tbody>
         </table>
+        <button class="hash-toggle" onclick="toggleHash(this)">🔑 SHA-256を表示</button>
       </div>
       <div class="security-note">
         <strong>セキュリティに関する注意:</strong> Windows SmartScreenは新しいソフトウェアを自動的に安全性チェックします。InsertDateは新しいリリースのため保護通知が表示される場合があります。すべてのパッケージはSSL.com認証によるコード署名済みで、VirusTotalを介してウイルスフリーであることが検証されています。続行するには<strong>「詳細情報」</strong>を選択し、次に<strong>「実行」</strong>を選択してください。
@@ -1738,12 +1802,13 @@
             <tr>
               <th>安装包</th>
               <th>格式 / 输出示例</th>
-              <th>SHA-256 哈希</th>
+              <th class="hash-col">SHA-256 哈希</th>
               <th style="text-align: center;">验证</th>
             </tr>
           </thead>
           <tbody id="zh-hans-table-body"></tbody>
         </table>
+        <button class="hash-toggle" onclick="toggleHash(this)">🔑 显示 SHA-256</button>
       </div>
       <div class="security-note">
         <strong>安全提示:</strong> Windows SmartScreen会自动检查新软件的安全性。InsertDate作为新发布的软件可能会显示保护提示。所有软件包均已通过SSL.com认证的代码签名，并经VirusTotal验证无病毒。要继续，请选择<strong>"更多信息"</strong>然后<strong>"仍要运行"</strong>。
@@ -1941,12 +2006,13 @@
             <tr>
               <th>安裝包</th>
               <th>格式 / 輸出示例</th>
-              <th>SHA-256 雜湊</th>
+              <th class="hash-col">SHA-256 雜湊</th>
               <th style="text-align: center;">驗證</th>
             </tr>
           </thead>
           <tbody id="zh-hant-table-body"></tbody>
         </table>
+        <button class="hash-toggle" onclick="toggleHash(this)">🔑 顯示 SHA-256</button>
       </div>
       <div class="security-note">
         <strong>安全提示:</strong> Windows SmartScreen會自動檢查新軟體的安全性。InsertDate作為新發布的軟體可能會顯示保護提示。所有軟體包均已通過SSL.com認證的程式碼簽名，並經VirusTotal驗證無病毒。要繼續，請選擇<strong>「其他資訊」</strong>然後<strong>「仍要執行」</strong>。
@@ -2232,6 +2298,22 @@
 </footer>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+function toggleHash(btn) {
+  var table = btn.closest('.specs-table');
+  table.classList.toggle('hash-visible');
+  var visible = table.classList.contains('hash-visible');
+  var labels = {
+    'en': ['\uD83D\uDD11 Show SHA-256', '\uD83D\uDD11 Hide SHA-256'],
+    'ja': ['\uD83D\uDD11 SHA-256を表示', '\uD83D\uDD11 SHA-256を非表示'],
+    'zh-hans': ['\uD83D\uDD11 显示 SHA-256', '\uD83D\uDD11 隐藏 SHA-256'],
+    'zh-hant': ['\uD83D\uDD11 顯示 SHA-256', '\uD83D\uDD11 隱藏 SHA-256']
+  };
+  var section = btn.closest('section');
+  var lang = section ? section.getAttribute('data-lang') : 'en';
+  var pair = labels[lang] || labels['en'];
+  btn.textContent = visible ? pair[1] : pair[0];
+}
+</script><script>
 (function() {
   'use strict';
 
@@ -2284,8 +2366,17 @@
         const aPackage = document.createElement('a');
         aPackage.href = 'https://github.com/InsertDate/InsertDate/releases/download/v1.0/' + encodeURIComponent(b.name);
         aPackage.className = 'package-name';
-        aPackage.textContent = b.name;
+        aPackage.textContent = '⬇ ' + b.name;
         tdPackage.appendChild(aPackage);
+
+        // Add popular badge to first item (yyyyMMdd)
+        if (b.format === 'yyyyMMdd') {
+          var badgeTexts = { 'en': 'POPULAR', 'ja': '人気', 'zh-hans': '热门', 'zh-hant': '熱門' };
+          var badge = document.createElement('span');
+          badge.className = 'popular-badge';
+          badge.textContent = badgeTexts[lang] || badgeTexts['en'];
+          tdPackage.appendChild(badge);
+        }
         
         // Format cell
         const tdFormat = document.createElement('td');
@@ -2300,6 +2391,7 @@
         
         // Hash cell
         const tdHash = document.createElement('td');
+        tdHash.className = 'hash-col';
         const divHash = document.createElement('div');
         divHash.className = 'hash-code';
         divHash.textContent = b.hash;
